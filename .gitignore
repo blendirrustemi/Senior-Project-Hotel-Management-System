@@ -1,0 +1,30 @@
+# .env files
+.env
+
+# Composer
+vendor/
+
+# PHPUnit
+phpunit.xml
+
+# Logs
+logs/
+
+# Cache
+cache/
+
+# Database
+database/
+
+# IDE files
+.idea/
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# Project files
+.DS_Store
+.project
+.buildpath
