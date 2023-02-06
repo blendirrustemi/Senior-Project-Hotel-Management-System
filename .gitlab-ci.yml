@@ -21,7 +21,7 @@ test:
   stage: test
   script:
     - echo "Running tests..."
-    - ./vendor/bin/phpunit --stop-on-error   
+    - ./vendor/bin/phpunit
  
 
 deploy:
