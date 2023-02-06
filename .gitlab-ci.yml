@@ -27,7 +27,7 @@ test:
 deploy:
   stage: deploy
   script:
-    - echo "Deploying the project..."
+    - echo "Deploying the project... "
 
 
 
