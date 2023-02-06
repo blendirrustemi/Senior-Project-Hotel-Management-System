@@ -15,13 +15,14 @@ stages:
 build:
   stage: build
   script:
-    - echo "Building the project... "
+    - echo "Building the project..."
 
 test:
   stage: test
   script:
     - echo "Running tests..."
-    - phpunit/phpunit
+    - ./vendor/bin/phpunit --log-junit result.xml
+ 
 
 deploy:
   stage: deploy
