@@ -21,8 +21,7 @@ test:
   stage: test
   script:
     - echo "Running tests..."
-    - phpunit/phpunit
-    ./vendor/bin/phpunit --log-junit result.xml
+    - phpunit/phpunit --log-junit result.xml
 
 deploy:
   stage: deploy
