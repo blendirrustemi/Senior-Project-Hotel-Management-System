@@ -21,7 +21,7 @@ test:
   stage: test
   script:
     - echo "Running tests... "
-    - ./vendor/bin/phpunit --coverage-text
+    - phpunit/phpunit
  
 
 deploy:
