@@ -1,9 +1,6 @@
 {
     "require": {
         "php": "^8.2"
-    },
-    "scripts": {
-    "test": "phpunit/phpunit ^9"
-}
+    }
     
 }
