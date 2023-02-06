@@ -20,7 +20,7 @@ build:
 test:
   stage: test
   script:
-    - echo "Running tests..."
+    - echo "Running tests... "
     - ./vendor/bin/phpunit
  
 
