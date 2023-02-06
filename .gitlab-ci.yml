@@ -16,6 +16,8 @@ build:
   stage: build
   script:
     - echo "Building the project..."
+     - php -r "file_put_contents('build/version.txt', date('Y-m-d H:i:s'));"
+    - zip -r build/project.zip . -x "build/*" -x ".git/*"
 
 test:
   stage: test
