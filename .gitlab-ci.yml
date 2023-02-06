@@ -5,7 +5,7 @@ before_script:
   - composer install --no-interaction --prefer-dist
   - composer require --dev phpunit/phpunit
   - composer update
-   - apt-get install zip unzip
+   - apk add zip
   
 
 stages:
