@@ -21,8 +21,8 @@ build:
   stage: build
   script:
     - echo "Building the project..."
-     - php -r "file_put_contents('build/version.txt', date('Y-m-d H:i:s'));"
-    - zip -r build/project.zip . -x "build/*" -x ".git/*"
+#     - php -r "file_put_contents('build/version.txt', date('Y-m-d H:i:s'));"
+#   - zip -r build/project.zip . -x "build/*" -x ".git/*"
   artifacts:
     expose_as: 'artifact_build'
     paths: ['build/version.txt']
@@ -50,6 +50,11 @@ deploy:
   stage: deploy
   script:
     - echo "Deploying the project... "
+    - echo "Generating version.txt file..."
+    - echo "$(date +%Y-%m-%d-%H:%M:%S)" > build/version.txt
+  artifacts:
+  paths:
+    - build/version.txt
 
 
 
