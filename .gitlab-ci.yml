@@ -40,7 +40,7 @@ code-quality:
   stage: code-quality
   script:
     - echo "Running code quality checks... "
-    - ./vendor/bin/phpstan analyze -c phpstan.neon
+    - ./vendor/bin/phpstan analyze -c phpstan.neon src/*
   artifacts:
     paths: ['build/phpstan-report.txt']
 
