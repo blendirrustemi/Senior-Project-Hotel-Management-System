@@ -27,7 +27,7 @@ test:
   stage: test
   script:
     - echo "Running tests... "
-     - ./vendor/bin/phpunit --log-junit=build/phpunit-report.xml
+     - ./vendor/bin/phpunit
      - ls -al build/
     - cat build/phpunit-report.xml
   artifacts:
