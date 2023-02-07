@@ -28,6 +28,8 @@ test:
   script:
     - echo "Running tests... "
      - ./vendor/bin/phpunit --log-junit=build/phpunit-report.xml
+     - ls -al build/
+    - cat build/phpunit-report.xml
   artifacts:
     paths: ['build/phpunit-report.xml']
  
