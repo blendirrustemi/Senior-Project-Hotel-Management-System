@@ -21,7 +21,7 @@ build:
     - zip -r build/project.zip . -x "build/*" -x ".git/*"
   artifacts:
     expose_as: 'artifact_build'
-    paths: ['build/version.txt']  
+    paths: ['build/version.txt', 'build/project.zip']  
 
 test:
   stage: test
