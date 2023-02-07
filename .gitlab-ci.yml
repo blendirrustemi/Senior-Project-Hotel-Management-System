@@ -28,6 +28,8 @@ test:
   script:
     - echo "Running tests... "
      - ./vendor/bin/phpunit
+  artifacts:
+    paths: ['phpunit-report.xml']
  
 
 deploy:
