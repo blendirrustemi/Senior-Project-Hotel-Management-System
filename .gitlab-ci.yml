@@ -27,9 +27,9 @@ test:
   stage: test
   script:
     - echo "Running tests... "
-     - ./vendor/bin/phpunit
+     - ./vendor/bin/phpunit --log-junit=build/phpunit-report.xml
   artifacts:
-    paths: ['build/phpunit-report.xml']
+    paths: ['phpunit-report.xml']
  
 
 deploy:
