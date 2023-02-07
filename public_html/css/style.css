@@ -32,8 +32,8 @@ h1{
     width: 18%; /* Make the container the full width of the page */
     height: 25%; /* Make the container the full height of the page */
     background-image: url('image.png'); /* Set the background image */
-    background-size: 30%%; /* Scale the image to cover the container */
-    z-index: -1; /* Send the container behind other elements on the page */ž
+    background-size: 30%; /* Scale the image to cover the container */
+    z-index: -1; /* Send the container behind other elements on the page */
 }
 body {
     background-color: #35343b;
