@@ -5,12 +5,14 @@ before_script:
   - curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
   - composer install --no-interaction --prefer-dist
   - composer require --dev phpunit/phpunit
+  - composer require --dev phpstan/phpstan
   - composer update
   
 
 stages:
   - build
   - test
+  - code-quality
   - deploy
 
 build:
@@ -21,7 +23,8 @@ build:
     - zip -r build/project.zip . -x "build/*" -x ".git/*"
   artifacts:
     expose_as: 'artifact_build'
-    paths: ['build/version.txt', 'build/project.zip']  
+    paths: ['build/version.txt']
+ #    paths: ['build/version.txt', 'build/project.zip']  
 
 test:
   stage: test
@@ -33,6 +36,13 @@ test:
   artifacts:
     paths: ['build/phpunit-report.xml']
  
+code-quality:
+  stage: code-quality
+  script:
+    - echo "Running code quality checks... "
+    - ./vendor/bin/phpstan analyze -c phpstan.neon
+  artifacts:
+    paths: ['build/phpstan-report.txt']
 
 deploy:
   stage: deploy
