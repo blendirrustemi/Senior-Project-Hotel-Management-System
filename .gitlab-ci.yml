@@ -53,8 +53,8 @@ deploy:
     - echo "Generating version.txt file..."
     - echo "$(date +%Y-%m-%d-%H:%M:%S)" > build/version.txt
   artifacts:
-  paths:
-    - build/version.txt
+    paths: ['build/version.txt']
+    
 
 
 
