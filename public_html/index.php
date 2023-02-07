@@ -1,4 +1,3 @@
-RuvfaCXXV3QCGS3sC36byjziwUEzYBa1yq
 <!DOCTYPE html>
 
 <html>
@@ -6,12 +5,14 @@ RuvfaCXXV3QCGS3sC36byjziwUEzYBa1yq
 <head>
 
     <title>Project Homepage</title>
-
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
 
-    <div>This should be the front controller that routes all incoming requests to the appropriate controller.</div>
+    
+
+<div>This should be the front controller that routes all incoming requests to the appropriate controller.</div>
 
 
 
