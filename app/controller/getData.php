@@ -4,7 +4,7 @@
 //$data = getDataFromModel();
 
 // Pass the data to the view
-require_once 'pages/view/viewDemo.php';
+//require_once 'pages/view/viewDemo.php';
 
 
 ?>
