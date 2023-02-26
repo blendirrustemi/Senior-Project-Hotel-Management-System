@@ -37,10 +37,9 @@ code_quality:
     - vendor/bin/phpmd app/ text codesize,unusedcode,naming,design
     - vendor/bin/phpstan analyze app/
   artifacts:
-    paths:
-      - ['build/phpstan-report.txt']
-    #reports:
-    #  codequality: build/logs/
+    paths: ['build/phpstan-report.txt']
+    reports:
+     codequality: build/logs/
 
 deploy:
   stage: deploy
