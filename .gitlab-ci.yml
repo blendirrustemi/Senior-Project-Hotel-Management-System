@@ -30,15 +30,15 @@ test:
   artifacts:
     paths: ['build/phpunit-report.xml']
 
-code_quality:
+#code_quality:
   #image: adamculp/php-code-quality
-  script:
+  #script:
     # - docker run --rm adamculp/php-code-quality apk update
     # - vendor/bin/phpcs --standard=PSR2 app/
     # - vendor/bin/phpmd app/ text codesize,unusedcode,naming,design
     # - vendor/bin/phpstan analyze app/
-  artifacts:
-    paths: ['build/phpstan-report.txt']
+  #artifacts:
+   # paths: ['build/phpstan-report.txt']
     #reports:#
     # codequality: build/logs/#
 
