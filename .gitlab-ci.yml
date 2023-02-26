@@ -1,7 +1,7 @@
 image: php:8.2-alpine
 
 before_script:
-  - apk update && apk add curl zip unzip tar
+  - apk update && apk add curl zip unzip tar docker
   - curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
   - composer install --no-interaction --prefer-dist
   - composer require --dev phpunit/phpunit
