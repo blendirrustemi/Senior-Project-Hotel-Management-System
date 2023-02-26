@@ -9,7 +9,6 @@ before_script:
   - composer update
   - ls -al build/
   - chmod -R 775 build/
-  
 
 stages:
   - build
@@ -22,28 +21,28 @@ build:
   script:
     - echo "Building the project..."
 #     - php -r "file_put_contents('build/version.txt', date('Y-m-d H:i:s'));"
-#   - zip -r build/project.zip . -x "build/*" -x ".git/*"
-#  artifacts:
-#    expose_as: 'artifact_build'
- #   paths: ['build/version.txt']
- #    paths: ['build/version.txt', 'build/project.zip']  
+#     - zip -r build/project.zip . -x "build/*" -x ".git/*"
+#   artifacts:
+#     expose_as: 'artifact_build'
+#     paths: ['build/version.txt']
+#     paths: ['build/version.txt', 'build/project.zip']
 
 test:
   stage: test
   script:
     - echo "Running tests... "
-     - ./vendor/bin/phpunit --log-junit=build/phpunit-report.xml
+    - ./vendor/bin/phpunit --log-junit=build/phpunit-report.xml
 #     - ls -al build/
-#    - cat build/phpunit-report.xml
+#     - cat build/phpunit-report.xml
   artifacts:
     paths: ['build/phpunit-report.xml']
- 
+
 code-quality:
   stage: code-quality
   script:
     - echo "Running code quality checks... "
- #   - ./vendor/bin/phpstan analyze -c phpstan.neon > build/phpstan-report.txt
-- docker run --rm -v $(pwd):/app adamculp/php-code-quality phpstan analyze -c phpstan.neon > build/phpstan-report.txt
+#     - ./vendor/bin/phpstan analyze -c phpstan.neon > build/phpstan-report.txt
+    - docker run --rm -v $(pwd):/app adamculp/php-code-quality phpstan analyze -c phpstan.neon > build/phpstan-report.txt
   artifacts:
     paths: ['build/phpstan-report.txt']
 
@@ -55,7 +54,3 @@ deploy:
     - echo "$(date +%Y-%m-%d-%H:%M:%S)" > build/version.txt
   artifacts:
     paths: ['build/version.txt']
-    
-
-
-
