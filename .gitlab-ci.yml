@@ -37,14 +37,28 @@ test:
  # artifacts:
  #   paths: ['build/phpunit-report.xml']
 
-code-quality:
-  stage: code-quality
+# code-quality:
+
+#   stage: code-quality
+#   script:
+#     - echo "Running code quality checks... "
+# #     - ./vendor/bin/phpstan analyze -c phpstan.neon > build/phpstan-report.txt
+#     - docker run --rm -v $(pwd):/app adamculp/php-code-quality phpstan analyze -c phpstan.neon > build/phpstan-report.txt
+#   artifacts:
+#     paths: ['build/phpstan-report.txt']
+
+code_quality:
+  image: adamculp/php-code-quality
   script:
-    - echo "Running code quality checks... "
-#     - ./vendor/bin/phpstan analyze -c phpstan.neon > build/phpstan-report.txt
-    - docker run --rm -v $(pwd):/app adamculp/php-code-quality phpstan analyze -c phpstan.neon > build/phpstan-report.txt
+    - vendor/bin/phpcs --standard=PSR2 app/
+    - vendor/bin/phpmd app/ text codesize,unusedcode,naming,design
+    - vendor/bin/phpstan analyze app/
   artifacts:
-    paths: ['build/phpstan-report.txt']
+    paths:
+      paths: ['build/phpstan-report.txt']
+    reports:
+      codequality: build/logs/
+
 
 deploy:
   stage: deploy
