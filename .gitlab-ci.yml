@@ -1,5 +1,7 @@
 before_script:
-  - apk update && apk add curl zip unzip tar docker
+  - apk update
+  - apk add curl zip unzip tar docker
+  - apk add php php-curl php-json php-dom php-phar php-iconv php-openssl php-mbstring
   - curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
   - composer install --no-interaction --prefer-dist
   - composer require --dev phpunit/phpunit
@@ -28,7 +30,8 @@ code_quality:
   script:
     - vendor/bin/phpcs --standard=PSR2 app/
     - vendor/bin/phpmd app/ text codesize,unusedcode,naming,design
-    - vendor/bin/phpstan analyze app/
+    #- vendor/bin/phpstan analyze app/
+    - docker run --rm -v $(pwd):/app adamculp/php-code-quality phpstan analyze -c phpstan.neon > build/phpstan-report.txt
   artifacts:
     paths: ['build/phpstan-report.txt']
     reports:
