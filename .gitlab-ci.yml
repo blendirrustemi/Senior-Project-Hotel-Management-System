@@ -39,8 +39,8 @@ code_quality:
   artifacts:
     paths:
       - ['build/phpstan-report.txt']
-    reports:
-      codequality: build/logs/
+    #reports:
+    #  codequality: build/logs/
 
 deploy:
   stage: deploy
