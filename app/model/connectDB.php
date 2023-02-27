@@ -6,6 +6,8 @@ $username = "root";
 $password = "";
 $dbname = "yin_db";
 
+//Comment add test
+
 try {
     $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
