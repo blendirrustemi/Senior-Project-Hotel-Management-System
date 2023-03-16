@@ -4,7 +4,7 @@
 
 <head>
 
-    <title>Project Homepage</title>
+    <title>Senior Project Homepage</title>
     <link rel="stylesheet" href="/css/style.css">
 </head>
 
