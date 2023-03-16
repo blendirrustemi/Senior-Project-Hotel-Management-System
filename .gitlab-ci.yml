@@ -1,34 +1,34 @@
-image: php:8.2-alpine
+# image: php:8.2-alpine
 
-before_script:
-  - apk update && apk add curl zip unzip tar docker
-  - curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
-  - composer install --no-interaction --prefer-dist
-  - composer require --dev phpunit/phpunit
-  - composer update
-  - ls -al build/
-  - chmod -R 775 build/
+# before_script:
+#   - apk update && apk add curl zip unzip tar docker
+#   - curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+#   - composer install --no-interaction --prefer-dist
+#   - composer require --dev phpunit/phpunit
+#   - composer update
+#   - ls -al build/
+#   - chmod -R 775 build/
 
-stages:
-  - build
-  - test
-  - code-quality
-  - deploy
+# stages:
+#   - build
+#   - test
+#   - code-quality
+#   - deploy
 
-build:
-  stage: build
-  script:
-    - echo "Building the project..."
-  artifacts:
-    expose_as: 'artifact_build'
-    paths: ['build/version.txt']
+# build:
+#   stage: build
+#   script:
+#     - echo "Building the project..."
+#   artifacts:
+#     expose_as: 'artifact_build'
+#     paths: ['build/version.txt']
 
-test:
-  stage: test
-  script:
-    - echo "Running tests... "
-  artifacts:
-    paths: ['build/phpunit-report.xml']
+# test:
+#   stage: test
+#   script:
+#     - echo "Running tests... "
+#   artifacts:
+#     paths: ['build/phpunit-report.xml']
 
 #code_quality:
   #image: adamculp/php-code-quality
@@ -42,11 +42,11 @@ test:
     #reports:#
     # codequality: build/logs/#
 
-deploy:
-  stage: deploy
-  script:
-    - echo "Deploying the project... "
-    - echo "Generating version.txt file..."
-    - echo "$(date +%Y-%m-%d-%H:%M:%S)" > build/version.txt
-  artifacts:
-    paths: ['build/version.txt']
+# deploy:
+#   stage: deploy
+#   script:
+#     - echo "Deploying the project... "
+#     - echo "Generating version.txt file..."
+#     - echo "$(date +%Y-%m-%d-%H:%M:%S)" > build/version.txt
+#   artifacts:
+#     paths: ['build/version.txt']
