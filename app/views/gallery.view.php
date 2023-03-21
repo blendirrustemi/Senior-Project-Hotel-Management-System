@@ -8,8 +8,9 @@
     <link rel="stylesheet" href="<?=ROOT?>/assets/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
-    <title>History - The Yorkshire Inn</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto+Slab:wght@400;700&display=swap"
+        rel="stylesheet">
+    <title>Gallery - The Yorkshire Inn</title>
 </head>
 
 <body>
@@ -34,7 +35,7 @@
         <nav class="navbar">
             <div class="logo">
                 <a href="<?=ROOT?>">
-                    <img src="assets/images/icons/logo.svg" alt="The Yorkshire Inn"> <!-- jel ode treba ic ROOT prije assets?? -->
+                    <img src="assets/images/icons/logo.svg" alt="The Yorkshire Inn">
                 </a>
             </div>
 
@@ -52,10 +53,45 @@
 
     </header>
 
+
     <div class="container">
 
-        <section>
-        <h2>Error 404 - Page not found</h2>
+        <section class="gallery section-title">
+            <h2>Gallery</h2>
+
+            <div class="gallery-grid">
+
+                <div class="gallery-grid-item">
+                    <img src="https://placeimg.com/488/488" alt="Photo">
+                </div>
+                <div class="gallery-grid-item">
+                    <img src="https://placeimg.com/488/488/landscape" alt="Photo">
+                </div>
+                <div class="gallery-grid-item">
+                    <img src="https://placeimg.com/488/488/art" alt="Photo">
+                </div>
+                <div class="gallery-grid-item">
+                    <img src="https://placeimg.com/488/488/animals" alt="Photo">
+                </div>
+
+                <div class="gallery-grid-item">
+                    <img src="https://placeimg.com/488/488" alt="Photo">
+                </div>
+                <div class="gallery-grid-item">
+                    <img src="https://placeimg.com/488/488/landscape" alt="Photo">
+                </div>
+                <div class="gallery-grid-item">
+                    <img src="https://placeimg.com/488/488/art" alt="Photo">
+                </div>
+                <div class="gallery-grid-item">
+                    <img src="https://placeimg.com/488/488/animals" alt="Photo">
+                </div>
+                <div class="gallery-grid-item">
+                    <img src="https://placeimg.com/488/488" alt="Photo">
+                </div>
+
+            </div>
+
         </section>
 
         <footer class="full-bleed">

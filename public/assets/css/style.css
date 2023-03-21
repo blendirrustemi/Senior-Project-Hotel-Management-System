@@ -94,10 +94,6 @@ header {
     font-family: 'Roboto Slab', sans-serif;
     font-size: 18px;
     text-decoration: none;
-    color: #333;
-}
-
-.navbar-links a:hover {
     color: #000;
 }
 
@@ -598,6 +594,68 @@ history.html
 .history-container {
     display: flex;
     column-gap: 64px;
+}
+
+/*
+----------------------------------------------------------------------------------------------------------------------------------------------------
+fingerlakes
+----------------------------------------------------------------------------------------------------------------------------------------------------
+*/
+.fingerlakes {
+    margin-top: 48px;
+    margin-bottom: 32px;
+}
+
+/*
+----------------------------------------------------------------------------------------------------------------------------------------------------
+gallery
+----------------------------------------------------------------------------------------------------------------------------------------------------
+*/
+.gallery {
+    margin-top: 48px;
+    margin-bottom: 32px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 10px;
+
+}
+
+.gallery-grid-item img {
+    max-width: 100%;
+    display: block;
+}
+
+/*
+----------------------------------------------------------------------------------------------------------------------------------------------------
+contact
+----------------------------------------------------------------------------------------------------------------------------------------------------
+*/
+.contact {
+    margin-top: 48px;
+    margin-bottom: 32px;
+}
+
+.contact-call-to-action {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #83032F;
+    padding: 48px 0;
+    column-gap: 8px;
+}
+
+.contact-call-to-action h2 {
+    max-width: 45ch;
+    color: #fff;
+}
+
+.contact-call-to-action button {
+    background-color: #fff;
+    color: #83032F;
 }
 
 /*

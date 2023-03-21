@@ -8,8 +8,9 @@
     <link rel="stylesheet" href="<?=ROOT?>/assets/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
-    <title>History - The Yorkshire Inn</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto+Slab:wght@400;700&display=swap"
+        rel="stylesheet">
+    <title>Fingerlakes - The Yorkshire Inn</title>
 </head>
 
 <body>
@@ -34,7 +35,7 @@
         <nav class="navbar">
             <div class="logo">
                 <a href="<?=ROOT?>">
-                    <img src="assets/images/icons/logo.svg" alt="The Yorkshire Inn"> <!-- jel ode treba ic ROOT prije assets?? -->
+                    <img src="assets/images/icons/logo.svg" alt="The Yorkshire Inn">
                 </a>
             </div>
 
@@ -52,10 +53,22 @@
 
     </header>
 
+
     <div class="container">
 
-        <section>
-        <h2>Error 404 - Page not found</h2>
+        <section class="fingerlakes section-title">
+            <h2>Fingerlakes</h2>
+            <img src="assets/images/fingerlakes/fingerlakes.webp" alt="Fingerlakes">
+            <p>The Finger Lakes Region is known for many artisan vineyards, particularly its world-renowned Rieslings.
+                The region also boasts an impressive list of craft breweries, distilleries, and hard-cider producers.
+                New York, by the way, is one of the largest apple-growing states in the country, second only to the
+                state of Washington. The area offers activities for all ages. From the Glenn H. Curtiss Aviation Museum
+                to the George Eastman House and the Rochester Children's Museum, museums make the perfect day trip. If
+                you prefer to spend your time outdoors, there are plenty of hiking and biking trails and places to go
+                boating or fishing on the lakes. A local favorite is exploring the gorge trail in Watkins Glen State
+                Park, which has no less than nineteen waterfalls!
+            </p>
+            <button><a href="rooms">BOOK A STAY AT THE YORKSHIRE INN</a></button>
         </section>
 
         <footer class="full-bleed">

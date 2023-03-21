@@ -32,19 +32,18 @@
 
     <nav class="navbar">
         <div class="logo">
-            <a href="index.php">
+            <a href="<?=ROOT?>">
                 <img src="<?=ROOT?>/assets/images/icons/logo.svg" alt="The Yorkshire Inn">
             </a>
         </div>
 
         <div class="navbar-links">
             <ul>
-                <li><a href="rooms.php">Rooms</a></li>
-                <li><a href="history.php">History</a></li>
-                <li><a href="gallery.php">Gallery</a></li>
-                <li><a href="fingerlakes.php">Fingerlakes</a></li>
-                <li><a href="contact.php">Contact & Policies</a></li>
-                <li class="account"></li>
+                <li><a href="rooms">Rooms</a></li>
+                <li><a href="history">History</a></li>
+                <li><a href="gallery">Gallery</a></li>
+                <li><a href="fingerlakes">Fingerlakes</a></li>
+                <li><a href="contact">Contact & Policies</a></li>
             </ul>
         </div>
 
@@ -58,7 +57,7 @@
         <div class="hero-content">
             <h1>Welcome to Phelps, New York</h1>
             <h2>Stay with us in comfort at Yorkshire Inn</h2>
-            <button><a href="rooms.php">BOOK NOW</a></button>
+            <button><a href="rooms">BOOK NOW</a></button>
         </div>
         <img src="<?=ROOT?>/assets/images/homepage/yorkshire.webp" alt="Yorkshire Inn">
     </section>
@@ -230,7 +229,7 @@
             We also have pets, a cat and a dog, that live in the Inn as this is our home as well. If you have any allergies or
             concerns about the animals we highly recommend you call us prior to booking or consider other accommodations.
         </p>
-        <button><a href="contact.php">CONTACT</a></button>
+        <button><a href="contact">CONTACT</a></button>
     </section>
 
     <section class="call-to-action section-title">
