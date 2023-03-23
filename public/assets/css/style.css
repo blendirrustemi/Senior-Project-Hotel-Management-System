@@ -254,6 +254,15 @@ h3 {
     display: block;
 }
 
+.col a::before {    
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+}
+
 .rectangle {
     position: absolute;
     bottom: 0;
@@ -577,6 +586,15 @@ lodgesuite.html
     margin-top: 16px;
 }
 
+.room-features-details {
+    display: flex;
+    gap: 16px;
+}
+
+.room-features-details-item p:first-child {
+    font-weight: bold;
+}
+
 /*
 ----------------------------------------------------------------------------------------------------------------------------------------------------
 history.html
@@ -588,7 +606,7 @@ history.html
 }
 
 .history-text p {
-    margin-bottom: 1em;
+    margin-bottom: 16px;
 }
 
 .history-container {
@@ -604,6 +622,15 @@ fingerlakes
 .fingerlakes {
     margin-top: 48px;
     margin-bottom: 32px;
+}
+
+.fingerlakes img {
+    width: 100%;
+    margin-bottom: 8px;
+}
+
+.fingerlakes button {
+    margin-top: 16px;
 }
 
 /*
@@ -639,13 +666,19 @@ contact
     margin-bottom: 32px;
 }
 
+.contact p {
+    margin-top: 16px;
+}
+
 .contact-call-to-action {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     background-color: #83032F;
     padding: 48px 0;
     column-gap: 8px;
+    margin-bottom: 32px;
 }
 
 .contact-call-to-action h2 {
@@ -656,6 +689,22 @@ contact
 .contact-call-to-action button {
     background-color: #fff;
     color: #83032F;
+}
+
+.interactive-map {    
+    margin: 0 calc(-50vw + 50%);
+}
+
+.contact-policies {
+    margin-bottom: 32px;
+}
+
+.policies {
+    margin-bottom: 16px;
+}
+
+.policies li {
+    margin-left: 32px;
 }
 
 /*

@@ -132,23 +132,25 @@
             <div class="row">
                 <div class="col">
                     <img src="<?=ROOT?>/assets/images/homepage/home-blue-room.png">
-                    <div class="rectangle">
-                        <h3>Blue Room</h3>
-                    </div>
+                    <div class="rectangle"><h3>Blue Room</h3></div>
+                    <a href="blueroom"></a>
                 </div>
                 <div class="col">
                     <img src="<?=ROOT?>/assets/images/homepage/home-bolero-room.png">
                     <div class="rectangle"><h3>Bolero Room</h3></div>
+                    <a href="boleroroom"></a>
                 </div>
             </div>
             <div class="row">
                 <div class="col">
                     <img src="<?=ROOT?>/assets/images/homepage/home-rose-suite.png">
                     <div class="rectangle"><h3>Rose Room</h3></div>
+                    <a href="rosesuite"></a>
                 </div>
                 <div class="col">
                     <img src="<?=ROOT?>/assets/images/homepage/home-lodge-suite.png">
                     <div class="rectangle"><h3>Lodge Room</h3></div>
+                    <a href="lodgesuite"></a>
                 </div>
             </div>
         </div>

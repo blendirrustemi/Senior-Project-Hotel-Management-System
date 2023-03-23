@@ -67,12 +67,14 @@
 
             <p>Check-In Time 3pm-6pm <br>Check-Out 11 am <br>Cancelation Policy Below</p>
 
-        </section> 
+        </section>
 
         <section class="contact-map section-title">
             <h2>Map</h2>
             
-            /////////////////////////////////// placeholder ///////////////////////////////////
+            <div class="interactive-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5840.645209874591!2d-77.03953229265372!3d42.95040560508165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d0d1c750b4eefd%3A0xe3f4212639fd53b2!2sThe%20Yorkshire%20Inn!5e0!3m2!1sen!2shr!4v1679438647947!5m2!1sen!2shr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
 
         </section>
 
@@ -85,7 +87,7 @@
 
             <h2>Policies</h2>
             
-            <div class="cancellation-guidelines">
+            <div class="policies">
                 <p>CANCELLATION GUIDELINES</p>
                 <ul>
                     <li>A $15.00 cancellation fee for all cancellations results in a refund.</li>
@@ -100,7 +102,7 @@
                 </ul>
             </div>
 
-            <div class="additional-guest-fee">
+            <div class="policies">
                 <p>ADDITIONAL GUEST FEE</p>
                 <ul>
                     <li>Additional guests can be accommodated in the Rose Room and the Lodge.</li>
@@ -109,7 +111,7 @@
                 </ul>
             </div>
 
-            <div class="smoking">
+            <div class="policies">
                 <p>SMOKING</p>
                 <ul>
                     <li>There is no smoking within the Inn.</li>

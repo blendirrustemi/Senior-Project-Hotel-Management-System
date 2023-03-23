@@ -54,8 +54,9 @@
 
     <div class="container">
 
-        <section>
+        <section class="section-title">
         <h2>Error 404 - Page not found</h2>
+        <h3>Click <span class="underline"><a href="<?=ROOT?>">here</a></span>  to go back</h3>
         </section>
 
         <footer class="full-bleed">
