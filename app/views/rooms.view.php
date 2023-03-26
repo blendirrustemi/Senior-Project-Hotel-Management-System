@@ -88,7 +88,7 @@
         <div class="room-preview">
 
             <div class="room-preview-img">                
-                <img src="https://placeimg.com/386/264" alt="Blue Room">
+                <img src="assets/images/blue-room/blue8.jpg" alt="Blue Room">
             </div>
 
             <div class="room-preview-info">

@@ -234,8 +234,17 @@
         <button><a href="contact">CONTACT</a></button>
     </section>
 
-    <section class="call-to-action section-title">
-        /////////////////////////////////// placeholder ///////////////////////////////////
+    <section class="home-call-to-action section-title">
+        <div class="home-call-to-action-left">
+            <img src="<?=ROOT?>/assets/images/homepage/food.webp" alt="food">
+        </div>
+
+        <div class="home-call-to-action-right">
+            <div class="home-call-to-action-right-details">                
+                <h2>Welcome to Your Home Away From Home at The Yorkshire Inn!</h2>
+                <button><a href="rooms">BOOK NOW</a></button>
+            </div>
+        </div>
     </section>
 
     <section class="newsletter section-title">
