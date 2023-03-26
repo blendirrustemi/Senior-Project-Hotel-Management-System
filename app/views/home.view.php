@@ -109,25 +109,7 @@
 
     <section class="available-rooms section-title">
         <h2>Available Rooms</h2>
-
-        <!-- <div class="available-rooms-grid">
-          <div class="available-rooms-grid-item">
-            <img src="assets/images/blue-room/blue8.jpg" alt="Blue Room">
-            <div class="rectangle"><h3>Blue Room</h3></div>
-          </div>
-          <div class="available-rooms-grid-item">
-            <img src="assets/images/bolero-room/bolero3.webp" alt="Bolero Room">
-            <div class="rectangle"><h3>Bolero Room</h3></div>
-          </div>
-          <div class="available-rooms-grid-item">
-            <img src="assets/images/rose-suite/rose3.webp" alt="Rose Suite">
-            <div class="rectangle"><h3>Rose Suite</h3></div>
-          </div>
-          <div class="available-rooms-grid-item">
-            <img src="assets/images/lodge-suite/lodge9.webp" alt="Lodge Suite">
-            <div class="rectangle"><h3>Lodge Suite</h3></div>
-          </div>
-        </div> -->
+        
         <div class="available-rooms-image-container">
             <div class="row">
                 <div class="col">

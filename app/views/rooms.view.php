@@ -19,12 +19,12 @@
 
     <div class="contact-info">
       <div class="social-icons">
-        <a href="https://www.facebook.com/theyorkshireinn/"><img src="assets/images/icons/facebook.svg" alt="facebook"></a>
-        <a href="https://www.instagram.com/the_yorkshire_inn/"><img src="assets/images/icons/instagram.svg" alt="instagram"></a>
-        <a href="https://www.yelp.com/biz/the-yorkshire-inn-phelps"><img src="assets/images/icons/yelp.svg" alt="yelp"></a>
+        <a href="https://www.facebook.com/theyorkshireinn/"><img src="<?=ROOT?>/assets/images/icons/facebook.svg" alt="facebook"></a>
+        <a href="https://www.instagram.com/the_yorkshire_inn/"><img src="<?=ROOT?>/assets/images/icons/instagram.svg" alt="instagram"></a>
+        <a href="https://www.yelp.com/biz/the-yorkshire-inn-phelps"><img src="<?=ROOT?>/assets/images/icons/yelp.svg" alt="yelp"></a>
       </div>
       <div class="phone-number">
-        <img class="phone-icon" src="assets/images/icons/phone.svg" alt="phone">
+        <img class="phone-icon" src="<?=ROOT?>/assets/images/icons/phone.svg" alt="phone">
         <p>315-548-9675</p>
       </div>
     </div>
@@ -32,7 +32,7 @@
     <nav class="navbar">
       <div class="logo">
         <a href="<?=ROOT?>">
-          <img src="assets/images/icons/logo.svg" alt="The Yorkshire Inn">
+          <img src="<?=ROOT?>/assets/images/icons/logo.svg" alt="The Yorkshire Inn">
         </a>
       </div>
 
@@ -52,7 +52,7 @@
 
   <div class="container">
 
-    <section class="rooms section-title">
+  <section class="rooms section-title">
         <h2>Rooms</h2>
 
         <div class="calendar full-bleed">
@@ -88,7 +88,7 @@
         <div class="room-preview">
 
             <div class="room-preview-img">
-                <img src="assets/images/blue-room/blue8.jpg" alt="Blue Room">
+                <img src="<?=ROOT?>/assets/images/blue-room/blue8.jpg" alt="Blue Room">
             </div>
 
             <div class="room-preview-info">
@@ -100,11 +100,11 @@
                 
                 <a href="blueroom" class="underline">More info</a>
                 <div class="room-preview-icons">
-                    <img src="assets/images/icons/wifi-grey.svg" alt="Icon">
-                    <img src="assets/images/icons/tv-grey.svg" alt="Icon">
-                    <img src="assets/images/icons/wheelchair-grey.svg" alt="Icon">
-                    <img src="assets/images/icons/heat-grey.svg" alt="Icon">
-                    <img src="assets/images/icons/bath-grey.svg" alt="Icon">
+                    <img src="<?=ROOT?>/assets/images/icons/wifi-grey.svg" alt="Icon">
+                    <img src="<?=ROOT?>/assets/images/icons/tv-grey.svg" alt="Icon">
+                    <img src="<?=ROOT?>/assets/images/icons/wheelchair-grey.svg" alt="Icon">
+                    <img src="<?=ROOT?>/assets/images/icons/heat-grey.svg" alt="Icon">
+                    <img src="<?=ROOT?>/assets/images/icons/bath-grey.svg" alt="Icon">
                 </div>
                 <button><a href="#">BOOK NOW</a></button>
             </div>
@@ -113,7 +113,7 @@
         <div class="room-preview">
 
             <div class="room-preview-img">
-                <img src="assets/images/bolero-room/bolero3.webp" alt="Bolero Room">
+                <img src="<?=ROOT?>/assets/images/bolero-room/bolero3.webp" alt="Bolero Room">
             </div>
 
             <div class="room-preview-info">
@@ -125,10 +125,10 @@
                 </p>
                 <a href="boleroroom" class="underline">More info</a>
                 <div class="room-preview-icons">
-                    <img src="assets/images/icons/wifi-grey.svg" alt="Icon">
-                    <img src="assets/images/icons/tv-grey.svg" alt="Icon">
-                    <img src="assets/images/icons/heat-grey.svg" alt="Icon">
-                    <img src="assets/images/icons/bath-grey.svg" alt="Icon">
+                    <img src="<?=ROOT?>/assets/images/icons/wifi-grey.svg" alt="Icon">
+                    <img src="<?=ROOT?>/assets/images/icons/tv-grey.svg" alt="Icon">
+                    <img src="<?=ROOT?>/assets/images/icons/heat-grey.svg" alt="Icon">
+                    <img src="<?=ROOT?>/assets/images/icons/bath-grey.svg" alt="Icon">
                 </div>                
                 <button><a href="#">BOOK NOW</a></button>
             </div>
@@ -137,7 +137,7 @@
         <div class="room-preview">
 
             <div class="room-preview-img">
-                <img src="assets/images/rose-suite/rose3.webp" alt="Rose Suite">
+                <img src="<?=ROOT?>/assets/images/rose-suite/rose3.webp" alt="Rose Suite">
             </div>
 
             <div class="room-preview-info">
@@ -149,10 +149,10 @@
                 </p>
                 <a href="rosesuite" class="underline">More info</a>
                 <div class="room-preview-icons">
-                    <img src="assets/images/icons/wifi-grey.svg" alt="Icon">
-                    <img src="assets/images/icons/tv-grey.svg" alt="Icon">
-                    <img src="assets/images/icons/heat-grey.svg" alt="Icon">
-                    <img src="assets/images/icons/bath-grey.svg" alt="Icon">
+                    <img src="<?=ROOT?>/assets/images/icons/wifi-grey.svg" alt="Icon">
+                    <img src="<?=ROOT?>/assets/images/icons/tv-grey.svg" alt="Icon">
+                    <img src="<?=ROOT?>/assets/images/icons/heat-grey.svg" alt="Icon">
+                    <img src="<?=ROOT?>/assets/images/icons/bath-grey.svg" alt="Icon">
                 </div>                
                 <button><a href="#">BOOK NOW</a></button>
             </div>
@@ -161,7 +161,7 @@
         <div class="room-preview">
 
             <div class="room-preview-img">                
-                <img src="assets/images/lodge-suite/lodge9.webp" alt="Lodge Suite">
+                <img src="<?=ROOT?>/assets/images/lodge-suite/lodge9.webp" alt="Lodge Suite">
             </div>
 
             <div class="room-preview-info">
@@ -172,16 +172,16 @@
                 </p>
                 <a href="lodgesuite" class="underline">More info</a>
                 <div class="room-preview-icons">
-                    <img src="assets/images/icons/wifi-grey.svg" alt="Icon">
-                    <img src="assets/images/icons/tv-grey.svg" alt="Icon">
-                    <img src="assets/images/icons/heat-grey.svg" alt="Icon">
-                    <img src="assets/images/icons/bath-grey.svg" alt="Icon">
+                    <img src="<?=ROOT?>/assets/images/icons/wifi-grey.svg" alt="Icon">
+                    <img src="<?=ROOT?>/assets/images/icons/tv-grey.svg" alt="Icon">
+                    <img src="<?=ROOT?>/assets/images/icons/heat-grey.svg" alt="Icon">
+                    <img src="<?=ROOT?>/assets/images/icons/bath-grey.svg" alt="Icon">
                 </div>                
                 <button><a href="#">BOOK NOW</a></button>
             </div>
         </div>
 
-    </section>   
+    </section>
 
     <footer class="full-bleed">
 
@@ -190,9 +190,9 @@
         <div class="footer-socials">
           <p class="footer-title">Follow the Yorkshire Inn</p>
           <div class="footer-socials-icons">
-            <a href="https://www.facebook.com/theyorkshireinn/"><img src="assets/images/icons/facebook-white.svg" alt="facebook"></a>
-            <a href="https://www.instagram.com/the_yorkshire_inn/"><img src="assets/images/icons/instagram-white.svg" alt="instagram"></a>
-            <a href="https://www.yelp.com/biz/the-yorkshire-inn-phelps"><img src="assets/images/icons/yelp-white.svg" alt="yelp"></a>
+            <a href="https://www.facebook.com/theyorkshireinn/"><img src="<?=ROOT?>/assets/images/icons/facebook-white.svg" alt="facebook"></a>
+            <a href="https://www.instagram.com/the_yorkshire_inn/"><img src="<?=ROOT?>/assets/images/icons/instagram-white.svg" alt="instagram"></a>
+            <a href="https://www.yelp.com/biz/the-yorkshire-inn-phelps"><img src="<?=ROOT?>/assets/images/icons/yelp-white.svg" alt="yelp"></a>
           </div>
         </div>
 

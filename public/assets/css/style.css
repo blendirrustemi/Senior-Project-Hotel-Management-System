@@ -469,7 +469,6 @@ rooms.html
     display: flex;
     margin-bottom: 64px;
     column-gap: 16px;
-    height: 300px;
 }
 
 .room-preview:first-child {
@@ -478,18 +477,19 @@ rooms.html
 
 .room-preview h3 {
     line-height: 100%;
-    margin-bottom: 4px
+    margin-bottom: 4px;
 }
 
 .room-preview-img {
     min-width: 50%;
     height: 100%;
+    height: 300px;
 }
 
 .room-preview-img img {
     display: block;
-    width: 100%;
     height: 100%;
+    width: 100%;
     object-fit: cover;
 }
 
