@@ -87,7 +87,7 @@
 
         <div class="room-preview">
 
-            <div class="room-preview-img">                
+            <div class="room-preview-img">
                 <img src="assets/images/blue-room/blue8.jpg" alt="Blue Room">
             </div>
 
@@ -112,8 +112,8 @@
 
         <div class="room-preview">
 
-            <div class="room-preview-img">                
-                <img src="https://placeimg.com/386/264" alt="Bolero Room">
+            <div class="room-preview-img">
+                <img src="assets/images/bolero-room/bolero3.webp" alt="Bolero Room">
             </div>
 
             <div class="room-preview-info">
@@ -136,8 +136,8 @@
 
         <div class="room-preview">
 
-            <div class="room-preview-img">                
-                <img src="https://placeimg.com/386/264" alt="Rose Suite">
+            <div class="room-preview-img">
+                <img src="assets/images/rose-suite/rose3.webp" alt="Rose Suite">
             </div>
 
             <div class="room-preview-info">
@@ -161,7 +161,7 @@
         <div class="room-preview">
 
             <div class="room-preview-img">                
-                <img src="https://placeimg.com/386/264" alt="Lodge Suite">
+                <img src="assets/images/lodge-suite/lodge9.webp" alt="Lodge Suite">
             </div>
 
             <div class="room-preview-info">
