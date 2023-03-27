@@ -117,7 +117,7 @@
 </head>
 
 <body class="menuBody">
-<a href="adminedit" class="back-button-menu">Back to Admin Edit Page</a>
+<a href="bookingedit" class="back-button-menu">Back to Admin Edit Page</a>
 
 
 <h1>Food Selection</h1>
