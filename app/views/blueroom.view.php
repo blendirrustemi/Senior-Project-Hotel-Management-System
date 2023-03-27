@@ -19,15 +19,15 @@
 
         <div class="contact-info">
             <div class="social-icons">
-                <a href="https://www.facebook.com/theyorkshireinn/"><img src="assets/images/icons/facebook.svg"
+                <a href="https://www.facebook.com/theyorkshireinn/"><img src="<?=ROOT?>/assets/images/icons/facebook.svg"
                         alt="facebook"></a>
-                <a href="https://www.instagram.com/the_yorkshire_inn/"><img src="assets/images/icons/instagram.svg"
+                <a href="https://www.instagram.com/the_yorkshire_inn/"><img src="<?=ROOT?>/assets/images/icons/instagram.svg"
                         alt="instagram"></a>
-                <a href="https://www.yelp.com/biz/the-yorkshire-inn-phelps"><img src="assets/images/icons/yelp.svg"
+                <a href="https://www.yelp.com/biz/the-yorkshire-inn-phelps"><img src="<?=ROOT?>/assets/images/icons/yelp.svg"
                         alt="yelp"></a>
             </div>
             <div class="phone-number">
-                <img class="phone-icon" src="assets/images/icons/phone.svg" alt="phone">
+                <img class="phone-icon" src="<?=ROOT?>/assets/images/icons/phone.svg" alt="phone">
                 <p>315-548-9675</p>
             </div>
         </div>
@@ -35,7 +35,7 @@
         <nav class="navbar">
             <div class="logo">
                 <a href="<?=ROOT?>">
-                    <img src="assets/images/icons/logo.svg" alt="The Yorkshire Inn">
+                    <img src="<?=ROOT?>/assets/images/icons/logo.svg" alt="The Yorkshire Inn">
                 </a>
             </div>
 
@@ -130,33 +130,45 @@
         <section class="room-features section-title">
             <h2>Room Features</h2>
             <div class="room-features-details">
-                <p>Maximum Occupancy: 2</p>
-                <p>Accessibility
-                    Wheelchair-width doorways
-                </p>
-                <p>Bathroom
-                    Bathrobes
-                    Hair dryer
-                    Private bathroom
-                    Shower
-                </p>
-                <p>Bedroom
-                    Air conditioning
-                    Unit renovated in July 2015
-                    Entertainment
-                    Cable TV
-                    TV
-                    Internet
-                    Free WiFi
-                </p>
-                <p>More
-                    Daily housekeeping
-                    Desk
-                    Iron/ironing board
-                    View - garden
-                    Outdoor space
-                    Balcony
-                </p>
+
+                <div class="room-features-details-item">
+                    <p>Maximum Occupancy: 2</p>
+                </div>
+
+                <div class="room-features-details-item">
+                    <p><span class="bold">Accessibi</span>lity</p>
+                    <p>Wheelchair-width doorways</p>
+                </div>
+
+                <div class="room-features-details-item">
+                    <p>Bathroom</p>
+                    <p>Bathrobes</p>
+                    <p>Hair dryer</p>
+                    <p>Private bathroom</p>
+                    <p>Shower</p>
+                </div>
+
+                <div class="room-features-details-item">
+                    <p>Bedroom</p>
+                    <p>Air conditioning</p>
+                    <p>Unit renovated in July 2015</p>
+                    <p>Entertainment</p>
+                    <p>Cable TV</p>
+                    <p>TV</p>
+                    <p>Internet</p>
+                    <p>Free WiFi</p>
+                </div>
+                
+                <div class="room-features-details-item">
+                    <p>More</p>
+                    <p>Daily housekeeping</p>
+                    <p>Desk</p>
+                    <p>Iron/ironing board</p>
+                    <p>View - garden</p>
+                    <p>Outdoor space</p>
+                    <p>Balcony</p>
+                </div>
+
             </div>
             <button><a href="rooms">BOOK NOW</a></button>
         </section>
@@ -170,11 +182,11 @@
                     <p class="footer-title">Follow the Yorkshire Inn</p>
                     <div class="footer-socials-icons">
                         <a href="https://www.facebook.com/theyorkshireinn/"><img
-                                src="assets/images/icons/facebook-white.svg" alt="facebook"></a>
+                                src="<?=ROOT?>/assets/images/icons/facebook-white.svg" alt="facebook"></a>
                         <a href="https://www.instagram.com/the_yorkshire_inn/"><img
-                                src="assets/images/icons/instagram-white.svg" alt="instagram"></a>
+                                src="<?=ROOT?>/assets/images/icons/instagram-white.svg" alt="instagram"></a>
                         <a href="https://www.yelp.com/biz/the-yorkshire-inn-phelps"><img
-                                src="assets/images/icons/yelp-white.svg" alt="yelp"></a>
+                                src="<?=ROOT?>/assets/images/icons/yelp-white.svg" alt="yelp"></a>
                     </div>
                 </div>
 

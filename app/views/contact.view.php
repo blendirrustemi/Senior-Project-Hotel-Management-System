@@ -19,15 +19,15 @@
 
         <div class="contact-info">
             <div class="social-icons">
-                <a href="https://www.facebook.com/theyorkshireinn/"><img src="assets/images/icons/facebook.svg"
+                <a href="https://www.facebook.com/theyorkshireinn/"><img src="<?=ROOT?>/assets/images/icons/facebook.svg"
                         alt="facebook"></a>
-                <a href="https://www.instagram.com/the_yorkshire_inn/"><img src="assets/images/icons/instagram.svg"
+                <a href="https://www.instagram.com/the_yorkshire_inn/"><img src="<?=ROOT?>/assets/images/icons/instagram.svg"
                         alt="instagram"></a>
-                <a href="https://www.yelp.com/biz/the-yorkshire-inn-phelps"><img src="assets/images/icons/yelp.svg"
+                <a href="https://www.yelp.com/biz/the-yorkshire-inn-phelps"><img src="<?=ROOT?>/assets/images/icons/yelp.svg"
                         alt="yelp"></a>
             </div>
             <div class="phone-number">
-                <img class="phone-icon" src="assets/images/icons/phone.svg" alt="phone">
+                <img class="phone-icon" src="<?=ROOT?>/assets/images/icons/phone.svg" alt="phone">
                 <p>315-548-9675</p>
             </div>
         </div>
@@ -35,7 +35,7 @@
         <nav class="navbar">
             <div class="logo">
                 <a href="<?=ROOT?>">
-                    <img src="assets/images/icons/logo.svg" alt="The Yorkshire Inn">
+                    <img src="<?=ROOT?>/assets/images/icons/logo.svg" alt="The Yorkshire Inn">
                 </a>
             </div>
 
@@ -67,12 +67,14 @@
 
             <p>Check-In Time 3pm-6pm <br>Check-Out 11 am <br>Cancelation Policy Below</p>
 
-        </section> 
+        </section>
 
         <section class="contact-map section-title">
             <h2>Map</h2>
             
-            /////////////////////////////////// placeholder ///////////////////////////////////
+            <div class="interactive-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5840.645209874591!2d-77.03953229265372!3d42.95040560508165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d0d1c750b4eefd%3A0xe3f4212639fd53b2!2sThe%20Yorkshire%20Inn!5e0!3m2!1sen!2shr!4v1679438647947!5m2!1sen!2shr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
 
         </section>
 
@@ -85,7 +87,7 @@
 
             <h2>Policies</h2>
             
-            <div class="cancellation-guidelines">
+            <div class="policies">
                 <p>CANCELLATION GUIDELINES</p>
                 <ul>
                     <li>A $15.00 cancellation fee for all cancellations results in a refund.</li>
@@ -100,7 +102,7 @@
                 </ul>
             </div>
 
-            <div class="additional-guest-fee">
+            <div class="policies">
                 <p>ADDITIONAL GUEST FEE</p>
                 <ul>
                     <li>Additional guests can be accommodated in the Rose Room and the Lodge.</li>
@@ -109,7 +111,7 @@
                 </ul>
             </div>
 
-            <div class="smoking">
+            <div class="policies">
                 <p>SMOKING</p>
                 <ul>
                     <li>There is no smoking within the Inn.</li>
@@ -127,11 +129,11 @@
                     <p class="footer-title">Follow the Yorkshire Inn</p>
                     <div class="footer-socials-icons">
                         <a href="https://www.facebook.com/theyorkshireinn/"><img
-                                src="assets/images/icons/facebook-white.svg" alt="facebook"></a>
+                                src="<?=ROOT?>/assets/images/icons/facebook-white.svg" alt="facebook"></a>
                         <a href="https://www.instagram.com/the_yorkshire_inn/"><img
-                                src="assets/images/icons/instagram-white.svg" alt="instagram"></a>
+                                src="<?=ROOT?>/assets/images/icons/instagram-white.svg" alt="instagram"></a>
                         <a href="https://www.yelp.com/biz/the-yorkshire-inn-phelps"><img
-                                src="assets/images/icons/yelp-white.svg" alt="yelp"></a>
+                                src="<?=ROOT?>/assets/images/icons/yelp-white.svg" alt="yelp"></a>
                     </div>
                 </div>
 

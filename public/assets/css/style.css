@@ -254,6 +254,15 @@ h3 {
     display: block;
 }
 
+.col a::before {    
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+}
+
 .rectangle {
     position: absolute;
     bottom: 0;
@@ -277,7 +286,7 @@ h3 {
     color: #fff;
     padding-top: 16px;
     padding-bottom: 24px;
-    margin-bottom: 32px;
+    margin-bottom: 48px;
 }
 
 .reviews p {
@@ -335,7 +344,7 @@ h3 {
     row-gap: 24px;
     justify-content: space-between;
     margin-top: 24px;
-    margin-bottom: 24px;
+    margin-bottom: 32px;
 }
 
 .reviews-selector {
@@ -345,21 +354,54 @@ h3 {
 }
 
 .before-you-book {
-    margin-bottom: 32px;
+    margin-bottom: 48px;
 }
 
 .before-you-book button {
     margin-top: 16px;
 }
 
-.call-to-action {
-    padding: 50px 0;
-    margin-bottom: 32px;
+.home-call-to-action {
+    margin-bottom: 48px;
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+}
+
+.home-call-to-action img {
+    width: 100%;
+    display: block;
+}
+
+.home-call-to-action-left {
+    min-width: 50%;
+}
+
+.home-call-to-action-right {
+    min-width: 50%;
+    background-color: #83032F;
+    color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-call-to-action-right button {
+    background-color: #fff;
+    color: #83032F;
+    margin-top: 12px;
+}
+
+.home-call-to-action-right-details h2 {
+    max-width: 30ch;
 }
 
 .newsletter {
     text-align: center;
-    margin-bottom: 32px;
+    margin-bottom: 48px;
 }
 
 .newsletter p {
@@ -435,11 +477,20 @@ rooms.html
 
 .room-preview h3 {
     line-height: 100%;
-    margin-bottom: 4px
+    margin-bottom: 4px;
+}
+
+.room-preview-img {
+    min-width: 50%;
+    height: 100%;
+    height: 300px;
 }
 
 .room-preview-img img {
     display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 
 .room-preview-price {
@@ -577,6 +628,15 @@ lodgesuite.html
     margin-top: 16px;
 }
 
+.room-features-details {
+    display: flex;
+    gap: 16px;
+}
+
+.room-features-details-item p:first-child {
+    font-weight: bold;
+}
+
 /*
 ----------------------------------------------------------------------------------------------------------------------------------------------------
 history.html
@@ -588,7 +648,7 @@ history.html
 }
 
 .history-text p {
-    margin-bottom: 1em;
+    margin-bottom: 16px;
 }
 
 .history-container {
@@ -604,6 +664,15 @@ fingerlakes
 .fingerlakes {
     margin-top: 48px;
     margin-bottom: 32px;
+}
+
+.fingerlakes img {
+    width: 100%;
+    margin-bottom: 8px;
+}
+
+.fingerlakes button {
+    margin-top: 16px;
 }
 
 /*
@@ -639,13 +708,19 @@ contact
     margin-bottom: 32px;
 }
 
+.contact p {
+    margin-top: 16px;
+}
+
 .contact-call-to-action {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     background-color: #83032F;
     padding: 48px 0;
     column-gap: 8px;
+    margin-bottom: 32px;
 }
 
 .contact-call-to-action h2 {
@@ -656,6 +731,22 @@ contact
 .contact-call-to-action button {
     background-color: #fff;
     color: #83032F;
+}
+
+.interactive-map {    
+    margin: 0 calc(-50vw + 50%);
+}
+
+.contact-policies {
+    margin-bottom: 32px;
+}
+
+.policies {
+    margin-bottom: 16px;
+}
+
+.policies li {
+    margin-left: 32px;
 }
 
 /*
