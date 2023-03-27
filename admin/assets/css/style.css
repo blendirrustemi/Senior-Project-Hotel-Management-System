@@ -1,0 +1,343 @@
+/*Got help from "https://www.codinglabweb.com/2021/05/admin-dashboard-in-html-css.html"*/
+/* Googlefont Poppins CDN Link */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.admin-sidebar{
+  width: 240px;
+  height: 100%;
+  background: #9b116d;
+  transition: all 0.5s ease;
+  position: fixed;
+}
+
+.admin-details{
+  display: flex;
+  height: 80px;
+  align-items: center;
+}
+
+.admin-sidebar.active{
+  width: 60px;
+}
+.admin-sidebar .admin-details .admin-name{
+  font-size: 24px;
+  color: #fff;
+  font-weight: 500;
+}
+.admin-sidebar .admin-links{
+  margin-top: 10px;
+}
+.admin-sidebar .admin-links li{
+  height: 50px;
+  position: relative;
+  list-style: none;
+}
+.admin-sidebar .admin-links li a{
+  width: 100%;
+  display: flex;
+  height: 100%;
+  align-items: center;
+  transition: all 0.4s ease;
+  text-decoration: none;
+
+}
+.admin-sidebar .admin-details i{
+  font-size: 28px;
+  font-weight: 500;
+  color: #fff;
+  min-width: 60px;
+  text-align: center
+}
+.admin-sidebar .admin-links li a.active,
+.admin-sidebar .admin-links li a:hover {
+  background-color: #51084c;
+}
+
+.admin-sidebar .admin-links li a .admin-link-name{
+  font-size: 15px;
+  font-weight: 400;
+  color: #fff;
+  white-space: nowrap;
+}
+.admin-sidebar .admin-links li i{
+  min-width: 60px;
+  text-align: center;
+  font-size: 18px;
+  color: #fff;
+}
+.admin-sidebar .admin-links .admin-logout{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.admin-sidebar.active ~ .admin-home-section{
+  width: calc(100% - 60px);
+  left: 60px;
+}
+.admin-home-section nav{
+  display: flex;
+  height: 80px;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+
+  align-items: center;
+  position: fixed;
+  left: 240px;
+  z-index: 100;
+  width: calc(100% - 240px);
+  padding: 0 20px;
+  transition: all 0.5s ease;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+
+}
+.admin-home-section{
+  position: relative;
+  background: #f5f5f5;
+  min-height: 100vh;
+  width: calc(100% - 240px);
+  left: 240px;
+  transition: all 0.5s ease;
+}
+.admin-sidebar.active ~ .admin-home-section nav{
+  left: 60px;
+  width: calc(100% - 60px);
+}
+
+nav .admin-sidebar-button i{
+  font-size: 35px;
+  margin-right: 10px;
+}
+.admin-home-section nav .admin-search-box{
+  position: relative;
+  height: 50px;
+  max-width: 550px;
+  width: 100%;
+  margin: 0 20px;
+}
+.admin-home-section nav .admin-sidebar-button{
+  display: flex;
+ 
+  font-size: 24px;
+  font-weight: 500;
+  align-items: center;
+}
+nav .admin-search-box input{
+  height: 100%;
+  width: 100%;
+  outline: none;
+  background: #F5F6FA;
+  border: 2px solid #EFEEF1;
+  font-size: 18px;
+  border-radius: 6px;
+  padding: 0 15px;
+}
+
+.admin-home-section nav .admin-details{
+  display: flex;
+  align-items: center;
+  background: #F5F6FA;
+  border: 2px solid #EFEEF1;
+  border-radius: 6px;
+  height: 50px;
+  min-width: 190px;
+  padding: 0 15px 0 2px;
+}
+nav .admin-details img{
+  height: 40px;
+  border-radius: 6px;
+  width: 40px;
+  object-fit: cover;
+}
+nav .admin-search-box .bx-search{
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  background: #51084c;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 4px;
+  line-height: 40px;
+  text-align: center;
+  color: #fff;
+  font-size: 22px;
+  transition: all 0.4 ease;
+}
+nav .admin-details .admin-name{
+  font-size: 15px;
+  font-weight: 500;
+  color: #333;
+  margin: 0 10px;
+  white-space: nowrap;
+}
+
+.admin-home-section .admin-home-content{
+  position: relative;
+  padding-top: 104px;
+}
+
+.admin-home-content .admin-card{
+  width: 90%;
+  background: #fff;
+  padding: 20px 30px;
+  margin: 0 20px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+nav .admin-details i{
+  font-size: 25px;
+  color: #333;
+}
+.title{
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.admin-home-content{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+ 
+/* Responsive Media Query */
+@media (max-width: 1240px) {
+  .admin-sidebar{
+    width: 60px;
+  }
+  
+  .admin-home-section{
+    width: calc(100% - 60px);
+    left: 60px;
+  }
+  .admin-sidebar.active ~ .admin-home-section{
+    left: 220px;
+    width: calc(100% - 220px);
+    overflow: hidden;
+  }
+  .admin-sidebar.active{
+    width: 220px;
+  }
+  .admin-home-section nav{
+    width: calc(100% - 60px);
+    left: 60px;
+  }
+  .admin-sidebar.active ~ .admin-home-section nav{
+    width: calc(100% - 220px);
+    left: 220px;
+  }
+}
+@media (max-width: 1150px) {
+  .admin-home-content{
+    flex-direction: column;
+  }
+  .admin-home-content{
+    width: 100%;
+    overflow-x: scroll;
+    margin-bottom: 30px;
+  }
+  .admin-home-content{
+    margin: 0;
+  }
+}
+
+@media (max-width: 700px) {
+  nav .admin-sidebar-button .admin-dashboard,
+  nav .admin-details .admin-name,
+  nav .admin-details i{
+    display: none;
+  }
+ 
+  .admin-home-content{
+    width: 560px;
+  }
+  .admin-home-section nav .admin-details{
+    height: 50px;
+    min-width: 40px;
+  }
+}
+
+  .admin-sidebar.active ~ .admin-home-section nav .admin-details{
+    display: none;
+  }
+
+@media (max-width: 400px) {
+  .admin-sidebar{
+    width: 0;
+  }
+  
+  .admin-home-section{
+    width: 100%;
+    left: 0;
+  }
+  .admin-sidebar.active{
+    width: 60px;
+  }
+  
+  .admin-home-section nav{
+    width: 100%;
+    left: 0;
+  }
+  .admin-sidebar.active ~ .admin-home-section{
+    left: 60px;
+    width: calc(100% - 60px);
+  }
+  .admin-sidebar.active ~ .admin-home-section nav{
+    left: 60px;
+    width: calc(100% - 60px);
+  }
+}
+
+.table-bordered {
+  border: 1px solid #ddd;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+  vertical-align: middle; 
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+th {
+  background-color: #51084c;
+  color: white;
+}
+
+.bxs-edit {
+  color: blue; 
+  font-size: 30px; 
+  margin-right: 10px; 
+}
+.bxs-user-minus{
+  color: red; 
+  font-size: 30px; 
+  margin-right: 10px;
+}
+.button-td {
+  display: flex;
+  align-items: center;
+}
+
+.button-td i {
+  float: left;
+  margin-right: 10px;
+}
+
+
