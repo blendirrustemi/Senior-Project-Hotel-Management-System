@@ -96,32 +96,31 @@
             <div class="lodge-suite-grid">
 
                 <div class="lodge-suite-grid-item">
-                    <img src="https://placeimg.com/488/488" alt="Lodge Suite">
+                    <img src="<?=ROOT?>/assets/images/lodge-suite/lodge1.webp" alt="Lodge Suite">
                 </div>
                 <div class="lodge-suite-grid-item">
-                    <img src="https://placeimg.com/488/488/landscape" alt="Lodge Suite">
+                    <img src="<?=ROOT?>/assets/images/lodge-suite/lodge2.webp" alt="Lodge Suite">
                 </div>
                 <div class="lodge-suite-grid-item">
-                    <img src="https://placeimg.com/488/488/art" alt="Lodge Suite">
+                    <img src="<?=ROOT?>/assets/images/lodge-suite/lodge3.webp" alt="Lodge Suite">
                 </div>
                 <div class="lodge-suite-grid-item">
-                    <img src="https://placeimg.com/488/488/animals" alt="Lodge Suite">
-                </div>
-
-                <div class="lodge-suite-grid-item">
-                    <img src="https://placeimg.com/488/488" alt="Lodge Suite">
+                    <img src="<?=ROOT?>/assets/images/lodge-suite/lodge4.webp" alt="Lodge Suite">
                 </div>
                 <div class="lodge-suite-grid-item">
-                    <img src="https://placeimg.com/488/488/landscape" alt="Lodge Suite">
+                    <img src="<?=ROOT?>/assets/images/lodge-suite/lodge5.webp" alt="Lodge Suite">
                 </div>
                 <div class="lodge-suite-grid-item">
-                    <img src="https://placeimg.com/488/488/art" alt="Lodge Suite">
+                    <img src="<?=ROOT?>/assets/images/lodge-suite/lodge6.webp" alt="Lodge Suite">
                 </div>
                 <div class="lodge-suite-grid-item">
-                    <img src="https://placeimg.com/488/488/animals" alt="Lodge Suite">
+                    <img src="<?=ROOT?>/assets/images/lodge-suite/lodge7.webp" alt="Lodge Suite">
                 </div>
                 <div class="lodge-suite-grid-item">
-                    <img src="https://placeimg.com/488/488" alt="Lodge Suite">
+                    <img src="<?=ROOT?>/assets/images/lodge-suite/lodge8.webp" alt="Lodge Suite">
+                </div>
+                <div class="lodge-suite-grid-item">
+                    <img src="<?=ROOT?>/assets/images/lodge-suite/lodge9.webp" alt="Lodge Suite">
                 </div>
 
             </div>
@@ -130,33 +129,39 @@
         <section class="room-features section-title">
             <h2>Room Features</h2>
             <div class="room-features-details">
-                <p>Maximum Occupancy: 2</p>
-                <p>Accessibility
-                    Wheelchair-width doorways
-                </p>
-                <p>Bathroom
-                    Bathrobes
-                    Hair dryer
-                    Private bathroom
-                    Shower
-                </p>
-                <p>Bedroom
-                    Air conditioning
-                    Unit renovated in July 2015
-                    Entertainment
-                    Cable TV
-                    TV
-                    Internet
-                    Free WiFi
-                </p>
-                <p>More
-                    Daily housekeeping
-                    Desk
-                    Iron/ironing board
-                    View - garden
-                    Outdoor space
-                    Balcony
-                </p>
+
+                <div class="room-features-details-item">
+                    <p>Bedroom</p>
+                    <p>Air conditioning</p>
+                    <p>Unit renovated in July 2015</p>
+                    <p>Entertainment</p>
+                    <p>Cable TV</p>
+                    <p>TV</p>
+                    <p>Internet</p>
+                    <p>Free WiFi</p>
+                </div>
+
+                <div class="room-features-details-item">
+                    <p>More</p>
+                    <p>Daily housekeeping</p>
+                    <p>Desk</p>
+                    <p>Iron/ironing board</p>
+                    <p>View - garden</p>
+                    <p>Outdoor space</p>
+                    <p>Balcony</p>
+                </div>
+
+                <div class="room-features-details-item">
+                    <p>Bathroom</p>
+                    <p>Bathrobes</p>
+                    <p>Hair dryer</p>
+                    <p>Private bathroom</p>
+                    <p>Shower</p>
+                </div>
+
+                <div class="room-features-details-item">
+                    <p>Maximum Occupancy: 6</p>
+                </div>
             </div>
             <button><a href="rooms">BOOK NOW</a></button>
         </section>

@@ -96,32 +96,31 @@
             <div class="blue-room-grid">
 
                 <div class="blue-room-grid-item">
-                    <img src="https://placeimg.com/488/488" alt="Blue Room">
+                    <img src="<?=ROOT?>/assets/images/blue-room/blue1.webp" alt="Blue Room">
                 </div>
                 <div class="blue-room-grid-item">
-                    <img src="https://placeimg.com/488/488/landscape" alt="Blue Room">
+                    <img src="<?=ROOT?>/assets/images/blue-room/blue2.webp" alt="Blue Room">
                 </div>
                 <div class="blue-room-grid-item">
-                    <img src="https://placeimg.com/488/488/art" alt="Blue Room">
+                    <img src="<?=ROOT?>/assets/images/blue-room/blue3.webp" alt="Blue Room">
                 </div>
                 <div class="blue-room-grid-item">
-                    <img src="https://placeimg.com/488/488/animals" alt="Blue Room">
-                </div>
-
-                <div class="blue-room-grid-item">
-                    <img src="https://placeimg.com/488/488" alt="Blue Room">
+                    <img src="<?=ROOT?>/assets/images/blue-room/blue4.webp" alt="Blue Room">
                 </div>
                 <div class="blue-room-grid-item">
-                    <img src="https://placeimg.com/488/488/landscape" alt="Blue Room">
+                    <img src="<?=ROOT?>/assets/images/blue-room/blue5.webp" alt="Blue Room">
                 </div>
                 <div class="blue-room-grid-item">
-                    <img src="https://placeimg.com/488/488/art" alt="Blue Room">
+                    <img src="<?=ROOT?>/assets/images/blue-room/blue1.webp" alt="Blue Room">
                 </div>
                 <div class="blue-room-grid-item">
-                    <img src="https://placeimg.com/488/488/animals" alt="Blue Room">
+                    <img src="<?=ROOT?>/assets/images/blue-room/blue7.webp" alt="Blue Room">
                 </div>
                 <div class="blue-room-grid-item">
-                    <img src="https://placeimg.com/488/488" alt="Blue Room">
+                    <img src="<?=ROOT?>/assets/images/blue-room/blue8.jpg" alt="Blue Room">
+                </div>
+                <div class="blue-room-grid-item">
+                    <img src="<?=ROOT?>/assets/images/blue-room/blue9.jpg" alt="Blue Room">
                 </div>
 
             </div>
@@ -130,23 +129,6 @@
         <section class="room-features section-title">
             <h2>Room Features</h2>
             <div class="room-features-details">
-
-                <div class="room-features-details-item">
-                    <p>Maximum Occupancy: 2</p>
-                </div>
-
-                <div class="room-features-details-item">
-                    <p><span class="bold">Accessibi</span>lity</p>
-                    <p>Wheelchair-width doorways</p>
-                </div>
-
-                <div class="room-features-details-item">
-                    <p>Bathroom</p>
-                    <p>Bathrobes</p>
-                    <p>Hair dryer</p>
-                    <p>Private bathroom</p>
-                    <p>Shower</p>
-                </div>
 
                 <div class="room-features-details-item">
                     <p>Bedroom</p>
@@ -158,7 +140,7 @@
                     <p>Internet</p>
                     <p>Free WiFi</p>
                 </div>
-                
+
                 <div class="room-features-details-item">
                     <p>More</p>
                     <p>Daily housekeeping</p>
@@ -169,6 +151,22 @@
                     <p>Balcony</p>
                 </div>
 
+                <div class="room-features-details-item">
+                    <p>Bathroom</p>
+                    <p>Bathrobes</p>
+                    <p>Hair dryer</p>
+                    <p>Private bathroom</p>
+                    <p>Shower</p>
+                </div>
+
+                <div class="room-features-details-item">
+                    <p>Accessibility</p>
+                    <p>Wheelchair-width doorways</p>
+                </div>
+
+                <div class="room-features-details-item">
+                    <p>Maximum Occupancy: 2</p>
+                </div>
             </div>
             <button><a href="rooms">BOOK NOW</a></button>
         </section>
