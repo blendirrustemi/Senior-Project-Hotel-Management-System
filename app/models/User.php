@@ -61,6 +61,11 @@
                 // Create statement
                 // Execute statement
                 // Return result (single object)
+                $query = "SELECT * FROM users WHERE id = $id";
+                $statement = $this->db->prepare($query);
+                $statement->execute();
+
+                return ($statement->fetch(PDO::FETCH_OBJ));
             } catch (Exception $e) {
                 // Handle exception
                 // (The code below is used to easily show the issue on the website in a block)
@@ -79,6 +84,11 @@
                 // Create statement
                 // Execute statement
                 // Return result (collection of objects - array)
+                $query = "SELECT * FROM users";
+                $statement = $this->db->prepare($query);
+                $statement->execute();
+
+                return ($statement->fetchAll(PDO::FETCH_OBJ));
             } catch (Exception $e) {
                 // Handle exception
                 // (The code below is used to easily show the issue on the website in a block)
@@ -96,6 +106,18 @@
                 // Create statement
                 // Execute statement
                 // Return result (number of rows affected - message will be printed on the screen as confirmation for the user being created)
+                $query = "INSERT INTO users (fullname, email, password, phone, isadmin) VALUES 
+                                                                  :fullname, :email, :password, :phone, :isadmin)";
+                $statement = $this->db->prepare($query);
+                $statement->execute([
+                    'fullname' => $user->getFullname(),
+                    'email' => $user->getEmail(),
+                    'password' => $user->getPassword(),
+                    'phone' => $user->getPhone(),
+                    'isadmin' => $user->getIsadmin()
+                ]);
+
+                return ($statement->rowCount());
             } catch (Exception $e) {
                 // Handle exception
                 // (The code below is used to easily show the issue on the website in a block)
@@ -113,6 +135,19 @@
                 // Create statement
                 // Execute statement
                 // Return result (number of rows affected - message will be printed on the screen as confirmation for the user being updated)
+                $query = "UPDATE users SET fullname = :fullname, email = :email, password = :password,
+                 phone = :phone, isadmin = :isadmin WHERE id = :id";
+                $statement = $this->db->prepare($query);
+                $statement->execute([
+                    'fullname' => $user->getFullname(),
+                    'email' => $user->getEmail(),
+                    'password' => $user->getPassword(),
+                    'phone' => $user->getPhone(),
+                    'isadmin' => $user->getIsadmin(),
+                    'id' => $user->getId()
+                ]);
+
+                return ($statement->rowCount());
             } catch (Exception $e) {
                 // Handle exception
                 // (The code below is used to easily show the issue on the website in a block)
@@ -130,6 +165,13 @@
                 // Create statement
                 // Execute statement
                 // Return result (number of rows affected - message will be printed on the screen as confirmation for the user being deleted)
+                $query = "DELETE FROM users WHERE id = :id";
+                $statement = $this->db->prepare($query);
+                $statement->execute([
+                    'id' => $id
+                ]);
+
+                return ($statement->rowCount());
             } catch (Exception $e) {
                 // Handle exception
                 // (The code below is used to easily show the issue on the website in a block)
