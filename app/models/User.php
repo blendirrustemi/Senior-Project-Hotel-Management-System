@@ -107,7 +107,7 @@
                 // Execute statement
                 // Return result (number of rows affected - message will be printed on the screen as confirmation for the user being created)
                 $query = "INSERT INTO users (fullname, email, password, phone, isadmin) VALUES 
-                                                                  :fullname, :email, :password, :phone, :isadmin)";
+                                                                  (:fullname, :email, :password, :phone, :isadmin)";
                 $statement = $this->db->prepare($query);
                 $statement->execute([
                     'fullname' => $user->getFullname(),
