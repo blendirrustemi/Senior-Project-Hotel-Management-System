@@ -1,3 +1,13 @@
+<?php
+    include('../controllers/Users.php');
+    
+    // We need to implement the select function here on the Users Admin page and fill out the table.
+    // I suggest we get a loop and loop through an array of objects from the result of the query.
+    // Go see Users.php for more info on the controller side of things.
+    
+    // PS: not sure where to implement the code on this page yet but the rest of the template should be good to use.
+?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
