@@ -1,5 +1,5 @@
 <?php
-    include('../controllers/Users.php');
+    //include('../controllers/Users.php');
     
     // We need to implement the select function here on the Users Admin page and fill out the table.
     // I suggest we get a loop and loop through an array of objects from the result of the query.

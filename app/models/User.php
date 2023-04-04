@@ -3,7 +3,7 @@
     // We then modify the data in the database and send a response back to the view through the controller.
     
     // Include Database.php to use the DB Connection variable
-    include('../core/Database.php');
+    //include('../core/Database.php');
     
     class User {
         
