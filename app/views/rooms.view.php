@@ -6,8 +6,6 @@ $conn = $test->connect();
 $query = "SELECT * FROM Rooms";
 $result = $test->query($query);
 
-//echo($result[0]);
-
 ?>
 
 

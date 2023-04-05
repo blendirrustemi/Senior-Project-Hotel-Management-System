@@ -1,3 +1,30 @@
+<?php
+
+if (isset($_POST['submit'])) {
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+
+    $db = new Database;
+    $con = $db->connect();
+
+    try {
+        $query = "SELECT * FROM customers WHERE username = '$username' AND password = '$password'";
+        $result = $db->query($query);
+
+        if (count($result) === 1) {
+//            echo "Login successful";
+            header("Location: admin");
+        } else {
+            echo "Invalid username or password";
+        }
+    } catch (PDOException $e) {
+        echo "Error: " . $e->getMessage();
+    }
+
+}
+
+?>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -8,17 +35,17 @@
 <body>
 
 <div class="container-login">
-    <form action="admin" method="POST">
+    <form action="" method="POST">
         <a href="home"><div class="brand-logo"></div></a>
         <div class="login-title">Please sign in</div>
         <div class="inputs">
             <label class="username-label">USERNAME</label>
-            <input type="username" placeholder="username" required/>
+            <input type="username" name="username" placeholder="username" required/>
             <label class="password-label">PASSWORD</label>
-            <input type="password" placeholder="password" required/>
+            <input type="password" name="password" placeholder="password" required/>
             <a href="forgotpassword">Forgot password?</a><br><br>
 
-            <button class="login-button" type="submit">LOGIN</button>
+            <button class="login-button" name="submit" type="submit">LOGIN</button>
         </div>
     </form>
 </div>

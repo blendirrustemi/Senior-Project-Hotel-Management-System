@@ -12,17 +12,22 @@ Class Database{
     public function query($query, $data = [])
     {
 
-        $con = $this->connect();
-        $stm = $con->prepare($query);
+        try {
+            $con = $this->connect();
+            $stm = $con->prepare($query);
 
-        $check = $stm->execute($data);
-        if($check)
-        {
-            $result = $stm->fetchAll(PDO::FETCH_OBJ);
-            if(is_array($result) && count($result))
+            $check = $stm->execute($data);
+            if($check)
             {
-                return $result;
+                $result = $stm->fetchAll(PDO::FETCH_OBJ);
+                if(is_array($result) && count($result) > 0)
+                {
+                    return $result;
+                } return $result;
             }
+
+        } catch (PDOException $e) {
+            echo "Error: " . $e->getMessage();
         }
 
         return false;
