@@ -521,6 +521,12 @@ rooms.html
     align-items: flex-start;
 }
 
+.search_rooms_btn.disabled {
+    opacity: 0.6; /* reduce the opacity to make the button appear greyed out */
+    cursor: not-allowed; /* prevent the button from receiving mouse events */
+}
+
+
 
 /*
 ----------------------------------------------------------------------------------------------------------------------------------------------------

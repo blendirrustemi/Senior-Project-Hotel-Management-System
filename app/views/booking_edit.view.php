@@ -9,7 +9,6 @@ $query = "SELECT * FROM Bookings, Customers WHERE
                                       Bookings.CustomerID = Customers.CustomerID AND Bookings.CustomerID = $customer_id";
 $result = $db->query($query);
 
-show($result);
 ?>
 
 <html lang="en">
