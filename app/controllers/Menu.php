@@ -1,7 +1,7 @@
 <?php
-    class Menu
+    class Menu extends Controller
     {
-        use Controller;
+//        use Controller;
         
         public function index()
         {

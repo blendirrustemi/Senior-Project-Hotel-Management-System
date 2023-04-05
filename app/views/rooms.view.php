@@ -1,3 +1,16 @@
+<?php
+
+$test = new Database;
+$conn = $test->connect();
+
+$query = "SELECT * FROM Rooms";
+$result = $test->query($query);
+
+//echo($result[0]);
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -92,7 +105,7 @@
             </div>
 
             <div class="room-preview-info">
-                <h3>Blue Room</h3>
+                <h3><?php echo($result[0]-> RoomName);?></h3>
                 <p class="room-preview-price">$215 - $230 / night</p>
                 <p class="room-preview-description">Sleeps 2 and features a wall of south facing windows overlooking the deck and back yard. 
                     The private bath features an oversized standup shower.

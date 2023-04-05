@@ -1,7 +1,7 @@
 <?php
-class _404
+class _404 extends Controller
 {
-    use Controller;
+//    use Controller;
 
     public function index()
     {

@@ -1,7 +1,7 @@
 <?php
-class Contact
+class Contact extends Controller
 {
-    use Controller;
+//    use Controller;
     public function index()
     {
 

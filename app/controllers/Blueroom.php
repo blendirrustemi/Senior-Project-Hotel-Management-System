@@ -1,7 +1,7 @@
 <?php
-class Blueroom
+class Blueroom extends Controller
 {
-    use Controller;
+//    use Controller;
     public function index()
     {
 

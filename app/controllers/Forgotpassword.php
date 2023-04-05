@@ -1,7 +1,7 @@
 <?php
-    class Forgotpassword
+    class Forgotpassword extends Controller
     {
-        use Controller;
+//        use Controller;
         public function index()
         {
             

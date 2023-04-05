@@ -1,7 +1,7 @@
 <?php
-class Rosesuite
+class Rosesuite extends Controller
 {
-    use Controller;
+//    use Controller;
     public function index()
     {
 

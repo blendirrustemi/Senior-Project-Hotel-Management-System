@@ -1,7 +1,7 @@
 <?php
-class Boleroroom
+class Boleroroom extends Controller
 {
-    use Controller;
+//    use Controller;
     public function index()
     {
 

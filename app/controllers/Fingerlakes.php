@@ -1,7 +1,7 @@
 <?php
-class Fingerlakes
+class Fingerlakes extends Controller
 {
-    use Controller;
+//    use Controller;
     public function index()
     {
 

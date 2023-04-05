@@ -1,7 +1,7 @@
 <?php
-class History
+class History extends Controller
 {
-    use Controller;
+//    use Controller;
     public function index()
     {
 

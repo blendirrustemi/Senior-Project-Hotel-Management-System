@@ -1,7 +1,7 @@
 <?php
-class Lodgesuite
+class Lodgesuite extends Controller
 {
-    use Controller;
+//    use Controller;
     public function index()
     {
 

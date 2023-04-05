@@ -1,7 +1,7 @@
 <?php
-class Gallery
+class Gallery extends Controller
 {
-    use Controller;
+//    use Controller;
     public function index()
     {
 

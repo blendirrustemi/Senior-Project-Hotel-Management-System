@@ -1,9 +1,9 @@
 <?php
     //include('../models/User.php');
     
-    class Users
+    class Users extends Controller
     {
-        use Controller;
+//        use Controller;
         
         public function index()
         {

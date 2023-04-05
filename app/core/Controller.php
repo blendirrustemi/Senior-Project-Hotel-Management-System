@@ -1,6 +1,6 @@
 <?php
 
-Trait Controller
+Class Controller
 {
 
     public function view($name)

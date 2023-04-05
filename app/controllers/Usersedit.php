@@ -1,7 +1,7 @@
 <?php
-    class Usersedit
+    class Usersedit extends Controller
     {
-        use Controller;
+//        use Controller;
         
         public function index()
         {

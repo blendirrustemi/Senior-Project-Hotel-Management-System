@@ -1,7 +1,7 @@
 <?php
-    class Admin
+    class Admin extends Controller
     {
-        use Controller;
+//        use Controller;
         
         public function index()
         {

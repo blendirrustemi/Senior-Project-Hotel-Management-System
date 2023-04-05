@@ -1,7 +1,7 @@
 <?php
-    class Bookingedit
+    class Bookingedit extends Controller
     {
-        use Controller;
+//        use Controller;
         
         public function index()
         {

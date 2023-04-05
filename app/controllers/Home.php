@@ -1,9 +1,13 @@
 <?php
-class Home
+class Home extends Controller
 {
-    use Controller;
+//    use Controller;
     public function index()
     {
+
+        $model = new Model;
+        $model->test();
+
 
         $this->view('home');
     }
