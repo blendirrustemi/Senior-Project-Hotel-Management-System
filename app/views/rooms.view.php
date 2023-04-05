@@ -79,7 +79,7 @@
                 <p>Guests</p>
 
                 <form>
-                    <input class="guests-number" type="number" placeholder="#">
+                    <input class="guests-number" type="number" placeholder="#" min=0 max=6>
                 </form>
 
             </div>
