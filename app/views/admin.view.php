@@ -1,3 +1,13 @@
+<?php
+
+$db = new Database();
+$con = $db->connect();
+
+$query = "SELECT * FROM Customers";
+$result = $db->query($query);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -66,15 +76,18 @@
                 </tr>
             </thead>
             <tbody>
+
+            <?php foreach($result as $row): ?>
                 
                 <tr>
-                    <td>1</td>
-                    <td>Daniel</td>
-                    <td>Craig</td>
-                    <td>Male</td>
-                    <td>926701908</td>
+                    <td><?=$row->CustomerID?></td>
+                    <td><?=$row->FirstName?></td>
+                    <td><?=$row->LastName?></td>
+                    <td><?=$row->Gender?></td>
+                    <td><?=$row->Phone?></td>
+
                     <td class = "button-td">
-                      <a href="bookingedit">
+                      <a href="bookingedit?id=<?=$row->CustomerID?>">
                         <i class="bx bxs-edit"></i>
                       </a>
                       <a href="#">
@@ -83,7 +96,8 @@
                       
                      </td>
                 </tr>
-                
+
+            <?php endforeach; ?>
                 
                     </div>
                 </div>
