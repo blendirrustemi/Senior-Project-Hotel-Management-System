@@ -119,7 +119,7 @@ $result = $db->query($query);
                     <img src="<?=ROOT?>/assets/images/icons/heat-grey.svg" alt="Icon">
                     <img src="<?=ROOT?>/assets/images/icons/bath-grey.svg" alt="Icon">
                 </div>
-                <button class="search_rooms_btn" <?php if (!$submit_btn){ echo "disabled"; }?> <?php echo "onclick=\"location.href='room?id=$row->RoomID';\""; ?>>BOOK NOW</button>
+                <button class="search_rooms_btn" <?php if (!$submit_btn){ echo "disabled"; }?> onclick="location.href='oneroom?id=<?php echo $row->RoomID ?>&arrive_date=<?php echo $arrive_date ?>&depart_date=<?=$depart_date?>'">BOOK NOW</button>
 
             </div>
         </div>
