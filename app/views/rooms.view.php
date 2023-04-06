@@ -34,7 +34,7 @@ $result = $db->query($query);
   <title>Rooms - The Yorkshire Inn</title>
 </head>
 
-<body>`
+<body>
 
   <header>
 
