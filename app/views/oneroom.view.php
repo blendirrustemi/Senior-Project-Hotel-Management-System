@@ -112,6 +112,8 @@ if (isset($_POST['submit'])){
 
     <input type="hidden" name="room_id" value="<?=$room_id?>">
     <input type="hidden" name="price_per_night" value="<?=$result->PricePerNight?>">
+    <input type="hidden" name="arrive_date" value="<?=$arrive_date?>">
+    <input type="hidden" name="depart_date" value="<?=$departure_date?>">
 
     <input type="submit" value="Submit" name="submit">
 
