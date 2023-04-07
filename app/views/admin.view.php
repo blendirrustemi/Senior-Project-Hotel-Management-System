@@ -6,6 +6,23 @@ $con = $db->connect();
 $query = "SELECT * FROM Customers";
 $result = $db->query($query);
 
+if (isset($_POST['del_user_btn'])){
+    $customer_id = $_POST['customer_id'];
+    $delete_user_query = "DELETE FROM Customers WHERE CustomerID = $customer_id";
+    $delete_booking_query = "DELETE FROM Bookings WHERE CustomerID = $customer_id";
+
+    $delete_user_result = $db->query($delete_user_query);
+    $delete_booking_result = $db->query($delete_booking_query);
+
+    echo "Successfully deleted user";
+}
+
+if (isset($_POST['search_btn'])){
+    $search_customer = $_POST['search_customer'];
+    $search_query = "SELECT * FROM Customers WHERE FirstName LIKE '%$search_customer%' OR LastName LIKE '%$search_customer%' or Phone LIKE '%$search_customer%'";
+    $result = $db->query($search_query);
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -51,10 +68,12 @@ $result = $db->query($query);
         <i class='bx bx-menu sidebarBtn'></i>
         <span class="admin-dashboard">Bookings</span>
       </div>
-      <div class="admin-search-box">
-        <input type="text" placeholder="Search...">
-        <i class='bx bx-search' ></i>
-      </div>
+      <form method="POST" action="">
+          <div class="admin-search-box">
+              <input type="text" name="search_customer" placeholder="Search...">
+              <button class='bx bx-search' name="search_btn" type="submit"></button>
+          </div>
+      </form>
      
     </nav>
 
@@ -86,15 +105,16 @@ $result = $db->query($query);
                     <td><?=$row->Gender?></td>
                     <td><?=$row->Phone?></td>
 
-                    <td class = "button-td">
-                      <a href="bookingedit?id=<?=$row->CustomerID?>">
-                        <i class="bx bxs-edit"></i>
-                      </a>
-                      <a href="#">
-                        <i class="bx bxs-user-minus"></i>
-                      </a>
-                      
-                     </td>
+                    <form action="" method="POST">
+                        <td class = "button-td">
+                            <a href="bookingedit?id=<?=$row->CustomerID?>">
+                                <i class="bx bxs-edit"></i>
+                            </a>
+                            <input type="hidden" name="customer_id" value="<?=$row->CustomerID?>">
+                            <button class="bx bxs-user-minus" name="del_user_btn" type="submit"></button>
+
+                        </td>
+                    </form>
                 </tr>
 
             <?php endforeach; ?>

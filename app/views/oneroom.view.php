@@ -3,16 +3,15 @@
 $db = new Database();
 $con = $db->connect();
 
-$room_id = $_GET['id'];
-$arrive_date = $_GET['arrive_date'];
-$departure_date = $_GET['depart_date'];
+$room_id = $_POST['room_id'];
+$arrive_date = $_POST['arrive_date'];
+$departure_date = $_POST['depart_date'];
 
 $query = "SELECT * FROM Rooms WHERE RoomID = $room_id";
 $result = $db->query($query);
 
 $result = $result[0];
 
-//
 
 if (isset($_POST['submit'])){
     // Customers Table:
@@ -30,8 +29,8 @@ if (isset($_POST['submit'])){
 
 // Bookings Table:
     $room_id = $_POST['room_id'];
-    $checkin = $_GET['arrive_date'];
-    $checkout = $_GET['depart_date'];
+    $checkin = $_POST['arrive_date'];
+    $checkout = $_POST['depart_date'];
     $adults = $_POST['adults'];
     $children = $_POST['children'];
     $special_requests = $_POST['special_requests'];

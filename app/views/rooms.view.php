@@ -116,7 +116,14 @@ $result = $db->query($query);
                     <img src="<?=ROOT?>/assets/images/icons/heat-grey.svg" alt="Icon">
                     <img src="<?=ROOT?>/assets/images/icons/bath-grey.svg" alt="Icon">
                 </div>
-                <button class="search_rooms_btn" <?php if (!$submit_btn){ echo "disabled"; }?> onclick="location.href='oneroom?id=<?php echo $row->RoomID ?>&arrive_date=<?php echo $arrive_date ?>&depart_date=<?=$depart_date?>'">BOOK NOW</button>
+
+                <form action="oneroom" method="POST">
+                    <input type="hidden" name="arrive_date" value="<?php echo $arrive_date ?>">
+                    <input type="hidden" name="depart_date" value="<?php echo $depart_date ?>">
+                    <input type="hidden" name="room_id" value="<?php echo $row->RoomID ?>">
+
+                    <button class="search_rooms_btn" <?php if (!$submit_btn){ echo "disabled"; }?>>BOOK NOW</button>
+                </form>
 
             </div>
         </div>
