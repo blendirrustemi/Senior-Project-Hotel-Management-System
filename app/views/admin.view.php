@@ -6,6 +6,8 @@ $con = $db->connect();
 $query = "SELECT * FROM Customers";
 $result = $db->query($query);
 
+$is_deleted = "";
+
 if (isset($_POST['del_user_btn'])){
     $customer_id = $_POST['customer_id'];
     $delete_user_query = "DELETE FROM Customers WHERE CustomerID = $customer_id";
@@ -14,13 +16,15 @@ if (isset($_POST['del_user_btn'])){
     $delete_user_result = $db->query($delete_user_query);
     $delete_booking_result = $db->query($delete_booking_query);
 
-    echo "Successfully deleted user";
+    header("Refresh:0");
 }
 
 if (isset($_POST['search_btn'])){
     $search_customer = $_POST['search_customer'];
-    $search_query = "SELECT * FROM Customers WHERE FirstName LIKE '%$search_customer%' OR LastName LIKE '%$search_customer%' or Phone LIKE '%$search_customer%'";
+    $search_query = "SELECT * FROM Customers WHERE FirstName LIKE '%$search_customer%' OR 
+                              LastName LIKE '%$search_customer%' or Phone LIKE '%$search_customer%'";
     $result = $db->query($search_query);
+
 }
 
 ?>
@@ -97,7 +101,7 @@ if (isset($_POST['search_btn'])){
             <tbody>
 
             <?php foreach($result as $row): ?>
-                
+
                 <tr>
                     <td><?=$row->CustomerID?></td>
                     <td><?=$row->FirstName?></td>
@@ -123,7 +127,7 @@ if (isset($_POST['search_btn'])){
                 </div>
             </tbody>
         </table>
-        
+
         </div>
         
       
