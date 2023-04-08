@@ -51,12 +51,6 @@ if (isset($_POST['search_btn'])){
             <span class="admin-link-name">Bookings</span>
           </a>
         </li>
-        <li>
-          <a href="users">
-            <i class='bx bxs-user-detail'></i>
-            <span class="admin-link-name">Users</span>
-          </a>
-        </li>
        
         <li class="admin-logout">
           <a href="login">
