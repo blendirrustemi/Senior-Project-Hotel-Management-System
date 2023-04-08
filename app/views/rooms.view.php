@@ -159,6 +159,22 @@ $result = $db->query($query);
 
   </div>
 
+<script>
+    const date = new Date();
+    const today = date.toISOString().substr(0, 10);
+    document.querySelector(".date-picker").value = today;
+    document.querySelector(".date-picker").min = today;
+    document.querySelector(".date-picker").addEventListener("change", function() {
+        document.querySelector(".departure").min = this.value;
+    });
+
+    const tomorrow = new Date(date);
+    tomorrow.setDate(tomorrow.getDate() + 1);
+    const tomorrowString = tomorrow.toISOString().substr(0, 10);
+    document.querySelector(".departure").value = tomorrowString;
+    document.querySelector(".departure").min = tomorrowString;
+
+</script>
 
 `</body>
 

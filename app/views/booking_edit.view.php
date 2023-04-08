@@ -106,9 +106,9 @@ if (isset($_POST['update_values'])) {
         <label for="people">Children:</label>
         <input type="number" id="children" name="children" required value="<?=$result[0]->Children?>"><br><br>
         <label for="entryDate">Entry Date:</label>
-        <input type="date" id="entryDate" name="arrive_date" required value="<?=$result[0]->CheckInDate?>"><br><br>
+        <input type="date" class=date-picker" id="entryDate" name="arrive_date" required value="<?=$result[0]->CheckInDate?>"><br><br>
         <label for="departureDate">Departure Date:</label>
-        <input type="date" id="departureDate" name="depart_date" required value="<?=$result[0]-> CheckOutDate?>"><br><br>
+        <input type="date" id="departureDate" class="departure" name="depart_date" required value="<?=$result[0]-> CheckOutDate?>"><br><br>
         <textarea class="special_requests" name="special_requests" cols="50" rows="15"><?=$result[0]->Requests?></textarea><br><br>
 
         <!--        <label for="time">Estimated Time Of Arrival:</label>-->
