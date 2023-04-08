@@ -9,13 +9,14 @@ if ($submit_btn) {
   $arrive_date = $_POST['arrive_date'];
   $depart_date = $_POST['depart_date'];
   $guest_num = $_POST['guest_num'];
+  $query = "SELECT * FROM Rooms where RoomID not in(SELECT RoomID from Bookings WHERE CheckInDate < '$depart_date' AND CheckOutDate > '$arrive_date')";
+  $result = $db->query($query);
 }
 
 
 
 
-$query = "SELECT * FROM Rooms where RoomID not in(SELECT RoomID from Bookings WHERE CheckInDate < '$depart_date' AND CheckOutDate > '$arrive_date')";
-$result = $db->query($query);
+
 
 ?>
 
