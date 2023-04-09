@@ -33,7 +33,7 @@ if (isset($_POST['update_values'])) {
     $depart_date = $_POST['depart_date'];
     $special_requests = $_POST['special_requests'];
 
-    $double_book_query = "SELECT * FROM Rooms where RoomID not in(SELECT RoomID from Bookings WHERE CheckInDate < '$depart_date' AND CheckOutDate > '$arrive_date')";
+    $double_book_query = "SELECT * FROM Rooms where RoomID not in(SELECT RoomID from Bookings WHERE CheckInDate < '$depart_date' AND CheckOutDate > '$arrive_date' AND NOT (RoomID = $room_id AND CustomerID = $customer_id))";
     $booking_result = $db->query($double_book_query);
 
     $rooms = array();
@@ -47,8 +47,8 @@ if (isset($_POST['update_values'])) {
     $new_room_id = $new_room[0]->RoomID;
 
 
-    if (($room_name != $room_result[0]->RoomName) or (!in_array($room_name, $rooms))) {
-            echo "$room_name is not available during those dates!";
+    if (!in_array($room_name, $rooms)) {
+        echo "Room $room_name is not available during those dates!";
     } else {
         $update_booking = "UPDATE Bookings SET RoomID = '$new_room_id', CheckInDate = '$arrive_date', CheckOutDate = '$depart_date', Adults = '$adults', Children = '$children', Requests = '$special_requests' WHERE CustomerID = '$customer_id'";
         $update_booking_result = $db->query($update_booking);
