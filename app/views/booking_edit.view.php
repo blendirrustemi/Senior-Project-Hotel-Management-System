@@ -47,7 +47,7 @@ if (isset($_POST['update_values'])) {
     $new_room_id = $new_room[0]->RoomID;
 
 
-    if (($room_name != $room_result[0]->RoomName) and (!in_array($room_name, $rooms))) {
+    if (($room_name != $room_result[0]->RoomName) or (!in_array($room_name, $rooms))) {
             echo "$room_name is not available during those dates!";
     } else {
         $update_booking = "UPDATE Bookings SET RoomID = '$new_room_id', CheckInDate = '$arrive_date', CheckOutDate = '$depart_date', Adults = '$adults', Children = '$children', Requests = '$special_requests' WHERE CustomerID = '$customer_id'";
