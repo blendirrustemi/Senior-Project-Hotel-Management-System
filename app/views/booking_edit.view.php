@@ -9,6 +9,9 @@ $query = "SELECT * FROM Bookings, Customers WHERE
                                       Bookings.CustomerID = Customers.CustomerID AND Bookings.CustomerID = $customer_id";
 $result = $db->query($query);
 
+$arrive_old_date = $result[0]->CheckInDate;
+$depart_old_date = $result[0]->CheckOutDate;
+
 $room_id = $result[0]->RoomID;
 
 $room_query = "SELECT * FROM Rooms WHERE RoomID = $room_id";
