@@ -16,6 +16,7 @@ $room_id = $result[0]->RoomID;
 
 $room_query = "SELECT * FROM Rooms WHERE RoomID = $room_id";
 $room_result = $db->query($room_query); // Could be optimised
+$room_price = $room_result[0]->PricePerNight;
 
 if (isset($_POST['update_values'])) {
     $name = $_POST['name'];
@@ -32,6 +33,8 @@ if (isset($_POST['update_values'])) {
     $arrive_date = $_POST['arrive_date'];
     $depart_date = $_POST['depart_date'];
     $special_requests = $_POST['special_requests'];
+
+    $total_price = $room_price * (floor(abs(strtotime($depart_date) - strtotime($arrive_date)) / (60 * 60 * 24)));
 
     $double_book_query = "SELECT * FROM Rooms where RoomID not in(SELECT RoomID from Bookings WHERE CheckInDate < '$depart_date' AND CheckOutDate > '$arrive_date' AND NOT (RoomID = $room_id AND CustomerID = $customer_id))";
     $booking_result = $db->query($double_book_query);
@@ -50,7 +53,7 @@ if (isset($_POST['update_values'])) {
     if (!in_array($room_name, $rooms)) {
         echo "Room $room_name is not available during those dates!";
     } else {
-        $update_booking = "UPDATE Bookings SET RoomID = '$new_room_id', CheckInDate = '$arrive_date', CheckOutDate = '$depart_date', Adults = '$adults', Children = '$children', Requests = '$special_requests' WHERE CustomerID = '$customer_id'";
+        $update_booking = "UPDATE Bookings SET RoomID = '$new_room_id', CheckInDate = '$arrive_date', CheckOutDate = '$depart_date', Adults = '$adults', Children = '$children', Requests = '$special_requests', NightsToStay = (SELECT DATEDIFF('$depart_date', '$arrive_date')), TotalPrice = $total_price WHERE CustomerID = '$customer_id'";
         $update_booking_result = $db->query($update_booking);
         header("Refresh:0");
     }
