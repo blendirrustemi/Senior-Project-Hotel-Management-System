@@ -1,31 +1,3 @@
-<?php
-
-$db = new Database;
-$conn = $db->connect();
-
-$submit_btn = isset($_POST['submit']);
-
-if ($submit_btn) {
-  $arrive_date = $_POST['arrive_date'];
-  $depart_date = $_POST['depart_date'];
-  $guest_num = $_POST['guest_num'];
-  
-  $query = "SELECT * FROM Rooms where RoomID not in(SELECT RoomID from Bookings WHERE CheckInDate < '$depart_date' AND CheckOutDate > '$arrive_date')";
-  $result = $db->query($query);
-
-} else {
-  $query = "SELECT * FROM Rooms";
-  $result = $db->query($query);
-}
-
-
-
-
-
-
-?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -85,68 +57,135 @@ if ($submit_btn) {
         <h2>Rooms</h2>
 
         <div class="calendar full-bleed">
-
+            
             <div class="arrival">
-
-                <form method="POST" action="">
                 <p>Arrival</p>
-                    <input class="date-picker" name="arrive_date" type="date" >
-                <p>Departure</p>
-                    <input class="date-picker departure" name="depart_date" type="date" >
-                <p>Guests</p>
-                    <select name="guest_num" id="" class="guests-number guests">
-                      <option value="">1</option>
-                      <option value="">2</option>
-                      <option value="">3</option>
-                      <option value="">4</option>
-                      <option value="">5</option>
-                      <option value="">6</option>
-                    </select>
 
-                    <button class="login-button" name="submit" type="submit">See Availabilty</button>
+                <form>
+                    <input class="date-picker" type="date">
                 </form>
 
             </div>
 
-        </div>
+            <div class="departure">
+                <p>Departure</p>
+                
+                <form>
+                    <input class="date-picker" type="date" >
+                </form>
 
-      <?php foreach ($result as $row): ?>
+            </div>
+            
+            <div class="guests">
+                <p>Guests</p>
+
+                <select name="" id="" class="guests-number">
+                    <option value="">1</option>
+                    <option value="">2</option>
+                    <option value="">3</option>
+                    <option value="">4</option>
+                    <option value="">5</option>
+                    <option value="">6</option>
+                </select>
+
+            </div>
+        </div>
 
         <div class="room-preview">
 
             <div class="room-preview-img">
-                <img src="<?=ROOT?><?=$row->Picture?>" alt="<?=$row->RoomName?>">
+                <img src="<?=ROOT?>/assets/images/blue-room/blue8.jpg" alt="Blue Room">
             </div>
 
             <div class="room-preview-info">
-                <h3><?=$row->RoomName?></h3>
-                <p class="room-preview-price">$<?=$row->PricePerNight?>/ night</p>
-                <p class="room-preview-description"><?=$row->Description?>
+                <h3>Blue Room</h3>
+                <p class="room-preview-price">$215 - $230 / night</p>
+                <p class="room-preview-description">Sleeps 2 and features a wall of south facing windows overlooking the deck and back yard. 
+                    The private bath features an oversized standup shower.
                 </p>
-
+                
                 <a href="blueroom" class="underline">More info</a>
                 <div class="room-preview-icons">
                     <img src="<?=ROOT?>/assets/images/icons/wifi-grey.svg" alt="Icon">
                     <img src="<?=ROOT?>/assets/images/icons/tv-grey.svg" alt="Icon">
-                    <?php if($row->RoomName == "Blue Room"): ?>
-                        <img src="<?=ROOT?>/assets/images/icons/wheelchair-grey.svg" alt="Icon">
-                    <?php endif; ?>
+                    <img src="<?=ROOT?>/assets/images/icons/wheelchair-grey.svg" alt="Icon">
                     <img src="<?=ROOT?>/assets/images/icons/heat-grey.svg" alt="Icon">
                     <img src="<?=ROOT?>/assets/images/icons/bath-grey.svg" alt="Icon">
                 </div>
-
-                <form action="oneroom" method="POST">
-                    <input type="hidden" name="arrive_date" value="<?php echo $arrive_date ?>">
-                    <input type="hidden" name="depart_date" value="<?php echo $depart_date ?>">
-                    <input type="hidden" name="room_id" value="<?php echo $row->RoomID ?>">
-
-                    <button class="search_rooms_btn" <?php if (!$submit_btn){ echo "disabled"; }?>>BOOK NOW</button>
-                </form>
-
+                <button><a href="#">BOOK NOW</a></button>
             </div>
         </div>
 
-      <?php endforeach; ?>
+        <div class="room-preview">
+
+            <div class="room-preview-img">
+                <img src="<?=ROOT?>/assets/images/bolero-room/bolero3.webp" alt="Bolero Room">
+            </div>
+
+            <div class="room-preview-info">
+                <h3>Bolero Room</h3>
+                <p class="room-preview-price">$215 - $230 / night</p>
+                <p class="room-preview-description">The Bolero is our premium, private, romantic suite. It sleeps two in style 
+                    and comfort with a king bed, a sitting area and an oversized bath featuring a two person jacuzzi tub and 
+                    individual shower.
+                </p>
+                <a href="boleroroom" class="underline">More info</a>
+                <div class="room-preview-icons">
+                    <img src="<?=ROOT?>/assets/images/icons/wifi-grey.svg" alt="Icon">
+                    <img src="<?=ROOT?>/assets/images/icons/tv-grey.svg" alt="Icon">
+                    <img src="<?=ROOT?>/assets/images/icons/heat-grey.svg" alt="Icon">
+                    <img src="<?=ROOT?>/assets/images/icons/bath-grey.svg" alt="Icon">
+                </div>                
+                <button><a href="#">BOOK NOW</a></button>
+            </div>
+        </div>
+
+        <div class="room-preview">
+
+            <div class="room-preview-img">
+                <img src="<?=ROOT?>/assets/images/rose-suite/rose3.webp" alt="Rose Suite">
+            </div>
+
+            <div class="room-preview-info">
+                <h3>Rose Suite</h3>
+                <p class="room-preview-price">$215 - $230 / night</p>
+                <p class="room-preview-description">The Rose Suite is a two bedroom suite that sleeps up to 6 individuals. 
+                    It also has large windows overlooking the deck and back yard. 
+                    It has a second door that opens directly onto the deck. The private bath features an oversized standup shower.
+                </p>
+                <a href="rosesuite" class="underline">More info</a>
+                <div class="room-preview-icons">
+                    <img src="<?=ROOT?>/assets/images/icons/wifi-grey.svg" alt="Icon">
+                    <img src="<?=ROOT?>/assets/images/icons/tv-grey.svg" alt="Icon">
+                    <img src="<?=ROOT?>/assets/images/icons/heat-grey.svg" alt="Icon">
+                    <img src="<?=ROOT?>/assets/images/icons/bath-grey.svg" alt="Icon">
+                </div>                
+                <button><a href="#">BOOK NOW</a></button>
+            </div>
+        </div>
+
+        <div class="room-preview">
+
+            <div class="room-preview-img">                
+                <img src="<?=ROOT?>/assets/images/lodge-suite/lodge9.webp" alt="Lodge Suite">
+            </div>
+
+            <div class="room-preview-info">
+                <h3>Lodge Suite</h3>
+                <p class="room-preview-price">$215 - $230 / night</p>
+                <p class="room-preview-description">The Lodge is a two bedroom suite that sleeps up to 6 individuals. 
+                    It is trimmed in rough sawn cedar and features a traditonal bath with a tub and shower combination.
+                </p>
+                <a href="lodgesuite" class="underline">More info</a>
+                <div class="room-preview-icons">
+                    <img src="<?=ROOT?>/assets/images/icons/wifi-grey.svg" alt="Icon">
+                    <img src="<?=ROOT?>/assets/images/icons/tv-grey.svg" alt="Icon">
+                    <img src="<?=ROOT?>/assets/images/icons/heat-grey.svg" alt="Icon">
+                    <img src="<?=ROOT?>/assets/images/icons/bath-grey.svg" alt="Icon">
+                </div>                
+                <button><a href="#">BOOK NOW</a></button>
+            </div>
+        </div>
 
     </section>
 
@@ -177,23 +216,7 @@ if ($submit_btn) {
 
   </div>
 
-<script>
-    const date = new Date();
-    const today = date.toISOString().substr(0, 10);
-    document.querySelector(".date-picker").value = today;
-    document.querySelector(".date-picker").min = today;
-    document.querySelector(".date-picker").addEventListener("change", function() {
-        document.querySelector(".departure").min = this.value;
-    });
 
-    const tomorrow = new Date(date);
-    tomorrow.setDate(tomorrow.getDate() + 1);
-    const tomorrowString = tomorrow.toISOString().substr(0, 10);
-    document.querySelector(".departure").value = tomorrowString;
-    document.querySelector(".departure").min = tomorrowString;
-
-</script>
-
-`</body>
+</body>
 
 </html>
