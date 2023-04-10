@@ -3,6 +3,14 @@
 $db = new Database();
 $con = $db->connect();
 
+session_start();
+
+$is_logged_in = $_SESSION['is_logged_in'];
+
+if (!$is_logged_in){
+    header("Location: login");
+}
+
 $query = "SELECT * FROM Customers";
 $result = $db->query($query);
 
@@ -53,7 +61,7 @@ if (isset($_POST['search_btn'])){
         </li>
        
         <li class="admin-logout">
-          <a href="login">
+          <a href="logout">
             <i class='bx bx-log-out'></i>
             <span class="admin-link-name">Log out</span>
           </a>

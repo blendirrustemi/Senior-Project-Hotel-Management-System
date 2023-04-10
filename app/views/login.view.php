@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 if (isset($_POST['submit'])) {
     $username = $_POST['username'];
     $password = $_POST['password'];
@@ -12,7 +14,7 @@ if (isset($_POST['submit'])) {
         $result = $db->query($query);
 
         if (count($result) === 1) {
-//            echo "Login successful";
+            $_SESSION['is_logged_in'] = true;
             header("Location: admin");
         } else {
             echo "Invalid username or password";
