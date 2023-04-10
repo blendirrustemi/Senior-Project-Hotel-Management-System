@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="<?=ROOT?>/assets/css/style.css">
     <script src="<?=ROOT?>/assets/js/script.js" defer></script>
+    <script src="<?=ROOT?>/assets/js/lightbox-plus-jquery.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto+Slab:wght@400;700&display=swap"
@@ -82,9 +83,14 @@
                 <div class="guests">
                     <p>Guests</p>
 
-                    <form>
-                        <input class="guests-number" type="number" placeholder="#">
-                    </form>
+                    <select name="" id="" class="guests-number">
+                        <option value="">1</option>
+                        <option value="">2</option>
+                        <option value="">3</option>
+                        <option value="">4</option>
+                        <option value="">5</option>
+                        <option value="">6</option>
+                    </select>
 
                 </div>
             </div>
@@ -97,20 +103,33 @@
             <div class="rose-suite-grid">
 
                 <div class="rose-suite-grid-item">
+                    <a href="<?=ROOT?>/assets/images/rose-suite/rose1.webp" data-lightbox="rose-suite">
                     <img src="<?=ROOT?>/assets/images/rose-suite/rose1.webp" alt="Rose Suite">
-                </div>
-                <div class="rose-suite-grid-item">
-                    <img src="<?=ROOT?>/assets/images/rose-suite/rose2.webp" alt="Rose Suite">
-                </div>
-                <div class="rose-suite-grid-item">
-                    <img src="<?=ROOT?>/assets/images/rose-suite/rose3.webp" alt="Rose Suite">
-                </div>
-                <div class="rose-suite-grid-item">
-                    <img src="<?=ROOT?>/assets/images/rose-suite/rose4.webp" alt="Rose Suite">
+                    </a>
                 </div>
 
                 <div class="rose-suite-grid-item">
+                    <a href="<?=ROOT?>/assets/images/rose-suite/rose2.webp" data-lightbox="rose-suite">
+                    <img src="<?=ROOT?>/assets/images/rose-suite/rose2.webp" alt="Rose Suite">
+                    </a>
+                </div>
+
+                <div class="rose-suite-grid-item">
+                    <a href="<?=ROOT?>/assets/images/rose-suite/rose3.webp" data-lightbox="rose-suite">
+                    <img src="<?=ROOT?>/assets/images/rose-suite/rose3.webp" alt="Rose Suite">
+                    </a>
+                </div>
+
+                <div class="rose-suite-grid-item">
+                    <a href="<?=ROOT?>/assets/images/rose-suite/rose4.webp" data-lightbox="rose-suite">
+                    <img src="<?=ROOT?>/assets/images/rose-suite/rose4.webp" alt="Rose Suite">
+                    </a>
+                </div>
+
+                <div class="rose-suite-grid-item">
+                    <a href="<?=ROOT?>/assets/images/rose-suite/rose5.webp" data-lightbox="rose-suite">
                     <img src="<?=ROOT?>/assets/images/rose-suite/rose5.webp" alt="Rose Suite">
+                    </a>
                 </div>
             </div>
         </section>

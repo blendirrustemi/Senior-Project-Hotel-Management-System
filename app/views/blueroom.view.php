@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="<?=ROOT?>/assets/css/style.css">
     <script src="<?=ROOT?>/assets/js/script.js" defer></script>
+    <script src="<?=ROOT?>/assets/js/lightbox-plus-jquery.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto+Slab:wght@400;700&display=swap"
@@ -82,9 +83,10 @@
                 <div class="guests">
                     <p>Guests</p>
 
-                    <form>
-                        <input class="guests-number" type="number" placeholder="#">
-                    </form>
+                    <select name="" id="" class="guests-number">
+                        <option value="">1</option>
+                        <option value="">2</option>
+                    </select>
 
                 </div>
             </div>
@@ -97,31 +99,57 @@
             <div class="blue-room-grid">
 
                 <div class="blue-room-grid-item">
+                    <a href="<?=ROOT?>/assets/images/blue-room/blue1.webp" data-lightbox="blue-room">
                     <img src="<?=ROOT?>/assets/images/blue-room/blue1.webp" alt="Blue Room">
+                    </a>
                 </div>
+                
                 <div class="blue-room-grid-item">
+                    <a href="<?=ROOT?>/assets/images/blue-room/blue2.webp" data-lightbox="blue-room">
                     <img src="<?=ROOT?>/assets/images/blue-room/blue2.webp" alt="Blue Room">
+                    </a>
                 </div>
+
                 <div class="blue-room-grid-item">
+                    <a href="<?=ROOT?>/assets/images/blue-room/blue3.webp" data-lightbox="blue-room">
                     <img src="<?=ROOT?>/assets/images/blue-room/blue3.webp" alt="Blue Room">
+                    </a>
                 </div>
+
                 <div class="blue-room-grid-item">
+                    <a href="<?=ROOT?>/assets/images/blue-room/blue4.webp" data-lightbox="blue-room">
                     <img src="<?=ROOT?>/assets/images/blue-room/blue4.webp" alt="Blue Room">
+                    </a>
                 </div>
+
                 <div class="blue-room-grid-item">
+                    <a href="<?=ROOT?>/assets/images/blue-room/blue5.webp" data-lightbox="blue-room">
                     <img src="<?=ROOT?>/assets/images/blue-room/blue5.webp" alt="Blue Room">
+                    </a>
                 </div>
+
                 <div class="blue-room-grid-item">
-                    <img src="<?=ROOT?>/assets/images/blue-room/blue1.webp" alt="Blue Room">
+                    <a href="<?=ROOT?>/assets/images/blue-room/blue6.webp" data-lightbox="blue-room">
+                    <img src="<?=ROOT?>/assets/images/blue-room/blue6.webp" alt="Blue Room">
+                    </a>
                 </div>
+
                 <div class="blue-room-grid-item">
+                    <a href="<?=ROOT?>/assets/images/blue-room/blue7.webp" data-lightbox="blue-room">
                     <img src="<?=ROOT?>/assets/images/blue-room/blue7.webp" alt="Blue Room">
+                    </a>
                 </div>
+
                 <div class="blue-room-grid-item">
+                    <a href="<?=ROOT?>/assets/images/blue-room/blue8.jpg" data-lightbox="blue-room">
                     <img src="<?=ROOT?>/assets/images/blue-room/blue8.jpg" alt="Blue Room">
+                    </a>
                 </div>
+
                 <div class="blue-room-grid-item">
+                    <a href="<?=ROOT?>/assets/images/blue-room/blue9.jpg" data-lightbox="blue-room">
                     <img src="<?=ROOT?>/assets/images/blue-room/blue9.jpg" alt="Blue Room">
+                    </a>
                 </div>
 
             </div>

@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="<?=ROOT?>/assets/css/style.css">
     <script src="<?=ROOT?>/assets/js/script.js" defer></script>
+    <script src="<?=ROOT?>/assets/js/lightbox-plus-jquery.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto+Slab:wght@400;700&display=swap"
@@ -57,62 +58,111 @@
 
     <div class="container">
 
-        <section class="gallery section-title">
+    <section class="gallery section-title">
             <h2>Gallery</h2>
 
             <div class="gallery-grid">
 
                 <div class="gallery-grid-item">
-                    <img src="<?=ROOT?>/assets/images/gallery/1.webp" alt="Photo">
-                </div>
-                <div class="gallery-grid-item">
-                    <img src="<?=ROOT?>/assets/images/gallery/2.webp" alt="Photo">
-                </div>
-                <div class="gallery-grid-item">
-                    <img src="<?=ROOT?>/assets/images/gallery/3.webp" alt="Photo">
-                </div>
-                <div class="gallery-grid-item">
-                    <img src="<?=ROOT?>/assets/images/gallery/4.webp" alt="Photo">
+                    <a href="<?=ROOT?>/assets/images/gallery/1.webp" data-lightbox="yorkshire">
+                        <img src="<?=ROOT?>/assets/images/gallery/1.webp" alt="Photo">
+                    </a>
                 </div>
 
                 <div class="gallery-grid-item">
+                    <a href="<?=ROOT?>/assets/images/gallery/2.webp" data-lightbox="yorkshire">
+                    <img src="<?=ROOT?>/assets/images/gallery/2.webp" alt="Photo">
+                    </a>
+                </div>
+
+                <div class="gallery-grid-item">
+                    <a href="<?=ROOT?>/assets/images/gallery/3.webp" data-lightbox="yorkshire">
+                    <img src="<?=ROOT?>/assets/images/gallery/3.webp" alt="Photo">
+                    </a>
+                </div>
+
+                <div class="gallery-grid-item">
+                    <a href="<?=ROOT?>/assets/images/gallery/4.webp" data-lightbox="yorkshire">
+                    <img src="<?=ROOT?>/assets/images/gallery/4.webp" alt="Photo">
+                    </a>
+                </div>
+
+                <div class="gallery-grid-item">
+                    <a href="<?=ROOT?>/assets/images/gallery/5.webp" data-lightbox="yorkshire">
                     <img src="<?=ROOT?>/assets/images/gallery/5.webp" alt="Photo">
+                    </a>
                 </div>
+
                 <div class="gallery-grid-item">
+                    <a href="<?=ROOT?>/assets/images/gallery/6.webp" data-lightbox="yorkshire">
                     <img src="<?=ROOT?>/assets/images/gallery/6.webp" alt="Photo">
+                    </a>
                 </div>
+
                 <div class="gallery-grid-item">
+                    <a href="<?=ROOT?>/assets/images/gallery/7.webp" data-lightbox="yorkshire">
                     <img src="<?=ROOT?>/assets/images/gallery/7.webp" alt="Photo">
+                    </a>
                 </div>
+
                 <div class="gallery-grid-item">
+                    <a href="<?=ROOT?>/assets/images/gallery/8.webp" data-lightbox="yorkshire">
                     <img src="<?=ROOT?>/assets/images/gallery/8.webp" alt="Photo">
+                    </a>
                 </div>
+
                 <div class="gallery-grid-item">
+                    <a href="<?=ROOT?>/assets/images/gallery/9.webp" data-lightbox="yorkshire">
                     <img src="<?=ROOT?>/assets/images/gallery/9.webp" alt="Photo">
+                    </a>
                 </div>
+                
                 <div class="gallery-grid-item">
+                    <a href="<?=ROOT?>/assets/images/gallery/10.webp" data-lightbox="yorkshire">
                     <img src="<?=ROOT?>/assets/images/gallery/10.webp" alt="Photo">
+                    </a>
                 </div>
+
                 <div class="gallery-grid-item">
+                    <a href="<?=ROOT?>/assets/images/gallery/11.webp" data-lightbox="yorkshire">
                     <img src="<?=ROOT?>/assets/images/gallery/11.webp" alt="Photo">
+                    </a>
                 </div>
+
                 <div class="gallery-grid-item">
+                    <a href="<?=ROOT?>/assets/images/gallery/12.webp" data-lightbox="yorkshire">
                     <img src="<?=ROOT?>/assets/images/gallery/12.webp" alt="Photo">
+                    </a>
                 </div>
+
                 <div class="gallery-grid-item">
+                    <a href="<?=ROOT?>/assets/images/gallery/13.webp" data-lightbox="yorkshire">
                     <img src="<?=ROOT?>/assets/images/gallery/13.webp" alt="Photo">
+                    </a>
                 </div>
+
                 <div class="gallery-grid-item">
+                    <a href="<?=ROOT?>/assets/images/gallery/14.webp" data-lightbox="yorkshire">
                     <img src="<?=ROOT?>/assets/images/gallery/14.webp" alt="Photo">
+                    </a>
                 </div>
+
                 <div class="gallery-grid-item">
+                    <a href="<?=ROOT?>/assets/images/gallery/15.webp" data-lightbox="yorkshire">
                     <img src="<?=ROOT?>/assets/images/gallery/15.webp" alt="Photo">
+                    </a>
                 </div>
+
                 <div class="gallery-grid-item">
+                    <a href="<?=ROOT?>/assets/images/gallery/16.webp" data-lightbox="yorkshire">
                     <img src="<?=ROOT?>/assets/images/gallery/16.webp" alt="Photo">
+                    </a>
                 </div>
+
                 <div class="gallery-grid-item">
+                    <a href="<?=ROOT?>/assets/images/gallery/17.webp" data-lightbox="yorkshire">
                     <img src="<?=ROOT?>/assets/images/gallery/17.webp" alt="Photo">
+                    </a>
                 </div>
 
             </div>
