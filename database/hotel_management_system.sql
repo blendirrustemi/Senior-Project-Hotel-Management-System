@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Apr 07, 2023 at 09:03 PM
+-- Generation Time: Apr 11, 2023 at 02:58 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -20,7 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Database: `hotel_management_system`
 --
-
+CREATE DATABASE IF NOT EXISTS hotel_management_system;
+USE hotel_management_system;
 -- --------------------------------------------------------
 
 --
@@ -45,7 +46,7 @@ CREATE TABLE `Bookings` (
 --
 
 INSERT INTO `Bookings` (`BookingID`, `CustomerID`, `RoomID`, `CheckInDate`, `CheckOutDate`, `Adults`, `Children`, `Requests`, `NightsToStay`, `TotalPrice`) VALUES
-(1, 2, 1, '2023-04-18', '2023-04-22', 2, 0, 'Non-smoking room a', 4, '920.00'),
+(1, 2, 2, '2023-04-08', '2023-04-13', 4, 2, 'Non-smoking room', 5, '1250.00'),
 (8, 17, 2, '2023-04-17', '2023-04-23', 2, 1, 'No windows operating system in my room!', 6, '1500.00'),
 (11, 20, 3, '2023-04-13', '2023-04-20', 2, 4, 'No apple in this shit!', 7, '1610.00');
 
@@ -90,6 +91,7 @@ CREATE TABLE `Rooms` (
   `RoomNumber` varchar(20) DEFAULT NULL,
   `RoomName` varchar(50) DEFAULT NULL,
   `Description` text DEFAULT NULL,
+  `Sleeps` int(11) NOT NULL,
   `Picture` text NOT NULL,
   `PricePerNight` decimal(10,2) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -98,11 +100,11 @@ CREATE TABLE `Rooms` (
 -- Dumping data for table `Rooms`
 --
 
-INSERT INTO `Rooms` (`RoomID`, `RoomNumber`, `RoomName`, `Description`, `Picture`, `PricePerNight`) VALUES
-(1, '101', 'Blue Room', 'Sleeps 2 and features a wall of south facing windows overlooking the deck and back yard. The private bath features an oversized standup shower.', '/assets/images/blue-room/blue8.jpg', '230.00'),
-(2, '201', 'Bolero Room', 'The Bolero is our premium, private, romantic suite. It sleeps two in style and comfort with a king bed, a sitting area and an oversized bath featuring a two person jacuzzi tub and individual shower.', '/assets/images/bolero-room/bolero3.webp', '250.00'),
-(3, '301', 'Rose Suite', 'The Rose Suite is a two bedroom suite that sleeps up to 6 individuals. It also has large windows overlooking the deck and back yard. It has a second door that opens directly onto the deck. The private bath features an oversized standup shower.', 'assets/images/rose-suite/rose3.webp', '230.00'),
-(4, '401', 'Lodge Suite', 'The Lodge is a two bedroom suite that sleeps up to 6 individuals. It is trimmed in rough sawn cedar and features a traditonal bath with a tub and shower combination.', '/assets/images/lodge-suite/lodge9.webp', '230.00');
+INSERT INTO `Rooms` (`RoomID`, `RoomNumber`, `RoomName`, `Description`, `Sleeps`, `Picture`, `PricePerNight`) VALUES
+(1, '101', 'Blue Room', 'Sleeps 2 and features a wall of south facing windows overlooking the deck and back yard. The private bath features an oversized standup shower.', 2, '/assets/images/blue-room/blue8.jpg', '230.00'),
+(2, '201', 'Bolero Room', 'The Bolero is our premium, private, romantic suite. It sleeps two in style and comfort with a king bed, a sitting area and an oversized bath featuring a two person jacuzzi tub and individual shower.', 2, '/assets/images/bolero-room/bolero3.webp', '250.00'),
+(3, '301', 'Rose Suite', 'The Rose Suite is a two bedroom suite that sleeps up to 6 individuals. It also has large windows overlooking the deck and back yard. It has a second door that opens directly onto the deck. The private bath features an oversized standup shower.', 6, 'assets/images/rose-suite/rose3.webp', '230.00'),
+(4, '401', 'Lodge Suite', 'The Lodge is a two bedroom suite that sleeps up to 6 individuals. It is trimmed in rough sawn cedar and features a traditonal bath with a tub and shower combination.', 6, '/assets/images/lodge-suite/lodge9.webp', '230.00');
 
 --
 -- Indexes for dumped tables
