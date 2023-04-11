@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="<?=ROOT?>/assets/css/style.css">
-    <script src="<?=ROOT?>/assets/js/script.js" defer></script>
+    <link rel="stylesheet" type="text/css" href="<?=ROOT?>assets/css/style.css">
+    <script src="<?=ROOT?>assets/js/script.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto+Slab:wght@400;700&display=swap"
@@ -20,12 +20,12 @@
 
     <div class="contact-info">
         <div class="social-icons">
-            <a href="https://www.facebook.com/theyorkshireinn/"><img src="<?=ROOT?>/assets/images/icons/facebook.svg" alt="facebook"></a>
-            <a href="https://www.instagram.com/the_yorkshire_inn/"><img src="<?=ROOT?>/assets/images/icons/instagram.svg" alt="instagram"></a>
-            <a href="https://www.yelp.com/biz/the-yorkshire-inn-phelps"><img src="<?=ROOT?>/assets/images/icons/yelp.svg" alt="yelp"></a>
+            <a href="https://www.facebook.com/theyorkshireinn/"><img src="<?=ROOT?>assets/images/icons/facebook.svg" alt="facebook"></a>
+            <a href="https://www.instagram.com/the_yorkshire_inn/"><img src="<?=ROOT?>assets/images/icons/instagram.svg" alt="instagram"></a>
+            <a href="https://www.yelp.com/biz/the-yorkshire-inn-phelps"><img src="<?=ROOT?>assets/images/icons/yelp.svg" alt="yelp"></a>
         </div>
         <div class="phone-number">
-            <img class="phone-icon" src="<?=ROOT?>/assets/images/icons/phone.svg" alt="phone">
+            <img class="phone-icon" src="<?=ROOT?>assets/images/icons/phone.svg" alt="phone">
             <p>315-548-9675</p>
         </div>
     </div>
@@ -33,7 +33,7 @@
     <nav class="navbar">
         <div class="logo">
             <a href="<?=ROOT?>">
-                <img src="<?=ROOT?>/assets/images/icons/logo.svg" alt="The Yorkshire Inn">
+                <img src="<?=ROOT?>assets/images/icons/logo.svg" alt="The Yorkshire Inn">
             </a>
         </div>
 
@@ -46,7 +46,7 @@
                 <li><a href="contact">Contact & Policies</a></li>
             </ul>
         </div>
-            <img src="<?=ROOT?>/assets/images/icons/menu.svg" alt="menu icon" class="menu-icon">
+            <img src="<?=ROOT?>assets/images/icons/menu.svg" alt="menu icon" class="menu-icon">
     </nav>
 
 </header>
@@ -59,7 +59,7 @@
             <h2>Stay with us in comfort at Yorkshire Inn</h2>
             <button><a href="rooms">BOOK NOW</a></button>
         </div>
-        <img src="<?=ROOT?>/assets/images/homepage/yorkshire.webp" alt="Yorkshire Inn">
+        <img src="<?=ROOT?>assets/images/homepage/yorkshire.webp" alt="Yorkshire Inn">
     </section>
 
     <section class="amenities section-title">
@@ -74,32 +74,32 @@
         <div class="amenities-icons">
 
             <div class="amenities-icon-box">
-                <img src="<?=ROOT?>/assets/images/icons/wifi.svg" alt="Icon">
+                <img src="<?=ROOT?>assets/images/icons/wifi.svg" alt="Icon">
                 <p>WiFi</p>
             </div>
 
             <div class="amenities-icon-box">
-                <img src="<?=ROOT?>/assets/images/icons/tv.svg" alt="Icon">
+                <img src="<?=ROOT?>assets/images/icons/tv.svg" alt="Icon">
                 <p>TV</p>
             </div>
 
             <div class="amenities-icon-box">
-                <img src="<?=ROOT?>/assets/images/icons/wheelchair.svg" alt="Icon">
+                <img src="<?=ROOT?>assets/images/icons/wheelchair.svg" alt="Icon">
                 <p>Accesibility</p>
             </div>
 
             <div class="amenities-icon-box">
-                <img src="<?=ROOT?>/assets/images/icons/heat.svg" alt="Icon">
+                <img src="<?=ROOT?>assets/images/icons/heat.svg" alt="Icon">
                 <p>Heating</p>
             </div>
 
             <div class="amenities-icon-box">
-                <img src="<?=ROOT?>/assets/images/icons/bath.svg" alt="Icon">
+                <img src="<?=ROOT?>assets/images/icons/bath.svg" alt="Icon">
                 <p>Bathroom</p>
             </div>
 
             <div class="amenities-icon-box">
-                <img src="<?=ROOT?>/assets/images/icons/eco.svg" alt="Icon">
+                <img src="<?=ROOT?>assets/images/icons/eco.svg" alt="Icon">
                 <p>Eco-friendly</p>
             </div>
 
@@ -113,24 +113,24 @@
         <div class="available-rooms-image-container">
             <div class="row">
                 <div class="col">
-                    <img src="<?=ROOT?>/assets/images/homepage/home-blue-room.png">
+                    <img src="<?=ROOT?>assets/images/homepage/home-blue-room.png">
                     <div class="rectangle"><h3>Blue Room</h3></div>
                     <a href="blueroom"></a>
                 </div>
                 <div class="col">
-                    <img src="<?=ROOT?>/assets/images/homepage/home-bolero-room.png">
+                    <img src="<?=ROOT?>assets/images/homepage/home-bolero-room.png">
                     <div class="rectangle"><h3>Bolero Room</h3></div>
                     <a href="boleroroom"></a>
                 </div>
             </div>
             <div class="row">
                 <div class="col">
-                    <img src="<?=ROOT?>/assets/images/homepage/home-rose-suite.png">
+                    <img src="<?=ROOT?>assets/images/homepage/home-rose-suite.png">
                     <div class="rectangle"><h3>Rose Suite</h3></div>
                     <a href="rosesuite"></a>
                 </div>
                 <div class="col">
-                    <img src="<?=ROOT?>/assets/images/homepage/home-lodge-suite.png">
+                    <img src="<?=ROOT?>assets/images/homepage/home-lodge-suite.png">
                     <div class="rectangle"><h3>Lodge Suite</h3></div>
                     <a href="lodgesuite"></a>
                 </div>
@@ -152,21 +152,21 @@
         <h2>Reviews</h2>
         <p class="bold">97% RECOMMEND</p>
         <div class="stars">
-            <img src="<?=ROOT?>/assets/images/icons/star.svg" alt="star">
-            <img src="<?=ROOT?>/assets/images/icons/star.svg" alt="star">
-            <img src="<?=ROOT?>/assets/images/icons/star.svg" alt="star">
-            <img src="<?=ROOT?>/assets/images/icons/star.svg" alt="star">
+            <img src="<?=ROOT?>assets/images/icons/star.svg" alt="star">
+            <img src="<?=ROOT?>assets/images/icons/star.svg" alt="star">
+            <img src="<?=ROOT?>assets/images/icons/star.svg" alt="star">
+            <img src="<?=ROOT?>assets/images/icons/star.svg" alt="star">
         </div>
 
         <div class="reviews-container">
             <div class="review-box">
                 <div class="review-box-top">
-                    <img src="<?=ROOT?>/assets/images/homepage/review-1.png" alt="review">
+                    <img src="<?=ROOT?>assets/images/homepage/review-1.png" alt="review">
                     <p>"A wonderful stay for
                         my family!"</p>
                 </div>
                 <div class="review-box-bottom">
-                    <a href="https://www.facebook.com/theyorkshireinn"><img src="<?=ROOT?>/assets/images/icons/facebook-red.svg" alt="facebook"></a>
+                    <a href="https://www.facebook.com/theyorkshireinn"><img src="<?=ROOT?>assets/images/icons/facebook-red.svg" alt="facebook"></a>
                     <p class="bold">Dave Ries</p>
                     <p>7/18/2022</p>
                 </div>
@@ -174,11 +174,11 @@
 
             <div class="review-box">
                 <div class="review-box-top">
-                    <img src="<?=ROOT?>/assets/images/homepage/review-2.png" alt="review">
+                    <img src="<?=ROOT?>assets/images/homepage/review-2.png" alt="review">
                     <p>"I had a very enjoyable stay here. Clean and comfy rooms!"</p>
                 </div>
                 <div class="review-box-bottom">
-                    <a href="https://www.facebook.com/theyorkshireinn"><img src="<?=ROOT?>/assets/images/icons/facebook-red.svg" alt="facebook"></a>
+                    <a href="https://www.facebook.com/theyorkshireinn"><img src="<?=ROOT?>assets/images/icons/facebook-red.svg" alt="facebook"></a>
                     <p class="bold">Gay E. Canough</p>
                     <p>7/17/2022</p>
                 </div>
@@ -186,11 +186,11 @@
 
             <div class="review-box">
                 <div class="review-box-top">
-                    <img src="<?=ROOT?>/assets/images/homepage/review-3.png" alt="review">
+                    <img src="<?=ROOT?>assets/images/homepage/review-3.png" alt="review">
                     <p>"Very peaceful and quiet with comfortable rooms"</p>
                 </div>
                 <div class="review-box-bottom">
-                    <a href="https://www.facebook.com/theyorkshireinn"><img src="<?=ROOT?>/assets/images/icons/facebook-red.svg" alt="facebook"></a>
+                    <a href="https://www.facebook.com/theyorkshireinn"><img src="<?=ROOT?>assets/images/icons/facebook-red.svg" alt="facebook"></a>
                     <p class="bold">Cheryl Ives MacNeil</p>
                     <p>7/6/2022</p>
                 </div>
@@ -218,7 +218,7 @@
 
     <section class="home-call-to-action section-title">
         <div class="home-call-to-action-left">
-            <img src="<?=ROOT?>/assets/images/homepage/food.webp" alt="food">
+            <img src="<?=ROOT?>assets/images/homepage/food.webp" alt="food">
         </div>
 
         <div class="home-call-to-action-right">
@@ -247,9 +247,9 @@
             <div class="footer-socials">
                 <p class="footer-title">Follow the Yorkshire Inn</p>
                 <div class="footer-socials-icons">
-                    <a href="https://www.facebook.com/theyorkshireinn/"><img src="<?=ROOT?>/assets/images/icons/facebook-white.svg" alt="facebook"></a>
-                    <a href="https://www.instagram.com/the_yorkshire_inn/"><img src="<?=ROOT?>/assets/images/icons/instagram-white.svg" alt="instagram"></a>
-                    <a href="https://www.yelp.com/biz/the-yorkshire-inn-phelps"><img src="<?=ROOT?>/assets/images/icons/yelp-white.svg" alt="yelp"></a>
+                    <a href="https://www.facebook.com/theyorkshireinn/"><img src="<?=ROOT?>assets/images/icons/facebook-white.svg" alt="facebook"></a>
+                    <a href="https://www.instagram.com/the_yorkshire_inn/"><img src="<?=ROOT?>assets/images/icons/instagram-white.svg" alt="instagram"></a>
+                    <a href="https://www.yelp.com/biz/the-yorkshire-inn-phelps"><img src="<?=ROOT?>assets/images/icons/yelp-white.svg" alt="yelp"></a>
                 </div>
             </div>
 

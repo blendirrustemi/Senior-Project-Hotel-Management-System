@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="<?=ROOT?>/assets/css/style.css">
-    <script src="<?=ROOT?>/assets/js/script.js" defer></script>
-    <script src="<?=ROOT?>/assets/js/lightbox-plus-jquery.js" defer></script>
+    <link rel="stylesheet" href="<?=ROOT?>assets/css/style.css">
+    <script src="<?=ROOT?>assets/js/script.js" defer></script>
+    <script src="<?=ROOT?>assets/js/lightbox-plus-jquery.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto+Slab:wght@400;700&display=swap"
@@ -21,15 +21,15 @@
 
         <div class="contact-info">
             <div class="social-icons">
-                <a href="https://www.facebook.com/theyorkshireinn/"><img src="<?=ROOT?>/assets/images/icons/facebook.svg"
+                <a href="https://www.facebook.com/theyorkshireinn/"><img src="<?=ROOT?>assets/images/icons/facebook.svg"
                         alt="facebook"></a>
-                <a href="https://www.instagram.com/the_yorkshire_inn/"><img src="<?=ROOT?>/assets/images/icons/instagram.svg"
+                <a href="https://www.instagram.com/the_yorkshire_inn/"><img src="<?=ROOT?>assets/images/icons/instagram.svg"
                         alt="instagram"></a>
-                <a href="https://www.yelp.com/biz/the-yorkshire-inn-phelps"><img src="<?=ROOT?>/assets/images/icons/yelp.svg"
+                <a href="https://www.yelp.com/biz/the-yorkshire-inn-phelps"><img src="<?=ROOT?>assets/images/icons/yelp.svg"
                         alt="yelp"></a>
             </div>
             <div class="phone-number">
-                <img class="phone-icon" src="<?=ROOT?>/assets/images/icons/phone.svg" alt="phone">
+                <img class="phone-icon" src="<?=ROOT?>assets/images/icons/phone.svg" alt="phone">
                 <p>315-548-9675</p>
             </div>
         </div>
@@ -37,7 +37,7 @@
         <nav class="navbar">
             <div class="logo">
                 <a href="<?=ROOT?>">
-                    <img src="<?=ROOT?>/assets/images/icons/logo.svg" alt="The Yorkshire Inn">
+                    <img src="<?=ROOT?>assets/images/icons/logo.svg" alt="The Yorkshire Inn">
                 </a>
             </div>
 
@@ -50,7 +50,7 @@
                     <li><a href="contact">Contact & Policies</a></li>
                 </ul>
             </div>
-            <img src="<?=ROOT?>/assets/images/icons/menu.svg" alt="menu icon" class="menu-icon">
+            <img src="<?=ROOT?>assets/images/icons/menu.svg" alt="menu icon" class="menu-icon">
         </nav>
 
     </header>
@@ -71,32 +71,32 @@
             <h2>Photos</h2>
             <div class="rose-suite-grid">
                 <div class="rose-suite-grid-item">
-                        <a href="<?=ROOT?>/assets/images/rose-suite/rose1.webp" data-lightbox="rose-suite">
-                        <img src="<?=ROOT?>/assets/images/rose-suite/rose1.webp" alt="Rose Suite">
+                        <a href="<?=ROOT?>assets/images/rose-suite/rose1.webp" data-lightbox="rose-suite">
+                        <img src="<?=ROOT?>assets/images/rose-suite/rose1.webp" alt="Rose Suite">
                         </a>
                     </div>
 
                     <div class="rose-suite-grid-item">
-                        <a href="<?=ROOT?>/assets/images/rose-suite/rose2.webp" data-lightbox="rose-suite">
-                        <img src="<?=ROOT?>/assets/images/rose-suite/rose2.webp" alt="Rose Suite">
+                        <a href="<?=ROOT?>assets/images/rose-suite/rose2.webp" data-lightbox="rose-suite">
+                        <img src="<?=ROOT?>assets/images/rose-suite/rose2.webp" alt="Rose Suite">
                         </a>
                     </div>
 
                     <div class="rose-suite-grid-item">
-                        <a href="<?=ROOT?>/assets/images/rose-suite/rose3.webp" data-lightbox="rose-suite">
-                        <img src="<?=ROOT?>/assets/images/rose-suite/rose3.webp" alt="Rose Suite">
+                        <a href="<?=ROOT?>assets/images/rose-suite/rose3.webp" data-lightbox="rose-suite">
+                        <img src="<?=ROOT?>assets/images/rose-suite/rose3.webp" alt="Rose Suite">
                         </a>
                     </div>
 
                     <div class="rose-suite-grid-item">
-                        <a href="<?=ROOT?>/assets/images/rose-suite/rose4.webp" data-lightbox="rose-suite">
-                        <img src="<?=ROOT?>/assets/images/rose-suite/rose4.webp" alt="Rose Suite">
+                        <a href="<?=ROOT?>assets/images/rose-suite/rose4.webp" data-lightbox="rose-suite">
+                        <img src="<?=ROOT?>assets/images/rose-suite/rose4.webp" alt="Rose Suite">
                         </a>
                     </div>
 
                     <div class="rose-suite-grid-item">
-                        <a href="<?=ROOT?>/assets/images/rose-suite/rose5.webp" data-lightbox="rose-suite">
-                        <img src="<?=ROOT?>/assets/images/rose-suite/rose5.webp" alt="Rose Suite">
+                        <a href="<?=ROOT?>assets/images/rose-suite/rose5.webp" data-lightbox="rose-suite">
+                        <img src="<?=ROOT?>assets/images/rose-suite/rose5.webp" alt="Rose Suite">
                         </a>
                     </div>
                 </div>
@@ -151,11 +151,11 @@
                     <p class="footer-title">Follow the Yorkshire Inn</p>
                     <div class="footer-socials-icons">
                         <a href="https://www.facebook.com/theyorkshireinn/"><img
-                                src="<?=ROOT?>/assets/images/icons/facebook-white.svg" alt="facebook"></a>
+                                src="<?=ROOT?>assets/images/icons/facebook-white.svg" alt="facebook"></a>
                         <a href="https://www.instagram.com/the_yorkshire_inn/"><img
-                                src="<?=ROOT?>/assets/images/icons/instagram-white.svg" alt="instagram"></a>
+                                src="<?=ROOT?>assets/images/icons/instagram-white.svg" alt="instagram"></a>
                         <a href="https://www.yelp.com/biz/the-yorkshire-inn-phelps"><img
-                                src="<?=ROOT?>/assets/images/icons/yelp-white.svg" alt="yelp"></a>
+                                src="<?=ROOT?>assets/images/icons/yelp-white.svg" alt="yelp"></a>
                     </div>
                 </div>
 

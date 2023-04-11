@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="<?=ROOT?>/assets/css/style.css">
-    <script src="<?=ROOT?>/assets/js/script.js" defer></script>
+    <link rel="stylesheet" href="<?=ROOT?>assets/css/style.css">
+    <script src="<?=ROOT?>assets/js/script.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto+Slab:wght@400;700&display=swap"
@@ -20,15 +20,15 @@
 
         <div class="contact-info">
             <div class="social-icons">
-                <a href="https://www.facebook.com/theyorkshireinn/"><img src="<?=ROOT?>/assets/images/icons/facebook.svg"
+                <a href="https://www.facebook.com/theyorkshireinn/"><img src="<?=ROOT?>assets/images/icons/facebook.svg"
                         alt="facebook"></a>
-                <a href="https://www.instagram.com/the_yorkshire_inn/"><img src="<?=ROOT?>/assets/images/icons/instagram.svg"
+                <a href="https://www.instagram.com/the_yorkshire_inn/"><img src="<?=ROOT?>assets/images/icons/instagram.svg"
                         alt="instagram"></a>
-                <a href="https://www.yelp.com/biz/the-yorkshire-inn-phelps"><img src="<?=ROOT?>/assets/images/icons/yelp.svg"
+                <a href="https://www.yelp.com/biz/the-yorkshire-inn-phelps"><img src="<?=ROOT?>assets/images/icons/yelp.svg"
                         alt="yelp"></a>
             </div>
             <div class="phone-number">
-                <img class="phone-icon" src="<?=ROOT?>/assets/images/icons/phone.svg" alt="phone">
+                <img class="phone-icon" src="<?=ROOT?>assets/images/icons/phone.svg" alt="phone">
                 <p>315-548-9675</p>
             </div>
         </div>
@@ -36,7 +36,7 @@
         <nav class="navbar">
             <div class="logo">
                 <a href="<?=ROOT?>">
-                    <img src="<?=ROOT?>/assets/images/icons/logo.svg" alt="The Yorkshire Inn">
+                    <img src="<?=ROOT?>assets/images/icons/logo.svg" alt="The Yorkshire Inn">
                 </a>
             </div>
 
@@ -49,7 +49,7 @@
                     <li><a href="contact">Contact & Policies</a></li>
                 </ul>
             </div>
-            <img src="<?=ROOT?>/assets/images/icons/menu.svg" alt="menu icon" class="menu-icon">
+            <img src="<?=ROOT?>assets/images/icons/menu.svg" alt="menu icon" class="menu-icon">
         </nav>
 
     </header>
@@ -59,7 +59,7 @@
 
         <section class="fingerlakes section-title">
             <h2>Fingerlakes</h2>
-            <img src="<?=ROOT?>/assets/images/fingerlakes/fingerlakes.webp" alt="Fingerlakes">
+            <img src="<?=ROOT?>assets/images/fingerlakes/fingerlakes.webp" alt="Fingerlakes">
             <p>The Finger Lakes Region is known for many artisan vineyards, particularly its world-renowned Rieslings.
                 The region also boasts an impressive list of craft breweries, distilleries, and hard-cider producers.
                 New York, by the way, is one of the largest apple-growing states in the country, second only to the
@@ -80,11 +80,11 @@
                     <p class="footer-title">Follow the Yorkshire Inn</p>
                     <div class="footer-socials-icons">
                         <a href="https://www.facebook.com/theyorkshireinn/"><img
-                                src="<?=ROOT?>/assets/images/icons/facebook-white.svg" alt="facebook"></a>
+                                src="<?=ROOT?>assets/images/icons/facebook-white.svg" alt="facebook"></a>
                         <a href="https://www.instagram.com/the_yorkshire_inn/"><img
-                                src="<?=ROOT?>/assets/images/icons/instagram-white.svg" alt="instagram"></a>
+                                src="<?=ROOT?>assets/images/icons/instagram-white.svg" alt="instagram"></a>
                         <a href="https://www.yelp.com/biz/the-yorkshire-inn-phelps"><img
-                                src="<?=ROOT?>/assets/images/icons/yelp-white.svg" alt="yelp"></a>
+                                src="<?=ROOT?>assets/images/icons/yelp-white.svg" alt="yelp"></a>
                     </div>
                 </div>
 
