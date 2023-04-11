@@ -5,11 +5,23 @@ $conn = $db->connect();
 
 $submit_btn = isset($_POST['submit']);
 
-$arrive_date = $_POST['arrive_date'];
-$depart_date = $_POST['depart_date'];
+if ($submit_btn) {
+  $arrive_date = $_POST['arrive_date'];
+  $depart_date = $_POST['depart_date'];
+  $guest_num = $_POST['guest_num'];
+  
+  $query = "SELECT * FROM Rooms where RoomID not in(SELECT RoomID from Bookings WHERE CheckInDate < '$depart_date' AND CheckOutDate > '$arrive_date')";
+  $result = $db->query($query);
 
-$query = "SELECT * FROM Rooms where RoomID not in(SELECT RoomID from Bookings WHERE CheckInDate < '$depart_date' AND CheckOutDate > '$arrive_date')";
-$result = $db->query($query);
+} else {
+  $query = "SELECT * FROM Rooms";
+  $result = $db->query($query);
+}
+
+
+
+
+
 
 ?>
 
@@ -22,6 +34,7 @@ $result = $db->query($query);
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="<?=ROOT?>/assets/css/style.css">
+  <script src="<?=ROOT?>/assets/js/script.js" defer></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto+Slab:wght@400;700&display=swap"
@@ -61,7 +74,7 @@ $result = $db->query($query);
           <li><a href="contact">Contact & Policies</a></li>
         </ul>
       </div>
-
+      <img src="<?=ROOT?>/assets/images/icons/menu.svg" alt="menu icon" class="menu-icon">
     </nav>
 
   </header>

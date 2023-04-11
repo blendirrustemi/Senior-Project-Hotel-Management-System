@@ -86,7 +86,6 @@ header {
 .navbar-links li {
     display: inline-block;
     margin-right: 50px;
-    height: 36px;
     line-height: 36px;
 }
 
@@ -101,12 +100,12 @@ header {
     color: #000;
 }
 
-.account {
-    height: 36px;
-    width: 36px;
-    background-image: url(../images/icons/account.svg);
-    background-repeat: no-repeat;
-    background-position: center;
+.menu-icon {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    cursor: pointer;
 }
 
 .container {
@@ -205,28 +204,14 @@ h3 {
     align-items: center;
 }
 
+.amenities-icon-box img {
+    width: 4vw;
+}
+
+
 .available-rooms {
     margin-bottom: 32px;
 }
-
-/*
-.available-rooms-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: 20px;
-}
-
-.available-rooms-grid-item {
-    position: relative;
-    height: 488px;
-    width: 488px;
-}
-
-.available-rooms-grid-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-} */
 
 .available-rooms-image-container {
     display: flex;
@@ -469,6 +454,15 @@ rooms.html
     width: 64px;
 }
 
+.guests select {    
+    border: 2.5px solid #CFCFCF;
+    border-radius: 5px;
+    padding: 8px 0;
+    padding-left: 10px;
+    font-size: 16px;
+    color: #565453;
+}
+
 .room-preview {
     display: flex;
     margin-bottom: 64px;
@@ -546,7 +540,6 @@ blueroom.html
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
     gap: 10px;
-
 }
 
 .blue-room-grid-item img {
@@ -640,6 +633,7 @@ lodgesuite.html
 
 .room-features-details {
     display: flex;
+    flex-wrap: wrap;
     gap: 40px;
 }
 
@@ -697,10 +691,9 @@ gallery
 
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(3, 1fr);
     gap: 10px;
-
 }
 
 .gallery-grid-item img {
@@ -809,7 +802,106 @@ footer {
 media queries
 ----------------------------------------------------------------------------------------------------------------------------------------------------
 */
+@media only screen and (max-width: 1340px) {
+    html, body {
+        margin: 0;
+    }
+
+    .container {
+        margin-top: 64px;
+    }
+
+    .navbar .logo {
+        position: absolute;
+        top: 40px;
+        left: 40px;
+    }
+
+    .navbar {
+        z-index: 100;
+    }
+
+    .logo {
+        z-index: 100;
+    }
+
+    .contact-info {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        background-color: rgb(255, 255, 255);
+        width: 100%;
+        margin-left: -100%;
+        margin-bottom: 48px;
+        transition: all 0.5s ease;
+        z-index: 101;
+    }
+
+    .menu-icon {
+        display: block;
+        z-index: 100;
+    }
+
+    .navbar-links {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 0;
+        left: 0;
+        position: absolute;
+        background-color: rgb(255, 255, 255);
+        width: 100%;
+        height: 100vh;
+        margin-left: -100%;
+        transition: all 0.5s ease;
+    }
+
+    .navbar-links ul {
+        flex-direction: column;
+    }
+
+    .navbar-links a {
+        font-size: 1.4em;
+    }
+
+    .navbar-links li {
+        margin: 15px 0;
+    }
+
+    .navbar-links.mobile-menu {
+        margin-left: 0;
+    }
+
+    .contact-info.mobile-menu {
+        margin-left: 0;
+    }
+
+    .social-icons a {
+        margin-right: 16px;
+    }
+
+    /* .footer-container {
+        flex-direction: column;
+    } */
+
+    .amenities-icon-box img {
+        width: 6vw;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
 @media only screen and (max-width: 1100px) {
+    html, body {
+        margin: 0 auto;
+        width: 90%;
+    }
 
     .row {
         flex-direction: column;
@@ -833,15 +925,131 @@ media queries
         font-weight: bold;
     }
 
+    .home-call-to-action {
+        flex-direction: column;
+    }
+
+    .home-call-to-action-left {
+        height: 300px;
+    }
+
+    .home-call-to-action-right {
+        height: 300px;
+    }
+
+    .home-call-to-action-right-details {
+        max-width: 90%;
+    }
+
+    .home-call-to-action img {
+        object-fit: cover;
+        height: 100%;
+        width: 100%;
+    }
+    
+    .room-preview {
+        flex-direction: column;
+        row-gap: 16px;
+    }
+
+    .blue-room-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .bolero-room-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .rose-suite-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .lodge-suite-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
 }
 
-@media only screen and (max-width: 900px) {
-    html, body {
+@media only screen and (max-width: 975px) {
+    .section-title h2 {
+        margin-bottom: 16px;
+    }
+
+    .newsletter input {
+        margin-bottom: 24px;
+        max-width: 100%;
+    }
+
+    .history-container {
+        flex-direction: column-reverse;
+    }
+
+    .history-image {
         margin: 0 auto;
-        width: 90%;
+    }
+
+    .history-text {
+        margin-top: 16px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .room-features-details {
+        gap: 20px;
     }
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 800px) {
+
+    .amenities-icon-box img {
+    }
+}
+
+@media only screen and (max-width: 650px) {
+
+    body {
+        width: 100%;
+    }
+
+    .calendar {
+        flex-wrap: wrap;
+        row-gap: 8px;
+    }
+
+    .blue-room-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .bolero-room-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .rose-suite-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .lodge-suite-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }    
+
+    .footer-container {
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 24px;
+    }
+
+    .footer-contact {
+        align-items: center;
+    }
+
+    .copyright {
+        text-align: center;
+    }
 
 }
