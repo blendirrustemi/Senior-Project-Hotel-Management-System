@@ -58,7 +58,7 @@
 
     <div class="container">
 
-    <section class="gallery section-title">
+        <section class="gallery section-title">
             <h2>Gallery</h2>
 
             <div class="gallery-grid">
