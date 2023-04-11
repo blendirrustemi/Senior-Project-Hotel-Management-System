@@ -102,10 +102,10 @@ if (isset($_POST['submit'])){
     <input type="date" id="checkout" name="checkout" required value="<?=$departure_date?>" disabled><br>
 
     <label for="adults">Number of adults:</label>
-    <input type="number" id="adults" name="adults" min="1" max="10" required><br>
+    <input type="number" id="guest_adult" name="adults" min="1" max="6" required><br>
 
     <label for="children">Number of children:</label>
-    <input type="number" id="children" name="children" min="0" max="5" required><br>
+    <input type="number" id="guest_children" name="children" min="0" max="6" required><br>
 
     <label for="special-requests">Special requests:</label>
     <textarea id="special-requests" name="special_requests" rows="4" cols="30"></textarea><br>
@@ -118,6 +118,17 @@ if (isset($_POST['submit'])){
     <input type="submit" value="Submit" name="submit">
 
 </form>
+
+<script>
+    // Guest number validation (adults + children <= 6)
+    const guest_adult = document.getElementById('guest_adult');
+    const guest_children = document.getElementById('guest_children');
+
+    guest_adult.addEventListener('change', function() {
+        guest_children.max = 6 - guest_adult.value;
+    });
+
+</script>
 
 </body>
 

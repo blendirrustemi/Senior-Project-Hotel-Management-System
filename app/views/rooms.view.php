@@ -7,8 +7,6 @@ $submit_btn = isset($_POST['submit']);
 
 $arrive_date = $_POST['arrive_date'];
 $depart_date = $_POST['depart_date'];
-$guest_num = $_POST['guest_num'];
-
 
 $query = "SELECT * FROM Rooms where RoomID not in(SELECT RoomID from Bookings WHERE CheckInDate < '$depart_date' AND CheckOutDate > '$arrive_date')";
 $result = $db->query($query);
@@ -82,8 +80,6 @@ $result = $db->query($query);
                     <input class="date-picker" name="arrive_date" type="date" >
                 <p>Departure</p>
                     <input class="date-picker departure" name="depart_date" type="date" >
-                <p>Guests</p>
-                    <input class="guests-number guests" type="number" name="guest_num" placeholder="#" min=0 max=6>
 
                     <button class="login-button" name="submit" type="submit">Search Rooms</button>
                 </form>
