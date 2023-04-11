@@ -126,12 +126,12 @@
             <div class="row">
                 <div class="col">
                     <img src="<?=ROOT?>/assets/images/homepage/home-rose-suite.png">
-                    <div class="rectangle"><h3>Rose Room</h3></div>
+                    <div class="rectangle"><h3>Rose Suite</h3></div>
                     <a href="rosesuite"></a>
                 </div>
                 <div class="col">
                     <img src="<?=ROOT?>/assets/images/homepage/home-lodge-suite.png">
-                    <div class="rectangle"><h3>Lodge Room</h3></div>
+                    <div class="rectangle"><h3>Lodge Suite</h3></div>
                     <a href="lodgesuite"></a>
                 </div>
             </div>

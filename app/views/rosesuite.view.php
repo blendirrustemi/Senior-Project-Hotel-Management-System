@@ -61,32 +61,6 @@
 
             <div class="calendar full-bleed">
 
-                <div class="arrival">
-                    <p>Arrival</p>
-
-                    <form>
-                        <input class="date-picker" type="date" >
-                    </form>
-
-                </div>
-
-                <div class="departure">
-                    <p>Departure</p>
-
-                    <form>
-                        <input class="date-picker" type="date" >
-                    </form>
-
-                </div>
-
-                <div class="guests">
-                    <p>Guests</p>
-
-                    <form>
-                        <input class="guests-number" type="number" placeholder="#">
-                    </form>
-
-                </div>
             </div>
 
 

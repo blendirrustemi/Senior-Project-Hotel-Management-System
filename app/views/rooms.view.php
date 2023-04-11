@@ -10,18 +10,13 @@ if ($submit_btn) {
   $depart_date = $_POST['depart_date'];
   $guest_num = $_POST['guest_num'];
   
-  $query = "SELECT * FROM Rooms where RoomID not in(SELECT RoomID from Bookings WHERE CheckInDate < '$depart_date' AND CheckOutDate > '$arrive_date')";
+  $query = "SELECT * FROM Rooms where RoomID not in(SELECT RoomID from Bookings WHERE CheckInDate < '$depart_date' AND CheckOutDate > '$arrive_date') and Sleeps >= '$guest_num'";
   $result = $db->query($query);
 
 } else {
   $query = "SELECT * FROM Rooms";
   $result = $db->query($query);
 }
-
-
-
-
-
 
 ?>
 
@@ -93,6 +88,16 @@ if ($submit_btn) {
                     <input class="date-picker" name="arrive_date" type="date" >
                 <p>Departure</p>
                     <input class="date-picker departure" name="depart_date" type="date" >
+
+                <p>Guests</p>
+                    <select name="guest_num" id="guest_num">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                    </select>
 
                     <button class="login-button" name="submit" type="submit">Search Rooms</button>
                 </form>
