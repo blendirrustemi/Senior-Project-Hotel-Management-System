@@ -93,8 +93,6 @@ if ($submit_btn) {
                     <input class="date-picker" name="arrive_date" type="date" >
                 <p>Departure</p>
                     <input class="date-picker departure" name="depart_date" type="date" >
-                <p>Guests</p>
-                    <input class="guests-number guests" type="number" name="guest_num" placeholder="#" min=0 max=6>
 
                     <button class="login-button" name="submit" type="submit">Search Rooms</button>
                 </form>
