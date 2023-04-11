@@ -1,6 +1,6 @@
 <?php
     /**Session starts regardless on what page you are on**/
-    session_start();
+//    session_start();
     
     require "../app/core/init.php";
     
