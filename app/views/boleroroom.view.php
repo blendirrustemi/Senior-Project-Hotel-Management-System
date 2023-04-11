@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="<?=ROOT?>/assets/css/style.css">
     <script src="<?=ROOT?>/assets/js/script.js" defer></script>
+    <script src="<?=ROOT?>/assets/js/lightbox-plus-jquery.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto+Slab:wght@400;700&display=swap"
@@ -71,13 +72,19 @@
             <div class="bolero-room-grid">
 
                 <div class="bolero-room-grid-item">
+                    <a href="<?=ROOT?>/assets/images/bolero-room/bolero1.webp" data-lightbox="bolero-room">
                     <img src="<?=ROOT?>/assets/images/bolero-room/bolero1.webp" alt="Bolero Room">
+                    </a>
                 </div>
                 <div class="bolero-room-grid-item">
+                    <a href="<?=ROOT?>/assets/images/bolero-room/bolero2.webp" data-lightbox="bolero-room">
                     <img src="<?=ROOT?>/assets/images/bolero-room/bolero2.webp" alt="Bolero Room">
+                    </a>
                 </div>
                 <div class="bolero-room-grid-item">
+                    <a href="<?=ROOT?>/assets/images/bolero-room/bolero3.webp" data-lightbox="bolero-room">
                     <img src="<?=ROOT?>/assets/images/bolero-room/bolero3.webp" alt="Bolero Room">
+                    </a>
                 </div>
             </div>
         </section>

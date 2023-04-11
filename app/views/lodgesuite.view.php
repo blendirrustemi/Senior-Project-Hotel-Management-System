@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="<?=ROOT?>/assets/css/style.css">
     <script src="<?=ROOT?>/assets/js/script.js" defer></script>
+    <script src="<?=ROOT?>/assets/js/lightbox-plus-jquery.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto+Slab:wght@400;700&display=swap"
@@ -71,32 +72,58 @@
             <h2>Photos</h2>
             <div class="lodge-suite-grid">
 
-                <div class="lodge-suite-grid-item">
+            <div class="lodge-suite-grid-item">
+                    <a href="<?=ROOT?>/assets/images/lodge-suite/lodge1.webp" data-lightbox="lodge-suite">
                     <img src="<?=ROOT?>/assets/images/lodge-suite/lodge1.webp" alt="Lodge Suite">
+                    </a>
                 </div>
+
                 <div class="lodge-suite-grid-item">
+                    <a href="<?=ROOT?>/assets/images/lodge-suite/lodge2.webp" data-lightbox="lodge-suite">
                     <img src="<?=ROOT?>/assets/images/lodge-suite/lodge2.webp" alt="Lodge Suite">
+                    </a>
                 </div>
+
                 <div class="lodge-suite-grid-item">
+                    <a href="<?=ROOT?>/assets/images/lodge-suite/lodge3.webp" data-lightbox="lodge-suite">
                     <img src="<?=ROOT?>/assets/images/lodge-suite/lodge3.webp" alt="Lodge Suite">
+                    </a>
                 </div>
+
                 <div class="lodge-suite-grid-item">
+                    <a href="<?=ROOT?>/assets/images/lodge-suite/lodge4.webp" data-lightbox="lodge-suite">
                     <img src="<?=ROOT?>/assets/images/lodge-suite/lodge4.webp" alt="Lodge Suite">
+                    </a>
                 </div>
+
                 <div class="lodge-suite-grid-item">
+                    <a href="<?=ROOT?>/assets/images/lodge-suite/lodge5.webp" data-lightbox="lodge-suite">
                     <img src="<?=ROOT?>/assets/images/lodge-suite/lodge5.webp" alt="Lodge Suite">
+                    </a>
                 </div>
+
                 <div class="lodge-suite-grid-item">
+                    <a href="<?=ROOT?>/assets/images/lodge-suite/lodge6.webp" data-lightbox="lodge-suite">
                     <img src="<?=ROOT?>/assets/images/lodge-suite/lodge6.webp" alt="Lodge Suite">
+                    </a>
                 </div>
+
                 <div class="lodge-suite-grid-item">
+                    <a href="<?=ROOT?>/assets/images/lodge-suite/lodge7.webp" data-lightbox="lodge-suite">
                     <img src="<?=ROOT?>/assets/images/lodge-suite/lodge7.webp" alt="Lodge Suite">
+                    </a>
                 </div>
+
                 <div class="lodge-suite-grid-item">
+                    <a href="<?=ROOT?>/assets/images/lodge-suite/lodge8.webp" data-lightbox="lodge-suite">
                     <img src="<?=ROOT?>/assets/images/lodge-suite/lodge8.webp" alt="Lodge Suite">
+                    </a>
                 </div>
+
                 <div class="lodge-suite-grid-item">
+                    <a href="<?=ROOT?>/assets/images/lodge-suite/lodge9.webp" data-lightbox="lodge-suite">
                     <img src="<?=ROOT?>/assets/images/lodge-suite/lodge9.webp" alt="Lodge Suite">
+                    </a>
                 </div>
 
             </div>
