@@ -58,8 +58,78 @@ if (isset($_POST['submit'])){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="<?= ADMIN ?>/assets/css/styles.css">
+<!--    <link rel="stylesheet" href="--<?php //= ADMIN ?><!--/assets/css/styles.css">-->
     <title><?= $result->RoomName ?></title>
+<style>
+/*   make it modern and colorful*/
+
+body {
+    background-color: #f2f2f2;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    color: #4CAF50;
+}
+
+h3 {
+    text-align: center;
+    color: #364636;
+}
+
+form {
+    border: 3px solid #f1f1f1;
+    width: 50%;
+    margin: auto;
+}
+
+input[type=text], input[type=email], input[type=tel], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+/*input number larger*/
+input[type=number] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+    height: 50px;
+    font-size: 20px;
+}
+
+</style>
+
 
 </head>
 <body>
@@ -102,15 +172,36 @@ if (isset($_POST['submit'])){
     <input type="date" id="checkout" name="checkout" required value="<?=$departure_date?>" disabled><br>
 
     <label for="adults">Number of adults:</label>
-    <input type="number" id="guest_adult" name="adults" min="1" max="6" required><br>
+<!--    <input type="number" id="guest_adult" name="adults" min="1" max="6" required><br>-->
+    <select id="guest_adult" name="adults" required>
+        <option value="">--Select--</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+    </select><br>
+
 
     <label for="children">Number of children:</label>
-    <input type="number" id="guest_children" name="children" min="0" max="6" required><br>
+<!--    <input type="number" id="guest_children" name="children" min="0" max="6" required><br>-->
+
+    <select id="guest_children" name="children" required>
+        <option value="">--Select--</option>
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+    </select><br>
 
     <label for="special-requests">Special requests:</label>
     <textarea id="special-requests" name="special_requests" rows="4" cols="30"></textarea><br>
 
-    <input type="hidden" name="room_id" value="<?=$room_id?>">
+    <input type="hidden" id="room_id" name="room_id" value="<?=$room_id?>">
     <input type="hidden" name="price_per_night" value="<?=$result->PricePerNight?>">
     <input type="hidden" name="arrive_date" value="<?=$arrive_date?>">
     <input type="hidden" name="depart_date" value="<?=$departure_date?>">
@@ -120,15 +211,49 @@ if (isset($_POST['submit'])){
 </form>
 
 <script>
-    // Guest number validation (adults + children <= 6)
-    const guest_adult = document.getElementById('guest_adult');
-    const guest_children = document.getElementById('guest_children');
+    const adultSelect = document.getElementById('guest_adult');
+    const childSelect = document.getElementById('guest_children');
+    const roomIdInput = document.getElementById('room_id');
 
-    guest_adult.addEventListener('change', function() {
-        guest_children.max = 6 - guest_adult.value;
-    });
+    function updateGuestCount() {
+        const adultCount = parseInt(adultSelect.value);
+        const childCount = parseInt(childSelect.value);
+        const totalCount = adultCount + childCount;
+        const roomId = parseInt(roomIdInput.value);
+        let maxGuests = 0;
+        if (roomId === 1 || roomId === 2) {
+            maxGuests = 2;
+        } else if (roomId === 3 || roomId === 4) {
+            maxGuests = 6;
+        }
+        if (totalCount > maxGuests) {
+            alert(`You cannot select more than ${maxGuests} guests for this room.`);
+            // Reset the selection to the previous value
+            if (this.id === 'guest_adult') {
+                adultSelect.value = parseInt(adultSelect.dataset.previousValue);
+            } else {
+                childSelect.value = parseInt(childSelect.dataset.previousValue);
+            }
+        } else if (adultCount > maxGuests) {
+            alert(`You cannot select more than ${maxGuests} adults for this room.`);
+            // Reset the selection to the previous value
+            adultSelect.value = parseInt(adultSelect.dataset.previousValue);
+        } else {
+            // Remember the previous value
+            if (this.id === 'guest_adult') {
+                adultSelect.dataset.previousValue = adultSelect.value;
+            } else {
+                childSelect.dataset.previousValue = childSelect.value;
+            }
+        }
+    }
 
+    adultSelect.addEventListener('change', updateGuestCount);
+    childSelect.addEventListener('change', updateGuestCount);
+    roomIdInput.addEventListener('change', updateGuestCount);
 </script>
+
+
 
 </body>
 

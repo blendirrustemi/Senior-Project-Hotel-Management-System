@@ -1053,3 +1053,200 @@ media queries
     }
 
 }
+
+
+/*one room page */
+
+.oneRoomh3{
+    font-family: 'Roboto Slab', sans-serif;
+    margin-bottom: 15px;
+    justify-content: center;
+    display: flex;
+    box-sizing: border-box;
+    font-family: 'Roboto Slab', sans-serif;
+}
+ 
+.oneRoomBody{
+    box-sizing: border-box;
+    font-family: 'Roboto Slab', sans-serif;
+
+}
+.oneRoomHtml {
+    background-color: #F8F9F9;
+    background: linear-gradient(0deg, #f9f8f8fa 0%, #f9f8f8fa 80%, #83032F 80%, #83032F 80%);
+    padding: 30px;
+    height: 100%;
+    box-sizing: border-box;
+    font-family: 'Roboto Slab', sans-serif;
+}
+
+.oneRoomh1 {
+    margin: 0;
+    font-family: 'Roboto Slab', sans-serif;
+    padding: 23px;
+    font-size: 20px;
+    text-align: center;
+    border-bottom: 1px solid #eceff2fa;
+    color: black;
+    font-weight: 600;
+    background-color: #f9fbfcfa;
+    box-sizing: border-box;
+    font-family: 'Roboto Slab', sans-serif;
+}
+.oneRoomh1 i {
+    padding-right: 10px;
+    font-size: 27px;
+}
+.roomBookingForm{
+    background-color: #fffffff9;
+    width: 1000px;
+    height: 830px;
+    margin: 0 auto;
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,.3);
+}
+.roomBookingForm .areas {
+    position: relative;
+    padding: 20px;
+}
+.oneRoomGender {
+    appearance: none;
+    background-image: linear-gradient(45deg, transparent 50%, #c7c9cb 50%), linear-gradient(135deg, #c7c9cb 50%, transparent 50%), linear-gradient(to right, #dfe0e0, #dfe0e0);
+    background-position: calc(100% - 20px) 20px, calc(100% - 15px) 20px, calc(100% - 40px) 10px;
+    background-size: 5px 5px, 5px 5px, 1px 25px;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    font-family: 'Roboto Slab', sans-serif;
+}
+.roomBookingForm select option:first-child {
+    display: none;
+ }
+.roomBookingForm .oneRoomBirth::-webkit-calendar-picker-indicator {
+    color: #ddd;
+    filter: invert(0.8);
+}
+
+.roomBookingForm .oneRoomCheckin::-webkit-calendar-picker-indicator {
+    color: #ddd;
+    filter: invert(0.8);
+}
+
+.roomBookingForm .oneRoomCheckout::-webkit-calendar-picker-indicator {
+    color: #ddd;
+    filter: invert(0.8);
+}
+
+
+.roomBookingForm .oneRoomName,
+.roomBookingForm .oneRoomAddress,
+.roomBookingForm .oneRoomEmail,
+.roomBookingForm .oneRoomCheckin,
+.roomBookingForm .oneRoomCheckout,
+.roomBookingForm .oneRoomBirth,
+.roomBookingForm .oneRoomGender,
+.roomBookingForm .oneRoomPhone,
+.roomBookingForm .oneRoomlastname{
+    display: flex;
+    margin-top: 10px;
+    padding: 15px;
+    border: 1px solid #dfe0e0;
+    width: 100%;
+    flex-basis: 100%;
+    height: 47px;
+    box-sizing: border-box;
+    font-family: 'Roboto Slab', sans-serif;
+
+}
+.roomBookingForm .oneRoomName:focus, 
+.roomBookingForm .oneRoomlastname,
+.roomBookingForm .oneRoomAddress,
+.roomBookingForm .oneRoomEmail:focus,
+.roomBookingForm .oneRoomPhone:focus,
+.roomBookingForm .oneRoomCheckout:focus,
+.roomBookingForm .oneRoomBirth:focus,
+.roomBookingForm .oneRoomCheckin:focus,
+.roomBookingForm .oneRoomName,
+.roomBookingForm .oneRoomlastname,
+.roomBookingForm select:focus {
+    border: 1px solid #c6c7c7;
+}
+.roomBookingForm .oneRoomAdults,
+.roomBookingForm .oneRoomChild{
+    border: 1px solid #c6c7c7;
+
+}
+.roomBookingForm .oneRoomName::placeholder, 
+.roomBookingForm .oneRoomlastname::placeholder, 
+.roomBookingForm .oneRoomAddress::placeholder, 
+.roomBookingForm .oneRoomAddress::placeholder, 
+.roomBookingForm .oneRoomPhone::placeholder, 
+.roomBookingForm .oneRoomCheckin:invalid, 
+.roomBookingForm .oneRoomCheckout:invalid, 
+.roomBookingForm .oneRoomBirth:invalid, 
+.roomBookingForm .oneRoomName,
+.roomBookingForm .oneRoomlastname,
+.roomBookingForm textarea::placeholder,
+.roomBookingForm select:invalid {
+    color: black;
+}
+
+.oneRoomSpecial {
+    resize: none;
+    margin-top: 15px;
+    padding: 15px;
+    border: 1px solid #dfe0e0;
+    width: 100%;
+    height: 150px;
+    box-sizing: border-box;
+    font-family: 'Roboto Slab', sans-serif;
+}
+.oneRoomSpecial:focus {
+    border: 1px solid #c6c7c7;
+}
+.oneRoomSubmit {
+    display: block;
+    margin-top: 15px;
+    padding: 15px;
+    background-color: #83032F;
+    font-weight: bold;
+    color: white;        
+    cursor: pointer;
+    width: 100%;
+}
+.oneRoomSubmit:hover {
+    background-color: #8b1472;
+}
+.roomBookingForm .oneRoomEmail {
+    position: relative;
+    display: block;
+}
+.roomBookingForm .field {
+    display: inline-flex;
+    position: relative;
+    width: 100%;
+    padding-bottom: 20px;
+}
+.roomBookingForm label {
+    font-size: 14px;
+    font-weight: 600;
+    color: black;
+}
+.roomBookingForm .field i {
+    position: absolute;
+    color: #dfe2e5;
+    top: 25px;
+    left: 15px;
+    z-index: 10;
+}
+.roomBookingForm .field i ~ input {
+    padding-left: 45px !important;
+}
+.roomBookingForm .responses {
+    padding: 15px;
+    margin: 0;
+}
+.roomBookingForm .areas .wrapper {
+    display: flex;
+}
+.roomBookingForm .areas .wrapper .gap {
+    width: 36px;
+}
