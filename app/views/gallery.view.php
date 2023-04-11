@@ -63,57 +63,106 @@
 
             <div class="gallery-grid">
 
-                <div class="gallery-grid-item">
-                    <img src="<?=ROOT?>/assets/images/gallery/1.webp" alt="Photo">
-                </div>
-                <div class="gallery-grid-item">
-                    <img src="<?=ROOT?>/assets/images/gallery/2.webp" alt="Photo">
-                </div>
-                <div class="gallery-grid-item">
-                    <img src="<?=ROOT?>/assets/images/gallery/3.webp" alt="Photo">
-                </div>
-                <div class="gallery-grid-item">
-                    <img src="<?=ROOT?>/assets/images/gallery/4.webp" alt="Photo">
+            <div class="gallery-grid-item">
+                    <a href="<?=ROOT?>/assets/images/gallery/1.webp" data-lightbox="yorkshire">
+                        <img src="<?=ROOT?>/assets/images/gallery/1.webp" alt="Photo">
+                    </a>
                 </div>
 
                 <div class="gallery-grid-item">
+                    <a href="<?=ROOT?>/assets/images/gallery/2.webp" data-lightbox="yorkshire">
+                    <img src="<?=ROOT?>/assets/images/gallery/2.webp" alt="Photo">
+                    </a>
+                </div>
+
+                <div class="gallery-grid-item">
+                    <a href="<?=ROOT?>/assets/images/gallery/3.webp" data-lightbox="yorkshire">
+                    <img src="<?=ROOT?>/assets/images/gallery/3.webp" alt="Photo">
+                    </a>
+                </div>
+
+                <div class="gallery-grid-item">
+                    <a href="<?=ROOT?>/assets/images/gallery/4.webp" data-lightbox="yorkshire">
+                    <img src="<?=ROOT?>/assets/images/gallery/4.webp" alt="Photo">
+                    </a>
+                </div>
+
+                <div class="gallery-grid-item">
+                    <a href="<?=ROOT?>/assets/images/gallery/5.webp" data-lightbox="yorkshire">
                     <img src="<?=ROOT?>/assets/images/gallery/5.webp" alt="Photo">
+                    </a>
                 </div>
+
                 <div class="gallery-grid-item">
+                    <a href="<?=ROOT?>/assets/images/gallery/6.webp" data-lightbox="yorkshire">
                     <img src="<?=ROOT?>/assets/images/gallery/6.webp" alt="Photo">
+                    </a>
                 </div>
+
                 <div class="gallery-grid-item">
+                    <a href="<?=ROOT?>/assets/images/gallery/7.webp" data-lightbox="yorkshire">
                     <img src="<?=ROOT?>/assets/images/gallery/7.webp" alt="Photo">
+                    </a>
                 </div>
+
                 <div class="gallery-grid-item">
+                    <a href="<?=ROOT?>/assets/images/gallery/8.webp" data-lightbox="yorkshire">
                     <img src="<?=ROOT?>/assets/images/gallery/8.webp" alt="Photo">
+                    </a>
                 </div>
+
                 <div class="gallery-grid-item">
+                    <a href="<?=ROOT?>/assets/images/gallery/9.webp" data-lightbox="yorkshire">
                     <img src="<?=ROOT?>/assets/images/gallery/9.webp" alt="Photo">
+                    </a>
                 </div>
+                
                 <div class="gallery-grid-item">
+                    <a href="<?=ROOT?>/assets/images/gallery/10.webp" data-lightbox="yorkshire">
                     <img src="<?=ROOT?>/assets/images/gallery/10.webp" alt="Photo">
+                    </a>
                 </div>
+
                 <div class="gallery-grid-item">
+                    <a href="<?=ROOT?>/assets/images/gallery/11.webp" data-lightbox="yorkshire">
                     <img src="<?=ROOT?>/assets/images/gallery/11.webp" alt="Photo">
+                    </a>
                 </div>
+
                 <div class="gallery-grid-item">
+                    <a href="<?=ROOT?>/assets/images/gallery/12.webp" data-lightbox="yorkshire">
                     <img src="<?=ROOT?>/assets/images/gallery/12.webp" alt="Photo">
+                    </a>
                 </div>
+
                 <div class="gallery-grid-item">
+                    <a href="<?=ROOT?>/assets/images/gallery/13.webp" data-lightbox="yorkshire">
                     <img src="<?=ROOT?>/assets/images/gallery/13.webp" alt="Photo">
+                    </a>
                 </div>
+
                 <div class="gallery-grid-item">
+                    <a href="<?=ROOT?>/assets/images/gallery/14.webp" data-lightbox="yorkshire">
                     <img src="<?=ROOT?>/assets/images/gallery/14.webp" alt="Photo">
+                    </a>
                 </div>
+
                 <div class="gallery-grid-item">
+                    <a href="<?=ROOT?>/assets/images/gallery/15.webp" data-lightbox="yorkshire">
                     <img src="<?=ROOT?>/assets/images/gallery/15.webp" alt="Photo">
+                    </a>
                 </div>
+
                 <div class="gallery-grid-item">
+                    <a href="<?=ROOT?>/assets/images/gallery/16.webp" data-lightbox="yorkshire">
                     <img src="<?=ROOT?>/assets/images/gallery/16.webp" alt="Photo">
+                    </a>
                 </div>
+
                 <div class="gallery-grid-item">
+                    <a href="<?=ROOT?>/assets/images/gallery/17.webp" data-lightbox="yorkshire">
                     <img src="<?=ROOT?>/assets/images/gallery/17.webp" alt="Photo">
+                    </a>
                 </div>
 
             </div>
