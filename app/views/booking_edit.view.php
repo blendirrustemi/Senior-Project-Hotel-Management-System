@@ -108,9 +108,9 @@ if (isset($_POST['update_values'])) {
             <option value="Bolero Room">Bolero Room</option>
         </select><br><br>
         <label for="people">Adults:</label>
-        <input type="number" id="adults" name="adults" required value="<?=$result[0]->Adults?>"><br><br>
+        <input type="number" id="adults" name="adults" min="1" max="6" required value="<?=$result[0]->Adults?>"><br><br>
         <label for="people">Children:</label>
-        <input type="number" id="children" name="children" required value="<?=$result[0]->Children?>"><br><br>
+        <input type="number" id="children" name="children" min="0" max="6" required value="<?=$result[0]->Children?>"><br><br>
         <label for="entryDate">Entry Date:</label>
         <input type="date" class=date-picker" id="entryDate" name="arrive_date" required value="<?=$result[0]->CheckInDate?>"><br><br>
         <label for="departureDate">Departure Date:</label>
@@ -134,6 +134,17 @@ if (isset($_POST['update_values'])) {
     </div>
 </form>
 
+
+<script>
+    // Guest number validation (adults + children <= 6)
+    const guest_adult = document.getElementById('adults');
+    const guest_children = document.getElementById('children');
+
+    guest_adult.addEventListener('change', function() {
+        guest_children.max = 6 - guest_adult.value;
+    });
+
+</script>
 
 </body>
 </html>
