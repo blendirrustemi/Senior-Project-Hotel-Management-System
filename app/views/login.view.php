@@ -1,6 +1,7 @@
 <?php
 
 session_start();
+$err = "";
 
 if (isset($_POST['submit'])) {
     $username = $_POST['username'];
@@ -17,7 +18,7 @@ if (isset($_POST['submit'])) {
             $_SESSION['is_logged_in'] = true;
             header("Location: admin");
         } else {
-            echo "Invalid username or password";
+            $err = "Invalid username or password";
         }
     } catch (PDOException $e) {
         echo "Error: " . $e->getMessage();
@@ -46,6 +47,7 @@ if (isset($_POST['submit'])) {
             <label class="password-label">PASSWORD</label>
             <input type="password" name="password" placeholder="password" required/>
             <a href="forgotpassword">Forgot password?</a><br><br>
+            <p style="color: red"><?php echo $err ?></p>
 
             <button class="login-button" name="submit" type="submit">LOGIN</button>
         </div>

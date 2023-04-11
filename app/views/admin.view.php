@@ -29,7 +29,7 @@ if (isset($_POST['del_user_btn'])){
 
 if (isset($_POST['search_btn'])){
     $search_customer = $_POST['search_customer'];
-    $search_query = "SELECT * FROM Customers WHERE FirstName LIKE '%$search_customer%' OR 
+    $search_query = "SELECT * FROM Customers WHERE FirstName LIKE '%$search_customer%' OR
                               LastName LIKE '%$search_customer%' or Phone LIKE '%$search_customer%'";
     $result = $db->query($search_query);
 
@@ -56,7 +56,7 @@ if (isset($_POST['search_btn'])){
         <li>
           <a href="admin" class="active">
             <i class='bx bx-book-add'></i>
-            <span class="admin-link-name">Bookings</span>
+            <span class="admin-link-name">Bookings & Customers</span>
           </a>
         </li>
        
@@ -72,7 +72,7 @@ if (isset($_POST['search_btn'])){
     <nav>
       <div class="admin-sidebar-button">
         <i class='bx bx-menu sidebarBtn'></i>
-        <span class="admin-dashboard">Bookings</span>
+        <span class="admin-dashboard">Bookings & Customers</span>
       </div>
       <form method="POST" action="">
           <div class="admin-search-box">
@@ -88,7 +88,7 @@ if (isset($_POST['search_btn'])){
 
       <div class="admin-card">
         <div class="admin-recent-card">
-          <div class="title">Customers</div><br>
+          <div class="title">Data</div><br>
           <table class="table table-striped table-bordered table-condensed">
             <thead>
                 <tr>
