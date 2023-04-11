@@ -65,7 +65,7 @@ if ($submit_btn) {
           <li><a href="rooms">Rooms</a></li>
           <li><a href="history">History</a></li>
           <li><a href="gallery">Gallery</a></li>
-          <li><a href="fingerlakes">Fingerlakes</a></li>
+          <li><a href="fingerlakes">Finger lakes</a></li>
           <li><a href="contact">Contact & Policies</a></li>
         </ul>
       </div>

@@ -45,7 +45,7 @@
                     <li><a href="rooms">Rooms</a></li>
                     <li><a href="history">History</a></li>
                     <li><a href="gallery">Gallery</a></li>
-                    <li><a href="fingerlakes">Fingerlakes</a></li>
+                    <li><a href="fingerlakes">Finger lakes</a></li>
                     <li><a href="contact">Contact & Policies</a></li>
                 </ul>
             </div>
@@ -58,7 +58,7 @@
     <div class="container">
 
         <section class="fingerlakes section-title">
-            <h2>Fingerlakes</h2>
+            <h2>Finger lakes</h2>
             <img src="<?=ROOT?>assets/images/fingerlakes/fingerlakes.webp" alt="Fingerlakes">
             <p>The Finger Lakes Region is known for many artisan vineyards, particularly its world-renowned Rieslings.
                 The region also boasts an impressive list of craft breweries, distilleries, and hard-cider producers.
