@@ -10,8 +10,8 @@
     <script src="<?=ROOT?>assets/js/lightbox-plus-jquery.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto+Slab:wght@400;700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="<?=ROOT?>assets/images/icons/favicon.png">
     <title>Rose Suite - The Yorkshire Inn</title>
 </head>
 
@@ -46,7 +46,7 @@
                     <li><a href="rooms">Rooms</a></li>
                     <li><a href="history">History</a></li>
                     <li><a href="gallery">Gallery</a></li>
-                    <li><a href="fingerlakes">Finger lakes</a></li>
+                    <li><a href="fingerlakes">Finger Lakes</a></li>
                     <li><a href="contact">Contact & Policies</a></li>
                 </ul>
             </div>

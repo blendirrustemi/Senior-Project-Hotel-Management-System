@@ -32,8 +32,8 @@ if ($submit_btn) {
   <script src="<?=ROOT?>assets/js/script.js" defer></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto+Slab:wght@400;700&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="<?=ROOT?>assets/images/icons/favicon.png">
   <title>Rooms - The Yorkshire Inn</title>
 </head>
 
@@ -65,7 +65,7 @@ if ($submit_btn) {
           <li><a href="rooms">Rooms</a></li>
           <li><a href="history">History</a></li>
           <li><a href="gallery">Gallery</a></li>
-          <li><a href="fingerlakes">Finger lakes</a></li>
+          <li><a href="fingerlakes">Finger Lakes</a></li>
           <li><a href="contact">Contact & Policies</a></li>
         </ul>
       </div>
@@ -81,16 +81,21 @@ if ($submit_btn) {
 
         <div class="calendar full-bleed">
 
-            <div class="arrival">
-
                 <form method="POST" action="">
-                <p>Arrival</p>
-                    <input class="date-picker" name="arrive_date" type="date" >
-                <p>Departure</p>
-                    <input class="date-picker departure" name="depart_date" type="date" >
 
-                <p>Guests</p>
-                    <select name="guest_num" id="guest_num">
+                  <div class="arrival">
+                  <p>Arrival</p>
+                    <input class="date-picker" name="arrive_date" type="date">
+                  </div>
+                  
+                  <div class="departure">
+                  <p>Departure</p>
+                    <input class="date-picker" name="depart_date" type="date">
+                  </div>
+
+                  <div class="guests">
+                    <p>Guests</p>
+                    <select name="guest_num" id="guest_num" class="guests-number">
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
@@ -98,11 +103,11 @@ if ($submit_btn) {
                         <option value="5">5</option>
                         <option value="6">6</option>
                     </select>
+                  </div>
 
-                    <button class="login-button" name="submit" type="submit">Search Rooms</button>
+                  <button class="search-button" name="submit" type="submit">CHECK AVAILABILITY</button>
+
                 </form>
-
-            </div>
 
         </div>
 
@@ -116,11 +121,26 @@ if ($submit_btn) {
 
             <div class="room-preview-info">
                 <h3><?=$row->RoomName?></h3>
-                <p class="room-preview-price">$<?=$row->PricePerNight?>/ night</p>
+                <p class="room-preview-price">$<?=$row->PricePerNight?> / night</p>
                 <p class="room-preview-description"><?=$row->Description?>
                 </p>
 
-                <a href="blueroom" class="underline">More info</a>
+                <?php if($row->RoomName == "Blue Room"): ?>                        
+                  <a href="blueroom" class="underline">More info</a>
+                <?php endif; ?>
+
+                <?php if($row->RoomName == "Bolero Room"): ?>                        
+                  <a href="boleroroom" class="underline">More info</a>
+                <?php endif; ?>
+
+                <?php if($row->RoomName == "Rose Suite"): ?>                        
+                  <a href="rosesuite" class="underline">More info</a>
+                <?php endif; ?>
+
+                <?php if($row->RoomName == "Lodge Suite"): ?>                        
+                  <a href="lodgesuite" class="underline">More info</a>
+                <?php endif; ?>
+
                 <div class="room-preview-icons">
                     <img src="<?=ROOT?>assets/images/icons/wifi-grey.svg" alt="Icon">
                     <img src="<?=ROOT?>assets/images/icons/tv-grey.svg" alt="Icon">

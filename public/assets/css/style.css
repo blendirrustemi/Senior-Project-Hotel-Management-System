@@ -423,8 +423,6 @@ rooms.html
 }
 
 .calendar {
-    display: flex;
-    column-gap: 24px;
     background-color: #83032F;
     padding-bottom: 24px;
     padding-top: 16px;
@@ -446,6 +444,23 @@ rooms.html
     color: #565453;
 }
 
+.calendar form {
+    display: flex;
+    column-gap: 24px;
+    align-items: flex-end;
+}
+
+.search-button {
+    padding: 8px;
+    margin: 0;
+    background-color: #fff;
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    font-weight: bold;
+    border: 2.5px solid #CFCFCF;
+    border-radius: 5px;
+}
+
 .date-picker {
     width: 184px;
 }
@@ -454,8 +469,9 @@ rooms.html
     width: 64px;
 }
 
-.guests select {    
+.guests select {
     border: 2.5px solid #CFCFCF;
+    background-color: #fff;
     border-radius: 5px;
     padding: 8px 0;
     padding-left: 10px;
@@ -501,7 +517,7 @@ rooms.html
 }
 
 .room-preview-icons {
-    margin-top: 8px;
+    margin-top: 12px;
     margin-bottom: 8px;
 }
 
@@ -702,6 +718,18 @@ fingerlakes
 
 .fingerlakes button {
     margin-top: 16px;
+}
+
+.did-you-know {
+    color: #fff;
+    background-color: #83032F;
+    padding: 48px 0;
+    margin-top: 32px;
+}
+
+.did-you-know button {
+    background-color: #fff;
+    color: #83032F;
 }
 
 /*
@@ -1250,15 +1278,17 @@ media queries
     }
 }
 
+@media only screen and (max-width: 907px) {
+    .calendar form {
+        flex-wrap: wrap;
+        row-gap: 8px;
+    }
+}
+
 @media only screen and (max-width: 650px) {
 
     body {
         width: 100%;
-    }
-
-    .calendar {
-        flex-wrap: wrap;
-        row-gap: 8px;
     }
 
     .blue-room-grid {
@@ -1478,7 +1508,7 @@ media queries
     left: 15px;
     z-index: 10;
 }
-.roomBookingForm .field i ~ input {
+.roomBookingForm .field i input {
     padding-left: 45px !important;
 }
 .roomBookingForm .responses {
@@ -1505,4 +1535,3 @@ media queries
     cursor: pointer;
     width: 16%;
 }
-
