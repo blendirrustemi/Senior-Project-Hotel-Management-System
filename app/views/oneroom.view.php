@@ -27,6 +27,7 @@ if (isset($_POST['submit'])){
             VALUES ('$name', '$surname', '$birthday', NULL, '$gender', '$email', '$phone', '$address', NULL, 0)";
     $customer = $db->query($customer_query);
 
+
 // Bookings Table:
     $room_id = $_POST['room_id'];
     $checkin = $_POST['arrive_date'];
@@ -47,172 +48,154 @@ if (isset($_POST['submit'])){
             VALUES ('$customer_id', '$room_id', '$checkin', '$checkout',
                     '$adults', '$children', '$special_requests', (SELECT DATEDIFF('$checkout', '$checkin')), $total_price)";
     $booking = $db->query($booking_query);
-
-
 }
-
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html class = "oneRoomHtml" lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!--    <link rel="stylesheet" href="--<?php //= ADMIN ?><!--/assets/css/styles.css">-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+    <link rel="stylesheet" href="<?=ROOT?>assets/css/style.css">
+
     <title><?= $result->RoomName ?></title>
-<style>
-/*   make it modern and colorful*/
-
-body {
-    background-color: #f2f2f2;
-    font-family: Arial, Helvetica, sans-serif;
-}
-
-h1 {
-    text-align: center;
-    color: #4CAF50;
-}
-
-h3 {
-    text-align: center;
-    color: #364636;
-}
-
-form {
-    border: 3px solid #f1f1f1;
-    width: 50%;
-    margin: auto;
-}
-
-input[type=text], input[type=email], input[type=tel], select, textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    margin-top: 6px;
-    margin-bottom: 16px;
-    resize: vertical;
-}
-
-input[type=submit] {
-    background-color: #4CAF50;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-input[type=submit]:hover {
-    background-color: #45a049;
-}
-
-.container {
-    border-radius: 5px;
-    background-color: #f2f2f2;
-    padding: 20px;
-}
-
-/*input number larger*/
-input[type=number] {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    margin-top: 6px;
-    margin-bottom: 16px;
-    resize: vertical;
-    height: 50px;
-    font-size: 20px;
-}
-
-</style>
-
 
 </head>
-<body>
+<body class = "oneRoomBody">
 
-<h1>Book your Room</h1>
-<h3><?= $result->RoomName ?></h3>
+<a class = "backtoHomeA" href = "home"<button class = "backToHomeButton">Back to Homepage</button> </a>
 
-<form action="" method="POST">
-
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name" required><br>
-
-    <label for="surname">Surname:</label>
-    <input type="text" id="surname" name="surname" required><br>
-
-    <label for="birthday">Birthday:</label>
-    <input type="date" id="birthday" name="birthday" required><br>
-
-    <label for="gender">Gender:</label>
-    <select id="gender" name="gender" required>
-        <option value="">--Select--</option>
-        <option value="male">Male</option>
-        <option value="female">Female</option>
-        <option value="other">Other</option>
-    </select><br>
-
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required><br>
-
-    <label for="phone">Phone:</label>
-    <input type="tel" id="phone" name="phone" required><br>
-
-    <label for="address">Address:</label>
-    <input type="text" id="address" name="address" required><br>
-
-    <label for="checkin">Check-in date:</label>
-    <input type="date" id="checkin" name="checkin" required value="<?=$arrive_date?>" disabled><br>
-
-    <label for="checkout">Check-out date:</label>
-    <input type="date" id="checkout" name="checkout" required value="<?=$departure_date?>" disabled><br>
-
-    <label for="adults">Number of adults:</label>
-<!--    <input type="number" id="guest_adult" name="adults" min="1" max="6" required><br>-->
-    <select id="guest_adult" name="adults" required>
-        <option value="">--Select--</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-    </select><br>
+<form class="roomBookingForm"  action="" method="POST">
 
 
-    <label for="children">Number of children:</label>
-<!--    <input type="number" id="guest_children" name="children" min="0" max="6" required><br>-->
 
-    <select id="guest_children" name="children" required>
-        <option value="">--Select--</option>
-        <option value="0">0</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-    </select><br>
+    <h1 class = "oneRoomh1"><i class="far fa-calendar-alt"></i>Book a room</h1>
+    <h3 class = "oneRoomh3">Room: <?= $result->RoomName ?></h3>
 
-    <label for="special-requests">Special requests:</label>
-    <textarea id="special-requests" name="special_requests" rows="4" cols="30"></textarea><br>
 
-    <input type="hidden" id="room_id" name="room_id" value="<?=$room_id?>">
-    <input type="hidden" name="price_per_night" value="<?=$result->PricePerNight?>">
-    <input type="hidden" name="arrive_date" value="<?=$arrive_date?>">
-    <input type="hidden" name="depart_date" value="<?=$departure_date?>">
+    <div class="areas">
 
-    <input type="submit" value="Submit" name="submit">
+        <div class="wrapper">
+            <div>
 
+                <label for="name">Name:</label>
+                <div class="field">
+                    <i class="fas fa-user"></i>
+                    <input type="text" class = "oneRoomName"  id="name" name="name" required>
+                </div>
+
+
+                <label for="surname">Surname:</label>
+                <div class="field">
+                    <i class="fas fa-user"></i>
+
+                    <input type="text" class = "oneRoomlastname"  id="surname" name="surname" required>
+
+
+                </div>
+                <div>
+                <label for="address">Address:</label>
+                <div class="field">
+                    <i class="fas fa-map-pin"></i>
+                    <input type="text" class = "oneRoomAddress" id="address" name="address" required>
+                </div>
+            </div>
+                <div><label for="email">Email:</label>
+                    <div class="field">
+                        <i class="fas fa-envelope"></i>
+                        <input id="email" class = "oneRoomEmail" type="email" name="email" placeholder=" Email" required>
+                    </div>
+                </div>
+                <div>
+                    <label for="phone">Phone:</label>
+                    <div class="field">
+                        <i class="fas fa-phone"></i>
+                        <input id="phone" class = "oneRoomPhone" type="tel" name="phone" placeholder="Phone Number" required>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+            <div class="gap"></div>
+            <div>
+                <div class="wrapper">
+                    <div>
+                        <label for="checkin">Check-in date:</label>
+                        <div class="field">
+                            <input type="date" class = "oneRoomCheckin" id="checkin" name="checkin" required value="<?=$arrive_date?>" disabled>
+                        </div>
+                    </div>
+
+                    <div class="gap"></div>
+                    <div>
+                        <label for="checkout">Check-out date:</label>
+                        <div class="field">
+                            <input type="date" class = "oneRoomCheckout" id="checkout" name="checkout" required value="<?=$departure_date?>" disabled>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="wrapper">
+                    <div>
+                        <label for="gender">Gender:</label>
+                        <div class="field">
+                            <select id="gender" class = "oneRoomGender" name="gender" required>
+                                <option value="">--Select--</option>
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="other">Other</option>
+                            </select><br>
+                        </div>
+                    </div>
+
+
+                    <div class="gap"></div>
+                    <div>
+                        <label for="birthday">Birthday:</label>
+                        <div class="field">
+                            <input type="date" class = "oneRoomBirth" id="birthday" name="birthday" required>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
+
+                <div class="wrapper">
+                    <div>
+                        <label for="adults">Number of Adults</label>
+                        <div class="field">
+                            <input type="number" class = "oneRoomAdults" id="adults" name="adults" min="1" max="6" required>
+                        </div>
+                    </div>
+                    <div class="gap"></div>
+                    <div>
+                        <label for="children">Number of Children</label>
+                        <div class="field">
+                            <input type="number" class = "oneRoomChild" id="children" name="children" min="0" max="5" required>
+                        </div>
+                    </div>
+                </div>
+                <label for="special-requests">Special requests:</label>
+                <div class="field">
+                    <textarea id="special-requests" class = "oneRoomSpecial" name="special_requests" rows="4" cols="30"></textarea>
+                    <input type="hidden" id="room_id" name="room_id" value="<?=$room_id?>">
+                    <input type="hidden" name="price_per_night" value="<?=$result->PricePerNight?>">
+                    <input type="hidden" name="arrive_date" value="<?=$arrive_date?>">
+                    <input type="hidden" name="depart_date" value="<?=$departure_date?>">
+                </div>
+                <input class ="oneRoomSubmit" type="submit" value="Book" name="submit">
+            </div>
 </form>
-
 <script>
-    const adultSelect = document.getElementById('guest_adult');
-    const childSelect = document.getElementById('guest_children');
+    const adultSelect = document.getElementById('adults');
+    const childSelect = document.getElementById('children');
     const roomIdInput = document.getElementById('room_id');
 
     function updateGuestCount() {
@@ -229,7 +212,7 @@ input[type=number] {
         if (totalCount > maxGuests) {
             alert(`You cannot select more than ${maxGuests} guests for this room.`);
             // Reset the selection to the previous value
-            if (this.id === 'guest_adult') {
+            if (this.id === 'adults') {
                 adultSelect.value = parseInt(adultSelect.dataset.previousValue);
             } else {
                 childSelect.value = parseInt(childSelect.dataset.previousValue);
@@ -240,7 +223,7 @@ input[type=number] {
             adultSelect.value = parseInt(adultSelect.dataset.previousValue);
         } else {
             // Remember the previous value
-            if (this.id === 'guest_adult') {
+            if (this.id === 'adults') {
                 adultSelect.dataset.previousValue = adultSelect.value;
             } else {
                 childSelect.dataset.previousValue = childSelect.value;
@@ -253,7 +236,6 @@ input[type=number] {
     roomIdInput.addEventListener('change', updateGuestCount);
 </script>
 
-
-
 </body>
+</html>
 
