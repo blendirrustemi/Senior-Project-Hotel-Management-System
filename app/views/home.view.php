@@ -11,6 +11,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="<?=ROOT?>assets/images/icons/favicon.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <title>The Yorkshire Inn</title>
 </head>
 
@@ -152,56 +154,163 @@
         <h2>Reviews</h2>
         <p class="bold">97% RECOMMEND</p>
         <div class="stars">
-            <img src="<?=ROOT?>assets/images/icons/star.svg" alt="star">
-            <img src="<?=ROOT?>assets/images/icons/star.svg" alt="star">
-            <img src="<?=ROOT?>assets/images/icons/star.svg" alt="star">
-            <img src="<?=ROOT?>assets/images/icons/star.svg" alt="star">
+            <img src="<?=ROOT?>/assets/images/icons/star.svg" alt="star">
+            <img src="<?=ROOT?>/assets/images/icons/star.svg" alt="star">
+            <img src="<?=ROOT?>/assets/images/icons/star.svg" alt="star">
+            <img src="<?=ROOT?>/assets/images/icons/star.svg" alt="star">
         </div>
 
-        <div class="reviews-container">
-            <div class="review-box">
-                <div class="review-box-top">
-                    <img src="<?=ROOT?>assets/images/homepage/review-1.png" alt="review">
-                    <p>"A wonderful stay for
-                        my family!"</p>
+        <div class="swiper" id="swiper-1">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+            
+                <div class="review-box">
+                    <div class="review-box-top">
+                        <img src="<?=ROOT?>/assets/images/homepage/review-1.png" alt="review">
+                        <p>"I recently attended the
+                        Women's Wellness Weeke..."
+                        </p>
+                    </div>
+                    <div class="review-box-bottom">
+                        <a href="https://maps.google.com/maps?cid=16425790188992418738"><img src="<?=ROOT?>/assets/images/icons/google-tile.svg" alt="google" class="review-icon"></a>
+                        <p class="bold">Loryn Payne</p>
+                        <p>2/8/2023</p>
+                    </div>
                 </div>
-                <div class="review-box-bottom">
-                    <a href="https://www.facebook.com/theyorkshireinn"><img src="<?=ROOT?>assets/images/icons/facebook-red.svg" alt="facebook"></a>
-                    <p class="bold">Dave Ries</p>
-                    <p>7/18/2022</p>
+
+            </div>
+
+            <div class="swiper-slide">
+            
+                <div class="review-box">
+                    <div class="review-box-top">
+                        <img src="<?=ROOT?>/assets/images/homepage/review-2.png" alt="review">
+                        <p>This customer did not write a review.</p>
+                    </div>
+                    <div class="review-box-bottom">
+                        <a href="https://maps.google.com/maps?cid=16425790188992418738"><img src="<?=ROOT?>/assets/images/icons/google-tile.svg" alt="google" class="review-icon"></a>
+                        <p class="bold">Adam Zeger</p>
+                        <p>2/7/2023</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="swiper-slide">            
+                
+                <div class="review-box">
+                    <div class="review-box-top">
+                        <img src="<?=ROOT?>/assets/images/homepage/review-3.png" alt="review">
+                        <p>"Beautiful. Great food and
+                        fantastic service. The ow..."
+                        </p>
+                    </div>
+                    <div class="review-box-bottom">
+                        <a href="https://maps.google.com/maps?cid=16425790188992418738"><img src="<?=ROOT?>/assets/images/icons/google-tile.svg" alt="google" class="review-icon"></a>
+                        <p class="bold">Karen McCarrick</p>
+                        <p>12/15/2022</p>
+                    </div>
                 </div>
             </div>
 
-            <div class="review-box">
-                <div class="review-box-top">
-                    <img src="<?=ROOT?>assets/images/homepage/review-2.png" alt="review">
-                    <p>"I had a very enjoyable stay here. Clean and comfy rooms!"</p>
-                </div>
-                <div class="review-box-bottom">
-                    <a href="https://www.facebook.com/theyorkshireinn"><img src="<?=ROOT?>assets/images/icons/facebook-red.svg" alt="facebook"></a>
-                    <p class="bold">Gay E. Canough</p>
-                    <p>7/17/2022</p>
+            <div class="swiper-slide">            
+                <div class="review-box">
+                    <div class="review-box-top">
+                        <img src="<?=ROOT?>/assets/images/homepage/review-5.png" alt="review">
+                        <p>"This charming and historic
+                        brick inn is a very comfort..."
+                        </p>
+                    </div>
+                    <div class="review-box-bottom">
+                        <a href="https://maps.google.com/maps?cid=16425790188992418738"><img src="<?=ROOT?>/assets/images/icons/google-tile.svg" alt="google" class="review-icon"></a>
+                        <p class="bold">Kevin Quinlan</p>
+                        <p>10/30/2022</p>
+                    </div>
                 </div>
             </div>
 
-            <div class="review-box">
-                <div class="review-box-top">
-                    <img src="<?=ROOT?>assets/images/homepage/review-3.png" alt="review">
-                    <p>"Very peaceful and quiet with comfortable rooms"</p>
+            <div class="swiper-slide">            
+                <div class="review-box">
+                    <div class="review-box-top">
+                        <img src="<?=ROOT?>/assets/images/homepage/review-6.png" alt="review">
+                        <p>"Very quaint and lovely B&B.
+                        The owners were very kin..."
+                        </p>
+                    </div>
+                    <div class="review-box-bottom">
+                        <a href="https://maps.google.com/maps?cid=16425790188992418738"><img src="<?=ROOT?>/assets/images/icons/google-tile.svg" alt="google" class="review-icon"></a>
+                        <p class="bold">Martha Comin</p>
+                        <p>10/8/2022</p>
+                    </div>
                 </div>
-                <div class="review-box-bottom">
-                    <a href="https://www.facebook.com/theyorkshireinn"><img src="<?=ROOT?>assets/images/icons/facebook-red.svg" alt="facebook"></a>
-                    <p class="bold">Cheryl Ives MacNeil</p>
-                    <p>7/6/2022</p>
+            </div>
+
+            <div class="swiper-slide">            
+                <div class="review-box">
+                    <div class="review-box-top">
+                        <img src="<?=ROOT?>/assets/images/homepage/review-7.png" alt="review">
+                        <p>"Everything was excellent.
+                        The place was nice, the pe..."
+                        </p>
+                    </div>
+                    <div class="review-box-bottom">
+                        <a href="https://maps.google.com/maps?cid=16425790188992418738"><img src="<?=ROOT?>/assets/images/icons/google-tile.svg" alt="google" class="review-icon"></a>
+                        <p class="bold">José Martínez</p>
+                        <p>10/7/2022</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide">            
+                <div class="review-box">
+                    <div class="review-box-top">
+                        <img src="<?=ROOT?>/assets/images/homepage/review-8.png" alt="review">
+                        <p>"My fiancé and I stayed here
+                        for a little 2 day getaway...."
+                        </p>
+                    </div>
+                    <div class="review-box-bottom">
+                        <a href="https://maps.google.com/maps?cid=16425790188992418738"><img src="<?=ROOT?>/assets/images/icons/google-tile.svg" alt="google" class="review-icon"></a>
+                        <p class="bold">Kaylee Brosius</p>
+                        <p>8/23/2022</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <div class="review-box">
+                    <div class="review-box-top">
+                        <img src="<?=ROOT?>/assets/images/homepage/review-9.png" alt="review">
+                        <p>"The location of the Inn was
+                        convenient to get to the Fi..."
+                        </p>
+                    </div>
+                    <div class="review-box-bottom">
+                        <a href="https://maps.google.com/maps?cid=16425790188992418738"><img src="<?=ROOT?>/assets/images/icons/google-tile.svg" alt="google" class="review-icon"></a>
+                        <p class="bold">Suchi Amritkumar</p>
+                        <p>8/23/2022</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide">         
+                <div class="review-box">
+                    <div class="review-box-top">
+                        <img src="<?=ROOT?>/assets/images/homepage/review-4.png" alt="review">
+                        <p>"What a wonderful place for
+                        a quick getaway. Micah is..."
+                        </p>
+                    </div>
+                    <div class="review-box-bottom">
+                        <a href="https://maps.google.com/maps?cid=16425790188992418738"><img src="<?=ROOT?>/assets/images/icons/google-tile.svg" alt="google" class="review-icon"></a>
+                        <p class="bold">Marie Burton</p>
+                        <p>8/15/2022</p>
+                    </div>
                 </div>
             </div>
         </div>
-
-        <div class="reviews-selector">
-            <input type="radio">
-            <input type="radio">
-            <input type="radio">
-        </div>
+        
+        <div class="swiper-pagination"></div>
 
     </section>
 
@@ -269,5 +378,50 @@
 
 
 </body>
-
+<script>
+const swiper = new Swiper('.swiper', {
+    loop: true,
+    loopFillGroupWithBlank: true,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+    breakpoints: {
+        // When screen width is less than or equal to 640px
+        600: {
+            slidesPerView: 1,
+            slidesPerGroup: 1,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+                type: 'bullets'
+            },
+        },
+        900: {
+            slidesPerView: 2,
+            slidesPerGroup: 2,
+            spaceBetween: 20,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+                type: 'bullets'
+            },
+        },
+        1100: {
+            slidesPerView: 3,
+            slidesPerGroup: 3,
+            spaceBetween: 30,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+                type: 'bullets'
+            },
+        },
+    },
+});
+</script>
 </html>

@@ -61,78 +61,113 @@ if (isset($_POST['update_values'])) {
 
 ?>
 
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="<?= ADMIN ?>/assets/css/styles.css">
-    <title>Edit Booking</title><br><br>
-
-
+    <link rel="stylesheet" href="<?= ADMIN ?>assets/css/style.css">
+    <link rel="icon" type="image/x-icon" href="<?=ROOT?>assets/images/icons/favicon.png">
+    <title>Edit Booking</title>
 </head>
-<body class="adminBody">
 
+<body>
 
-<h1 class="adminh1">Edit Booking</h1>
+    <div class="admin-form">
 
-<div class="admin-form">
+        <h1>Edit Booking</h1>
 
-<form method="POST" action="">
+        <form method="POST" action="">
 
+            <div class="label-input">
+                <label for="name">First name:</label>
+                <input type="text" id="name" name="name" required value="<?=$result[0]->FirstName?>">
+            </div>
 
-        <label for="name">First name:</label>
-        <input type="text" id="name" name="name" required value="<?=$result[0]->FirstName?>"><br><br>
-        <label for="lastName">Last name:</label>
-        <input type="text" id="lastName" name="Lastname" required value="<?=$result[0]->LastName?>"><br><br>
-        <label for="birthday">Birthday:</label>
-        <input type="date" id="birthday" name="birthday" required value="<?=$result[0]->Birthday?>"><br><br>
-        <label for="gender">Gender:</label>
-        <select id="gender" name="gender" required>
-            <option value="<?=$result[0]->Gender?>"><?=$result[0]->Gender?></option>
-            <option value="Male">Male</option>
-            <option value="Female">Female</option>
-            <option value="Other">Other</option>
-        </select><br><br>
-        <label for="phone">Phone number:</label>
-        <input type="tel" id="phone" name="phone" required value="<?=$result[0]->Phone?>"><br><br>
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required value="<?=$result[0]->Email?>"><br><br>
-        <label for="address">Address:</label>
-        <input type="text" id="address" name="address" required value="<?=$result[0]->Address?>"><br><br>
-        <label for="room">Room:</label>
-        <select id="room" name="room" required>
-            <option value="<?=$room_result[0]->RoomName?>"><?=$room_result[0]->RoomName?></option>
-            <option value="Lodge Suite">Lodge Suite</option>
-            <option value="Blue Room">Blue Room</option>
-            <option value="Rose Suite">Rose Suite</option>
-            <option value="Bolero Room">Bolero Room</option>
-        </select><br><br>
-        <label for="people">Adults:</label>
-        <input type="number" id="adults" name="adults" min="1" max="6" required value="<?=$result[0]->Adults?>"><br><br>
-        <label for="people">Children:</label>
-        <input type="number" id="children" name="children" min="0" max="6" required value="<?=$result[0]->Children?>"><br><br>
-        <label for="entryDate">Entry Date:</label>
-        <input type="date" class=date-picker" id="entryDate" name="arrive_date" required value="<?=$result[0]->CheckInDate?>"><br><br>
-        <label for="departureDate">Departure Date:</label>
-        <input type="date" id="departureDate" class="departure" name="depart_date" required value="<?=$result[0]-> CheckOutDate?>"><br><br>
-        <textarea class="special_requests" name="special_requests" cols="50" rows="15"><?=$result[0]->Requests?></textarea><br><br>
+            <div class="label-input">
+                <label for="lastName">Last name:</label>
+                <input type="text" id="lastName" name="Lastname" required value="<?=$result[0]->LastName?>">
+            </div>
 
-        <!--        <label for="time">Estimated Time Of Arrival:</label>-->
-        <!--        <input type="time" id="time" name="time" required><br><br>-->
-        <!--        <input class="checkboxAdmin" type="checkbox" name="checkin" value="checkin"> Checked in<br><br>-->
-        <!--        <input class="checkboxAdmin" type="checkbox" name="notcheckin" value="notcheckin"> Not-Checked in<br><br><br>-->
-        <!--    <a href="menu">-->
-        <!--            <button class="adminMenu-button">Go to menu selection</button>-->
-        <!--        </a><br><br>-->
+            <div class="label-input">
+                <label for="birthday">Birthday:</label>
+                <input type="date" id="birthday" name="birthday" required value="<?=$result[0]->Birthday?>">
+            </div>
 
-    </div>
-    <br><br>
+            <div class="label-input">
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender" required>
+                    <option value="<?=$result[0]->Gender?>"><?=$result[0]->Gender?></option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
 
-    <div class="admin-save-container">
-        <button type="submit" class="admin-button-save" name="update_values">Save</button>
-        <button class="back-button-save"><a href="admin">Back to Admin Panel</a></button>
-    </div>
-</form>
+            <div class="label-input">
+                <label for="phone">Phone number:</label>
+                <input type="tel" id="phone" name="phone" required value="<?=$result[0]->Phone?>">
+            </div>
+
+            <div class="label-input">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required value="<?=$result[0]->Email?>">
+            </div>
+
+            <div class="label-input">
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address" required value="<?=$result[0]->Address?>">
+            </div>
+
+            <div class="label-input">
+                <label for="room">Room:</label>
+                <select id="room" name="room" required>
+                    <option value="<?=$room_result[0]->RoomName?>"><?=$room_result[0]->RoomName?></option>
+                    <option value="Lodge Suite">Lodge Suite</option>
+                    <option value="Blue Room">Blue Room</option>
+                    <option value="Rose Suite">Rose Suite</option>
+                    <option value="Bolero Room">Bolero Room</option>
+                </select>
+            </div>
+
+            <div class="label-input">
+                <label for="people">Adults:</label>
+                <input type="number" id="adults" name="adults" min="1" max="6" required value="<?=$result[0]->Adults?>">
+            </div>
+
+            <div class="label-input">
+                <label for="people">Children:</label>
+                <input type="number" id="children" name="children" min="0" max="6" required value="<?=$result[0]->Children?>">
+            </div>
+
+            <div class="label-input">
+                <label for="entryDate">Entry Date:</label>
+                <input type="date" class=date-picker" id="entryDate" name="arrive_date" required value="<?=$result[0]->CheckInDate?>">
+            </div>
+
+            <div class="label-input">
+                <label for="departureDate">Departure Date:</label>
+                <input type="date" id="departureDate" class="departure" name="depart_date" required value="<?=$result[0]-> CheckOutDate?>">
+            </div>
+
+            <textarea class="special-requests" name="special_requests"><?=$result[0]->Requests?></textarea>
+
+            <!--        <label for="time">Estimated Time Of Arrival:</label>
+                    <input type="time" id="time" name="time" required>
+                    <input class="checkboxAdmin" type="checkbox" name="checkin" value="checkin"> Checked in
+                    <input class="checkboxAdmin" type="checkbox" name="notcheckin" value="notcheckin"> Not-Checked in<br>
+                <a href="menu">
+                        <button class="adminMenu-button">Go to menu selection</button>
+                    </a>-->
+                    
+
+            <div class="admin-save-container">
+                <button type="submit" class="admin-button-save" name="update_values">Save</button>
+                <a href="admin">Back to Admin Panel</a>
+            </div>
+        </form>
+    </div> <!--admin form-->
 
 
 <script>

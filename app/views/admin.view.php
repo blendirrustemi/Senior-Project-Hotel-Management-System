@@ -41,22 +41,28 @@ if (isset($_POST['search_btn'])){
 <html lang="en" dir="ltr">
   <head>
     <meta charset="UTF-8">
-    <title>Admin page </title>
     <link rel="stylesheet" href="<?=ADMIN?>/assets/css/style.css">
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="<?=ROOT?>assets/images/icons/favicon.png">
+    <title>Admin page </title>
    </head>
 <body>
   <div class="admin-sidebar">
     <div class="admin-details">
       <i class='bx bxs-user'></i>
-      <span class="admin-name">Hello, Admin</span>
+      <span class="admin-name">The Yorkshire Inn</span>
     </div>
       <ul class="admin-links">
         <li>
           <a href="admin" class="active">
             <i class='bx bx-book-add'></i>
             <span class="admin-link-name">Bookings & Customers</span>
+          </a>
+
+          <a href="users">
+            <i class='bx bx-book-add'></i>
+            <span class="admin-link-name">Admins</span>
           </a>
         </li>
        

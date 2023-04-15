@@ -310,6 +310,7 @@ h3 {
 .review-box-top img {
     border-radius: 50%;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    width: 100px;
 }
 
 .review-box-top {
@@ -327,19 +328,24 @@ h3 {
     align-items: center;
 }
 
-.reviews-container {
-    display: flex;
-    flex-wrap: wrap;
-    row-gap: 24px;
-    justify-content: space-between;
-    margin-top: 24px;
-    margin-bottom: 32px;
+.review-icon {
+    width: 20px;
 }
 
-.reviews-selector {
-    display: flex;
-    justify-content: center;
-    column-gap: 8px;
+#swiper-1 {
+    padding-bottom: 24px;
+    max-width: 100%;
+    margin-top: 16px;
+}
+
+#swiper-1 .swiper-pagination {
+    bottom: -2px;
+}
+
+#swiper-1 .swiper-pagination-bullet {
+    background-color: #fff;
+    width: 10px;
+    height: 10px;
 }
 
 .before-you-book {
