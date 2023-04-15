@@ -4,9 +4,9 @@
 *{
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  
+  box-sizing: border-box;  
 }
+
 body {
   font-family: 'Poppins', sans-serif;
 }
@@ -14,7 +14,7 @@ body {
 .admin-sidebar{
   width: 240px;
   height: 100%;
-  background: #9b116d;
+  background-color: #83032F;
   transition: all 0.5s ease;
   position: fixed;
 }
@@ -29,7 +29,7 @@ body {
   width: 60px;
 }
 .admin-sidebar .admin-details .admin-name{
-  font-size: 24px;
+  font-size: 18px;
   color: #fff;
   font-weight: 500;
 }
@@ -59,7 +59,7 @@ body {
 }
 .admin-sidebar .admin-links li a.active,
 .admin-sidebar .admin-links li a:hover {
-  background-color: #51084c;
+  background-color: #c20748;
 }
 
 .admin-sidebar .admin-links li a .admin-link-name{
@@ -175,7 +175,7 @@ nav .admin-search-box .bx-search{
   transition: all 0.4 ease;
 }
 nav .admin-details .admin-name{
-  font-size: 15px;
+  font-size: 10px;
   font-weight: 500;
   color: #333;
   margin: 0 10px;
@@ -316,7 +316,7 @@ tr:nth-child(even) {
 }
 
 th {
-  background-color: #51084c;
+  background-color: #c20748;
   color: white;
 }
 
@@ -340,4 +340,108 @@ th {
   margin-right: 10px;
 }
 
+/*
+edit bookings & edit users
+*/
+.admin-form {
+  width: 50%;
+  margin: 0 auto;  
+  padding: 20px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
+.admin-form label, input {
+  width: 100%;
+  padding: 0;
+  border: none;
+  outline: none;
+}
+
+.admin-form input {
+  background: #ecf0f3;
+  padding: 16px 8px;
+  font-size: 16px;
+}
+
+h1 {
+  font-family: 'Lato', sans-serif;
+  font-weight: normal;
+  text-align: center;
+  color: #000;
+  margin: 12px;
+}
+
+/**
+.adminMenu-button{
+  background-color: #931c63;
+  color: white;
+  margin-top: 20px;
+  height: 30px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 900;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+*/
+
+a {
+  color: #000;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.admin-button-save {
+  font-size: 16px;
+  background-color: #83032F;
+  color: #fff;
+  border-radius: 10px;
+  padding: 8px 24px;
+  cursor: pointer;
+  border: none;
+}
+
+.admin-save-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.back-button-save {
+  font-size: 16px;
+  background-color: #83032F;
+  color: #fff;
+  border-radius: 10px;
+  padding: 8px 24px;
+  cursor: pointer;
+  border: none;
+}
+
+.admin-form form {
+  width: 50%;
+}
+
+.label-input {
+  display: flex;
+  margin-bottom: 32px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 8px;
+  align-items: center;
+}
+
+.label-input select {
+  width: 100%;
+}
+
+.special-requests {
+  width: 100% !important;
+  height: 150px;
+}

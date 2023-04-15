@@ -2,23 +2,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="<?=ADMIN?>/assets/css/login_styles.css">
-    <title>Forgot Password Page</title>
+    <link rel="stylesheet" href="<?=ADMIN?>/assets/css/login.css">
+    <link rel="icon" type="image/x-icon" href="<?=ROOT?>assets/images/icons/favicon.png">
+    <title>Reset Password</title>
 </head>
 <body>
 
-<a href="login"><button class = "backToLogin-button">Back to Login Page</button></a>
+    <div class="login-container">
 
+        <div class="login-logo">
+            <a href="<?=ROOT?>">
+                <img src="<?=ROOT?>assets/images/icons/logo.svg" alt="The Yorkshire Inn">
+            </a>
+        </div>
 
+        <p>Enter your email to reset the password</p>
 
-<div class="container-forgotPass">
-    <div class="forgotPass-title">Enter your email to reset the password</div>
-    <div class="inputs">
-        <label class = "email-label">EMAIL</label>
-        <input type="email" placeholder="email"  required/>
+        <div class="login-input">
+            <input type="email" placeholder="Email" required/>
+        </div>
         
-        <button class ="forgotPass-button" type="submit">SUBMIT</button>
+        <button class ="reset-button" type="submit">Reset Password</button>
+
+        <a href="login">Back to Login Page</button></a>
+
     </div>
-</div>
+
 </body>
 </html>

@@ -32,26 +32,38 @@ if (isset($_POST['submit'])) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="<?= ADMIN ?>/assets/css/login_styles.css">
+    <link rel="stylesheet" href="<?= ADMIN ?>assets/css/login.css">
+    <link rel="icon" type="image/x-icon" href="<?=ROOT?>assets/images/icons/favicon.png">
     <title>Login Page</title>
 </head>
 <body>
 
-<div class="container-login">
-    <form action="" method="POST">
-        <a href="home"><div class="brand-logo"></div></a>
-        <div class="login-title">Please sign in</div>
-        <div class="inputs">
-            <label class="username-label">USERNAME</label>
-            <input type="username" name="username" placeholder="username" required/>
-            <label class="password-label">PASSWORD</label>
-            <input type="password" name="password" placeholder="password" required/>
-            <a href="forgotpassword">Forgot password?</a><br><br>
+    <div class="login-container">
+        <form action="" method="POST">
+            
+            <div class="login-logo">
+                <a href="<?=ROOT?>">
+                    <img src="<?=ROOT?>assets/images/icons/logo.svg" alt="The Yorkshire Inn">
+                </a>
+            </div>
+
+            <div class="login-title"><h1>Log In</h1></div>
+
+            <div class="login-input">
+                <input type="username" name="username" placeholder="Username" required/>
+            </div>
+
+            <div class="login-input">
+                <input type="password" name="password" placeholder="Password" required/>
+            </div>
+
+            <button class="login-button" name="submit" type="submit">Log in</button>
+
+            <a href="forgotpassword">Forgot password?</a>
+
             <p style="color: red"><?php echo $err ?></p>
 
-            <button class="login-button" name="submit" type="submit">LOGIN</button>
-        </div>
-    </form>
-</div>
+        </form>
+    </div>
 </body>
 </html>
