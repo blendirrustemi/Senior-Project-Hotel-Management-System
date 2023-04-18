@@ -1,0 +1,64 @@
+{
+  "bookings": [
+    {
+      "BookingID": 1,
+      "CustomerID": 2,
+      "RoomID": 2,
+      "CheckInDate": "2023-04-08",
+      "CheckOutDate": "2023-04-13",
+      "Adults": 4,
+      "Children": 2,
+      "Requests": "Non-smoking room",
+      "NightsToStay": 5,
+      "TotalPrice": 1250
+    },
+    {
+      "BookingID": 8,
+      "CustomerID": "17",
+      "RoomID": "2",
+      "CheckInDate": "2023-04-17",
+      "CheckOutDate": "2023-04-23",
+      "Adults": "2",
+      "Children": "1",
+      "Requests": "No windows operating system in my room!",
+      "NightsToStay": "6",
+      "TotalPrice": "1500"
+    },
+    {
+      "BookingID": 11,
+      "CustomerID": "20",
+      "RoomID": "3",
+      "CheckInDate": "2023-04-13",
+      "CheckOutDate": "2023-04-20",
+      "Adults": "2",
+      "Children": "4",
+      "Requests": "No apple in this shit!",
+      "NightsToStay": "7",
+      "TotalPrice": "1610"
+    },
+    {
+      "BookingID": 12,
+      "CustomerID": "4",
+      "RoomID": "2",
+      "CheckInDate": "2023-04-26",
+      "CheckOutDate": "2023-04-28",
+      "Adults": "2",
+      "Children": "1",
+      "Requests": "Lactose free",
+      "NightsToStay": "2",
+      "TotalPrice": "520"
+    },
+    {
+      "BookingID": 13,
+      "CustomerID": "4",
+      "RoomID": "1",
+      "CheckInDate": "2023-04-26",
+      "CheckOutDate": "2023-04-27",
+      "Adults": "2",
+      "Children": "0",
+      "Requests": "Gluten free",
+      "NightsToStay": "1",
+      "TotalPrice": "260"
+    }
+  ]
+}
