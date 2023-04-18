@@ -45,7 +45,7 @@ if (isset($_POST['search_btn'])){
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="<?=ROOT?>assets/images/icons/favicon.png">
-    <title>Admin page </title>
+    <title>Admin page</title>
    </head>
 <body>
   <div class="admin-sidebar">
@@ -61,7 +61,7 @@ if (isset($_POST['search_btn'])){
           </a>
 
           <a href="users">
-            <i class='bx bx-book-add'></i>
+                <i class='bx bxs-user-detail'></i>
             <span class="admin-link-name">Admins</span>
           </a>
         </li>

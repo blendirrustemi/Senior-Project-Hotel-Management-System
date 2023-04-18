@@ -32,8 +32,8 @@ if ($submit_btn) {
   <script src="<?=ROOT?>assets/js/script.js" defer></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto+Slab:wght@400;700&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="<?=ROOT?>assets/images/icons/favicon.png">
   <title>Rooms - The Yorkshire Inn</title>
 </head>
 
@@ -120,7 +120,18 @@ if ($submit_btn) {
                 <p class="room-preview-description"><?=$row->Description?>
                 </p>
 
+                <?php if($row->RoomName == "Blue Room"): ?>
                 <a href="blueroom" class="underline">More info</a>
+                <?php endif; ?>
+                <?php if($row->RoomName == "Bolero Room"): ?>
+                <a href="boleroroom" class="underline">More info</a>
+                <?php endif; ?>
+                <?php if($row->RoomName == "Rose Suite"): ?>
+                <a href="lodgesuite" class="underline">More info</a>
+                <?php endif; ?>
+                <?php if($row->RoomName == "Lodge Suite"): ?>
+                <a href="lodgesuite" class="underline">More info</a>
+                <?php endif; ?>
                 <div class="room-preview-icons">
                     <img src="<?=ROOT?>assets/images/icons/wifi-grey.svg" alt="Icon">
                     <img src="<?=ROOT?>assets/images/icons/tv-grey.svg" alt="Icon">
