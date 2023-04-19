@@ -21,40 +21,43 @@
 <div class="admin-sidebar">
     <div class="admin-details">
         <i class='bx bxs-user'></i>
-        <span class="admin-name">Hello, Admin</span>
+        <span class="admin-name">The Yorkshire Inn</span>
     </div>
     <ul class="admin-links">
         <li>
             <a href="admin">
                 <i class='bx bx-book-add'></i>
-                <span class="admin-link-name">Bookings</span>
+                <span class="admin-link-name">Bookings & Customers</span>
             </a>
         </li>
         <li>
             <a href="users" class="active" >
                 <i class='bx bxs-user-detail'></i>
-                <span class="admin-link-name">Users</span>"
+                <span class="admin-link-name">Admins</span>
             </a>
         </li>
         
         <li class="admin-logout">
-            <a href="login">
+            <a href="logout">
                 <i class='bx bx-log-out'></i>
                 <span class="admin-link-name">Log out</span>
             </a>
         </li>
     </ul>
 </div>
+
 <section class="admin-home-section">
     <nav>
         <div class="admin-sidebar-button">
             <i class='bx bx-menu sidebarBtn'></i>
-            <span class="admin-dashboard">Users</span>
+            <span class="admin-dashboard">Admins</span>
         </div>
-        <div class="admin-search-box">
-            <input type="text" placeholder="Search...">
-            <i class='bx bx-search' ></i>
-        </div>
+      <form method="POST" action="">
+          <div class="admin-search-box">
+              <input type="text" name="search_customer" placeholder="Search...">
+              <button class='bx bx-search' name="search_btn" type="submit"></button>
+          </div>
+      </form>
     
     </nav>
     
