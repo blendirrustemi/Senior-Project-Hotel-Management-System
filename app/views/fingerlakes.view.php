@@ -70,7 +70,7 @@
                 Park, which has no less than nineteen waterfalls!
             </p>
             <button><a href="rooms">BOOK A STAY AT THE YORKSHIRE INN</a></button>
-            <div class="did-you-know full-bleed">
+            <div class="did-you-know">
                 <h2>Did you know?</h2>
                 <p>The Finger Lakes District of New York State was named the Top Wine Region in the United States in a 2018 reader poll by USA Today.                    
                 </p>
