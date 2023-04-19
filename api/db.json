@@ -35,30 +35,6 @@
       "Requests": "No apple in this shit!",
       "NightsToStay": "7",
       "TotalPrice": "1610"
-    },
-    {
-      "BookingID": 12,
-      "CustomerID": "4",
-      "RoomID": "2",
-      "CheckInDate": "2023-04-26",
-      "CheckOutDate": "2023-04-28",
-      "Adults": "2",
-      "Children": "1",
-      "Requests": "Lactose free",
-      "NightsToStay": "2",
-      "TotalPrice": "520"
-    },
-    {
-      "BookingID": 13,
-      "CustomerID": "4",
-      "RoomID": "1",
-      "CheckInDate": "2023-04-26",
-      "CheckOutDate": "2023-04-27",
-      "Adults": "2",
-      "Children": "0",
-      "Requests": "Gluten free",
-      "NightsToStay": "1",
-      "TotalPrice": "260"
     }
   ]
 }

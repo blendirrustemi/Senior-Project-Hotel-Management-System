@@ -11,7 +11,7 @@
         ];
         $context = stream_context_create($options);
         $result  = file_get_contents($url, false, $context);
-        header('Location: index.php');
+        header('Location: api.php');
     }
 ?>
 
