@@ -58,141 +58,191 @@ if (isset($_POST['submit'])){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
     <link rel="stylesheet" href="<?=ROOT?>assets/css/style.css">
-
+    <script src="<?=ROOT?>assets/js/script.js" defer></script>
+    <link rel="icon" type="image/x-icon" href="<?=ROOT?>assets/images/icons/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
     <title><?= $result->RoomName ?></title>
 
 </head>
-<body class = "oneRoomBody">
+<body>
 
-<a class = "backtoHomeA" href = "home"<button class = "backToHomeButton">Back to Homepage</button> </a>
-
-<form class="roomBookingForm"  action="" method="POST">
-
-
-
-    <h1 class = "oneRoomh1"><i class="far fa-calendar-alt"></i>Book a room</h1>
-    <h3 class = "oneRoomh3">Room: <?= $result->RoomName ?></h3>
-
-
-    <div class="areas">
-
-        <div class="wrapper">
-            <div>
-
-                <label for="name">Name:</label>
-                <div class="field">
-                    <i class="fas fa-user"></i>
-                    <input type="text" class = "oneRoomName"  id="name" name="name" required>
-                </div>
-
-
-                <label for="surname">Surname:</label>
-                <div class="field">
-                    <i class="fas fa-user"></i>
-
-                    <input type="text" class = "oneRoomlastname"  id="surname" name="surname" required>
-
-
-                </div>
-                <div>
-                <label for="address">Address:</label>
-                <div class="field">
-                    <i class="fas fa-map-pin"></i>
-                    <input type="text" class = "oneRoomAddress" id="address" name="address" required>
-                </div>
+    <header>
+        <div class="contact-info">
+            <div class="social-icons">
+            <a href="https://www.facebook.com/theyorkshireinn/"><img src="<?=ROOT?>assets/images/icons/facebook.svg" alt="facebook"></a>
+            <a href="https://www.instagram.com/the_yorkshire_inn/"><img src="<?=ROOT?>assets/images/icons/instagram.svg" alt="instagram"></a>
+            <a href="https://www.yelp.com/biz/the-yorkshire-inn-phelps"><img src="<?=ROOT?>assets/images/icons/yelp.svg" alt="yelp"></a>
             </div>
-                <div><label for="email">Email:</label>
-                    <div class="field">
-                        <i class="fas fa-envelope"></i>
-                        <input id="email" class = "oneRoomEmail" type="email" name="email" placeholder=" Email" required>
-                    </div>
+            <div class="phone-number">
+            <img class="phone-icon" src="<?=ROOT?>assets/images/icons/phone.svg" alt="phone">
+            <p>315-548-9675</p>
+            </div>
+        </div>
+
+        <nav class="navbar">
+            <div class="logo">
+            <a href="<?=ROOT?>">
+                <img src="<?=ROOT?>assets/images/icons/logo.svg" alt="The Yorkshire Inn">
+            </a>
+            </div>
+
+            <div class="navbar-links">
+            <ul>
+                <li><a href="rooms">Rooms</a></li>
+                <li><a href="history">History</a></li>
+                <li><a href="gallery">Gallery</a></li>
+                <li><a href="fingerlakes">Finger Lakes</a></li>
+                <li><a href="contact">Contact & Policies</a></li>
+            </ul>
+            </div>
+            <img src="<?=ROOT?>assets/images/icons/menu.svg" alt="menu icon" class="menu-icon">
+        </nav>
+    </header>
+
+    <section class="container one-room">
+
+    <!--<?php if($result->RoomName == "Blue Room"): ?>
+        <img src="<?=ROOT?><?=$result->Picture?>" alt="<?=$result->RoomName?>">
+    <?php endif; ?>
+
+    <?php if($result->RoomName == "Bolero Room"): ?>
+        <img src="<?=ROOT?><?=$result->Picture?>" alt="<?=$result->RoomName?>">
+    <?php endif; ?>
+
+    <?php if($result->RoomName == "Rose Suite"): ?>
+        <img src="<?=ROOT?><?=$result->Picture?>" alt="<?=$result->RoomName?>">
+    <?php endif; ?>
+
+    <?php if($result->RoomName == "Lodge Suite"): ?>
+        <img src="<?=ROOT?><?=$result->Picture?>" alt="<?=$result->RoomName?>">
+    <?php endif; ?>-->
+
+    <form class="booking-form section-title" action="" method="POST">        
+
+        <h2>Booking: <?= $result->RoomName ?></h2>
+
+        <div class="booking-form-content">
+
+            <div class="booking-form-content-left">
+
+                <div class="booking-form-content-item">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
                 </div>
-                <div>
+
+
+                <div class="booking-form-content-item">
+                    <label for="surname">Surname:</label>
+                    <input type="text" id="surname" name="surname" required>
+                </div>
+
+
+                <div class="booking-form-content-item">
+                    <label for="address">Address:</label>
+                    <input type="text" id="address" name="address" required>
+                </div>
+
+
+                <div class="booking-form-content-item">
+                    <label for="email">Email:</label>
+                    <input id="email" type="email" name="email" placeholder="yourname@example.com" required>
+                </div>
+
+
+                <div class="booking-form-content-item">
                     <label for="phone">Phone:</label>
-                    <div class="field">
-                        <i class="fas fa-phone"></i>
-                        <input id="phone" class = "oneRoomPhone" type="tel" name="phone" placeholder="Phone Number" required>
-                    </div>
+                    <input id="phone" type="tel" name="phone" placeholder="123-456-7890" required>                       
                 </div>
+
             </div>
 
+            <div class="booking-form-content-right">
 
+                <div class="booking-form-content-item-group">
 
-
-
-            <div class="gap"></div>
-            <div>
-                <div class="wrapper">
-                    <div>
-                        <label for="checkin">Check-in date:</label>
-                        <div class="field">
-                            <input type="date" class = "oneRoomCheckin" id="checkin" name="checkin" required value="<?=$arrive_date?>" disabled>
-                        </div>
+                    <div class="booking-form-content-item">
+                        <label for="checkin">Arrival date:</label>
+                        <input type="date" id="checkin" name="checkin" required value="<?=$arrive_date?>" disabled>
                     </div>
 
-                    <div class="gap"></div>
-                    <div>
-                        <label for="checkout">Check-out date:</label>
-                        <div class="field">
-                            <input type="date" class = "oneRoomCheckout" id="checkout" name="checkout" required value="<?=$departure_date?>" disabled>
-                        </div>
+                    <div class="booking-form-content-item">
+                        <label for="checkout">Departure date:</label>
+                        <input type="date" id="checkout" name="checkout" required value="<?=$departure_date?>" disabled>
                     </div>
+
                 </div>
 
-                <div class="wrapper">
-                    <div>
-                        <label for="gender">Gender:</label>
-                        <div class="field">
-                            <select id="gender" class = "oneRoomGender" name="gender" required>
-                                <option value="">--Select--</option>
-                                <option value="male">Male</option>
-                                <option value="female">Female</option>
-                                <option value="other">Other</option>
-                            </select><br>
-                        </div>
-                    </div>
-
-
-                    <div class="gap"></div>
-                    <div>
-                        <label for="birthday">Birthday:</label>
-                        <div class="field">
-                            <input type="date" class = "oneRoomBirth" id="birthday" name="birthday" required>
-                        </div>
-                    </div>
+                <div class="booking-form-content-item">
+                    <label for="gender">Gender:</label>
+                    <select id="gender" name="gender" required>
+                        <option value="">-- Select --</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>                          
                 </div>
 
+                <div class="booking-form-content-item birthday">
+                    <label for="birthday">Birthday:</label>
+                    <input type="date" id="birthday" name="birthday" required>
+                </div>
 
-
-
-
-
-                <div class="wrapper">
-                    <div>
+                
+                <div class="booking-form-content-item-group">
+                    <div class="booking-form-content-item">
                         <label for="adults">Number of Adults</label>
-                        <div class="field">
-                            <input type="number" class = "oneRoomAdults" id="adults" name="adults" min="1" max="6" required>
-                        </div>
+                        <input type="number" id="adults" name="adults" min="1" max="6" required>
                     </div>
-                    <div class="gap"></div>
-                    <div>
+
+                    <div class="booking-form-content-item">
                         <label for="children">Number of Children</label>
-                        <div class="field">
-                            <input type="number" class = "oneRoomChild" id="children" name="children" min="0" max="5" required>
-                        </div>
+                        <input type="number" id="children" name="children" min="0" max="5" required>
                     </div>
-                </div>
-                <label for="special-requests">Special requests:</label>
-                <div class="field">
-                    <textarea id="special-requests" class = "oneRoomSpecial" name="special_requests" rows="4" cols="30"></textarea>
+                </div>                
+
+                <div class="booking-form-content-item">
+                    <label for="special-requests">Special requests:</label>
+                    <textarea id="special-requests" name="special_requests" rows="4" cols="30"></textarea>
                     <input type="hidden" id="room_id" name="room_id" value="<?=$room_id?>">
                     <input type="hidden" name="price_per_night" value="<?=$result->PricePerNight?>">
                     <input type="hidden" name="arrive_date" value="<?=$arrive_date?>">
                     <input type="hidden" name="depart_date" value="<?=$departure_date?>">
                 </div>
-                <input class ="oneRoomSubmit" type="submit" value="Book" name="submit">
+
             </div>
-</form>
+        </div> <!--areas-->
+
+        <input class="booking-form-button" type="submit" value="BOOK ROOM" name="submit">
+
+    </form>
+
+    </section>
+
+    <footer class="full-bleed">
+
+      <div class="footer-container">
+
+        <div class="footer-socials">
+          <p class="footer-title">Follow the Yorkshire Inn</p>
+          <div class="footer-socials-icons">
+            <a href="https://www.facebook.com/theyorkshireinn/"><img src="<?=ROOT?>assets/images/icons/facebook-white.svg" alt="facebook"></a>
+            <a href="https://www.instagram.com/the_yorkshire_inn/"><img src="<?=ROOT?>assets/images/icons/instagram-white.svg" alt="instagram"></a>
+            <a href="https://www.yelp.com/biz/the-yorkshire-inn-phelps"><img src="<?=ROOT?>assets/images/icons/yelp-white.svg" alt="yelp"></a>
+          </div>
+        </div>
+
+        <div class="footer-contact">
+          <p class="footer-title">Contact us</p>
+          <p>315-548-9675</p>
+          <p>innkeeper@theyorkshireinn.com</p>
+        </div>
+
+    </div>
+
+    <p class="copyright">© 2023 THE YORKSHIRE INN - ALL RIGHTS RESERVED</p>
+
+    </footer>
+
 <script>
     const adultSelect = document.getElementById('adults');
     const childSelect = document.getElementById('children');
@@ -238,4 +288,3 @@ if (isset($_POST['submit'])){
 
 </body>
 </html>
-
