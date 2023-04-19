@@ -3,6 +3,12 @@
 session_start();
 $err = "";
 
+$is_logged_in = $_SESSION['is_logged_in'];
+
+if ($is_logged_in) {
+    header("Location: admin");
+}
+
 if (isset($_POST['submit'])) {
     $username = $_POST['username'];
     $password = $_POST['password'];

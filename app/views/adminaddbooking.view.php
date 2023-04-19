@@ -3,14 +3,14 @@
 $db = new Database();
 $con = $db->connect();
 
-$room_id = $_POST['room_id'];
-$arrive_date = $_POST['arrive_date'];
-$departure_date = $_POST['depart_date'];
-
-$query = "SELECT * FROM Rooms WHERE RoomID = $room_id";
-$result = $db->query($query);
-
-$result = $result[0];
+//$room_id = $_POST['room_id'];
+//$arrive_date = $_POST['arrive_date'];
+//$departure_date = $_POST['depart_date'];
+//
+//$query = "SELECT * FROM Rooms WHERE RoomID = $room_id";
+//$result = $db->query($query);
+//
+//$result = $result[0];
 
 
 if (isset($_POST['submit'])){
@@ -27,22 +27,22 @@ if (isset($_POST['submit'])){
             VALUES ('$name', '$surname', '$birthday', NULL, '$gender', '$email', '$phone', '$address', NULL, 0)";
     $customer = $db->query($customer_query);
 
-
 // Bookings Table:
     $room_id = $_POST['room_id'];
-    $checkin = $_POST['arrive_date'];
-    $checkout = $_POST['depart_date'];
+    $checkin = $_POST['checkin'];
+    $checkout = $_POST['checkout'];
     $adults = $_POST['adults'];
     $children = $_POST['children'];
     $special_requests = $_POST['special_requests'];
     $price_per_night = $_POST['price_per_night'];
-
     $total_price = $price_per_night * (floor(abs(strtotime($checkout) - strtotime($checkin)) / (60 * 60 * 24)));
+
 
     $get_customer_id = "SELECT CustomerID FROM Customers WHERE Email = '$email'
                                    and FirstName = '$name' and LastName = '$surname' and birthday = '$birthday'";
     $customer_id = $db->query($get_customer_id);
     $customer_id=  $customer_id[0]->CustomerID;
+
 
     $booking_query = "INSERT INTO Bookings (CustomerID, RoomID, CheckInDate, CheckOutDate, Adults, Children, Requests, NightsToStay, TotalPrice)
             VALUES ('$customer_id', '$room_id', '$checkin', '$checkout',
@@ -60,7 +60,7 @@ if (isset($_POST['submit'])){
     <script src="<?=ROOT?>assets/js/script.js" defer></script>
     <link rel="icon" type="image/x-icon" href="<?=ROOT?>assets/images/icons/favicon.png">
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
-    <title><?= $result->RoomName ?></title>
+    <title>Admin Booking</title>
 
 </head>
 <body>
@@ -100,25 +100,9 @@ if (isset($_POST['submit'])){
 
 <section class="container one-room">
 
-    <!--<?php if($result->RoomName == "Blue Room"): ?>
-        <img src="<?=ROOT?><?=$result->Picture?>" alt="<?=$result->RoomName?>">
-    <?php endif; ?>
-
-    <?php if($result->RoomName == "Bolero Room"): ?>
-        <img src="<?=ROOT?><?=$result->Picture?>" alt="<?=$result->RoomName?>">
-    <?php endif; ?>
-
-    <?php if($result->RoomName == "Rose Suite"): ?>
-        <img src="<?=ROOT?><?=$result->Picture?>" alt="<?=$result->RoomName?>">
-    <?php endif; ?>
-
-    <?php if($result->RoomName == "Lodge Suite"): ?>
-        <img src="<?=ROOT?><?=$result->Picture?>" alt="<?=$result->RoomName?>">
-    <?php endif; ?>-->
-
     <form class="booking-form section-title" action="" method="POST">
 
-        <h2>Booking: <?= $result->RoomName ?></h2>
+        <h2>Admin Booking</h2>
 
         <div class="booking-form-content">
 
@@ -155,18 +139,29 @@ if (isset($_POST['submit'])){
 
             </div>
 
+            <div class="booking-form-content-item">
+                <label for="rooms">Rooms:</label>
+                <select id="room_id" name="room_id" required>
+                    <option value="">-- Select --</option>
+                    <option value="1">Blue Room</option>
+                    <option value="2">Bolero Room</option>
+                    <option value="3">Rose Suite</option>
+                    <option value="4">Lodge Suite</option>
+                </select>
+            </div>
+
             <div class="booking-form-content-right">
 
                 <div class="booking-form-content-item-group">
 
                     <div class="booking-form-content-item">
                         <label for="checkin">Arrival date:</label>
-                        <input type="date" id="checkin" name="checkin" required value="<?=$arrive_date?>" disabled>
+                        <input type="date" id="checkin" class="date-picker" name="checkin" required>
                     </div>
 
                     <div class="booking-form-content-item">
                         <label for="checkout">Departure date:</label>
-                        <input type="date" id="checkout" name="checkout" required value="<?=$departure_date?>" disabled>
+                        <input type="date" id="checkout" class="date-picker departure" name="checkout" required>
                     </div>
 
                 </div>
@@ -202,10 +197,7 @@ if (isset($_POST['submit'])){
                 <div class="booking-form-content-item">
                     <label for="special-requests">Special requests:</label>
                     <textarea id="special-requests" name="special_requests" rows="4" cols="30"></textarea>
-                    <input type="hidden" id="room_id" name="room_id" value="<?=$room_id?>">
-                    <input type="hidden" name="price_per_night" value="<?=$result->PricePerNight?>">
-                    <input type="hidden" name="arrive_date" value="<?=$arrive_date?>">
-                    <input type="hidden" name="depart_date" value="<?=$departure_date?>">
+
                 </div>
 
             </div>
@@ -252,14 +244,8 @@ if (isset($_POST['submit'])){
         const childCount = parseInt(childSelect.value);
         const totalCount = adultCount + childCount;
         const roomId = parseInt(roomIdInput.value);
-        let maxGuests = 0;
-        if (roomId === 1 || roomId === 2) {
-            maxGuests = 2;
-        } else if (roomId === 3 || roomId === 4) {
-            maxGuests = 6;
-        }
-        if (totalCount > maxGuests) {
-            alert(`You cannot select more than ${maxGuests} guests for this room.`);
+        if (totalCount > 6) {
+            alert(`You cannot select more than ${6} guests for this room.`);
             // Reset the selection to the previous value
             if (this.id === 'adults') {
                 adultSelect.value = parseInt(adultSelect.dataset.previousValue);
@@ -283,6 +269,21 @@ if (isset($_POST['submit'])){
     adultSelect.addEventListener('change', updateGuestCount);
     childSelect.addEventListener('change', updateGuestCount);
     roomIdInput.addEventListener('change', updateGuestCount);
+
+        const date = new Date();
+        const today = date.toISOString().substr(0, 10);
+        document.querySelector(".date-picker").value = today;
+        document.querySelector(".date-picker").min = today;
+        document.querySelector(".date-picker").addEventListener("change", function() {
+        document.querySelector(".departure").min = this.value;
+    });
+
+        const tomorrow = new Date(date);
+        tomorrow.setDate(tomorrow.getDate() + 1);
+        const tomorrowString = tomorrow.toISOString().substr(0, 10);
+        document.querySelector(".departure").value = tomorrowString;
+        document.querySelector(".departure").min = tomorrowString;
+
 </script>
 
 </body>

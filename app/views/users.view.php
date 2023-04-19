@@ -1,11 +1,35 @@
 <?php
-    //include('../controllers/Users.php');
-    
-    // We need to implement the select function here on the Users Admin page and fill out the table.
-    // I suggest we get a loop and loop through an array of objects from the result of the query.
-    // Go see Users.php for more info on the controller side of things.
-    
-    // PS: not sure where to implement the code on this page yet but the rest of the template should be good to use.
+$db = new Database();
+$con = $db->connect();
+
+session_start();
+
+$is_logged_in = $_SESSION['is_logged_in'];
+
+if (!$is_logged_in){
+    header("Location: login");
+}
+
+$query = "SELECT * FROM Customers where isAdmin = 1";
+$result = $db->query($query);
+
+if (isset($_POST['del_user_btn'])){
+    $customer_id = $_POST['del_user_btn'];
+    $delete_user_query = "DELETE FROM Customers WHERE CustomerID = '$customer_id'";
+
+    $delete_user_result = $db->query($delete_user_query);
+
+    header("Refresh:0");
+}
+
+
+if (isset($_POST['search_btn'])){
+    $search_customer = $_POST['search_customer'];
+    $search_query = "SELECT * FROM Customers WHERE CustomerID='$search_customer' OR FirstName LIKE '%$search_customer%' OR
+                              LastName LIKE '%$search_customer%' and isAdmin = 1";
+    $result = $db->query($search_query);
+
+}
 ?>
 
 <!DOCTYPE html>
@@ -52,21 +76,31 @@
             <i class='bx bx-menu sidebarBtn'></i>
             <span class="admin-dashboard">Admins</span>
         </div>
-      <form method="POST" action="">
-          <div class="admin-search-box">
-              <input type="text" name="search_customer" placeholder="Search...">
-              <button class='bx bx-search' name="search_btn" type="submit"></button>
-          </div>
-      </form>
+
+        <form method="POST" action="">
+            <div class="admin-search-box">
+                <input type="text" name="search_customer" placeholder="Search...">
+                <button class='bx bx-search' name="search_btn" type="submit"></button>
+            </div>
+        </form>
     
     </nav>
+
     
     <div class="admin-home-content">
         
         
         <div class="admin-card">
             <div class="admin-recent-card">
-                <div class="title">Customers</div><br>
+                <div class="title">Admins</div><br>
+
+                <button>
+                    <a href="addadmin">
+                        <i class='bx bxs-user-plus'>Add Admin</i>
+                    </a>
+                </button>
+
+
                 <table class="table table-striped table-bordered table-condensed">
                     <thead>
                     <tr>
@@ -77,21 +111,25 @@
                     </tr>
                     </thead>
                     <tbody>
-                    
+
+                    <?php foreach($result as $row): ?>
+
                     <tr>
-                        <td>1</td>
-                        <td>Daniel123</td>
-                        <td>Password</td>
-                        <td class = "button-td">
-                            <a href="usersedit">
-                                <i class="bx bxs-edit"></i>
-                            </a>
-                            <a href="#">
-                                <i class="bx bxs-user-minus"></i>
-                            </a>
-                        
-                        </td>
+                        <td><?=$row->CustomerID?></td>
+                        <td><?=$row->Username?></td>
+                        <td><?php echo str_repeat("*", strlen($row->Password)); ?></td>
+                        <form action="" method="POST">
+                            <td class = "button-td">
+                                <a href="usersedit?id=<?=$row->CustomerID?>">
+                                    <i class="bx bxs-edit"></i>
+                                </a>
+                                <button class="bx bxs-user-minus" name="del_user_btn" value="<?=$row->CustomerID?>" type="submit"></button>
+
+                            </td>
+                        </form>
                     </tr>
+
+                    <?php endforeach; ?>
             
             
             </div>
