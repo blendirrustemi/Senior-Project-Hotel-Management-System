@@ -726,15 +726,14 @@ fingerlakes
 }
 
 .did-you-know {
-    color: #fff;
-    background-color: #83032F;
+    color: #000;
     padding: 48px 0;
     margin-top: 32px;
 }
 
 .did-you-know button {
-    background-color: #fff;
-    color: #83032F;
+    background-color: #83032F;
+    color: #fff;
 }
 
 /*
@@ -1267,6 +1266,10 @@ media queries
     .booking-form {
         margin: 0 auto;
         width: 90%;
+    }
+
+    .hero, .rooms, .blue-room, .bolero-room, .rose-suite, .lodge-suite, .history, .gallery, .fingerlakes, .contact {
+        margin-top: 72px;
     }
 }
 
