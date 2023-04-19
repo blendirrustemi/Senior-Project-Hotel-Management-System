@@ -127,7 +127,7 @@ if ($submit_btn) {
                 <a href="boleroroom" class="underline">More info</a>
                 <?php endif; ?>
                 <?php if($row->RoomName == "Rose Suite"): ?>
-                <a href="lodgesuite" class="underline">More info</a>
+                <a href="rosesuite" class="underline">More info</a>
                 <?php endif; ?>
                 <?php if($row->RoomName == "Lodge Suite"): ?>
                 <a href="lodgesuite" class="underline">More info</a>
