@@ -35,6 +35,14 @@ if ($submit_btn) {
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/x-icon" href="<?=ROOT?>assets/images/icons/favicon.png">
   <title>Rooms - The Yorkshire Inn</title>
+    <style>
+        #num_rooms {
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 2rem 0;
+        }
+    </style>
 </head>
 
 <body>
@@ -105,6 +113,16 @@ if ($submit_btn) {
             </div>
 
         </div>
+
+      <h3 id="num_rooms">
+          <?php if (isset($arrive_date) && isset($depart_date)){
+              if ($guest_num == 1){
+                  echo "Available Rooms from $arrive_date to $depart_date for $guest_num Guest";
+              } else {
+              echo "Available Rooms from $arrive_date to $depart_date for $guest_num Guests";
+              }
+          }?>
+      </h3>
 
       <?php foreach ($result as $row): ?>
 
