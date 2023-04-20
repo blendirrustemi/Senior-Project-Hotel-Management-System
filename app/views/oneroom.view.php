@@ -12,7 +12,6 @@ $result = $db->query($query);
 
 $result = $result[0];
 
-
 if (isset($_POST['submit'])){
     // Customers Table:
     $name = $_POST['name'];
@@ -23,8 +22,8 @@ if (isset($_POST['submit'])){
     $phone = $_POST['phone'];
     $address = $_POST['address'];
 
-    $customer_query = "INSERT INTO Customers (FirstName, LastName, Birthday, Username, Gender, Email, Phone, Address, Password, IsAdmin)
-            VALUES ('$name', '$surname', '$birthday', NULL, '$gender', '$email', '$phone', '$address', NULL, 0)";
+    $customer_query = "INSERT INTO Customers (FirstName, LastName, Birthday, Username, Gender, Email, Phone, Address, password_hash, password_salt, IsAdmin)
+            VALUES ('$name', '$surname', '$birthday', NULL, '$gender', '$email', '$phone', '$address', NULL, NULL, 0)";
     $customer = $db->query($customer_query);
 
 
@@ -48,6 +47,8 @@ if (isset($_POST['submit'])){
             VALUES ('$customer_id', '$room_id', '$checkin', '$checkout',
                     '$adults', '$children', '$special_requests', (SELECT DATEDIFF('$checkout', '$checkin')), $total_price)";
     $booking = $db->query($booking_query);
+    
+    header("Location: rooms");
 }
 ?>
 <!DOCTYPE html>
