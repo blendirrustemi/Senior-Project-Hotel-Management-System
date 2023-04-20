@@ -48,10 +48,12 @@ if (isset($_POST['submit'])){
             VALUES ('$customer_id', '$room_id', '$checkin', '$checkout',
                     '$adults', '$children', '$special_requests', (SELECT DATEDIFF('$checkout', '$checkin')), $total_price)";
     $booking = $db->query($booking_query);
+    
+    header("Location: admin");
 }
 ?>
 <!DOCTYPE html>
-<html class = "oneRoomHtml" lang="en">
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -148,6 +150,11 @@ if (isset($_POST['submit'])){
                     <option value="3">Rose Suite</option>
                     <option value="4">Lodge Suite</option>
                 </select>
+            </div>
+
+            <div class="booking-form-content-item">
+                <label for="price_per_night">Price per night:</label>
+                <input type="text" id="price_per_night" name="price_per_night" required>
             </div>
 
             <div class="booking-form-content-right">

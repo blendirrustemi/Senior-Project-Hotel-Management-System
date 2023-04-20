@@ -23,6 +23,8 @@ if (isset($_POST['submit'])){
 
     $query = "INSERT INTO Customers (FirstName, LastName, Birthday, Username, Gender, Email, Phone, Address, Password, isAdmin)  VALUES ('$name', '$surname', '$birthday', '$username', '$gender', '$email', '$phone', '$address', '$password', 1)";
     $result = $db->query($query);
+    
+    header("Location: users");
 }
 ?>
 
