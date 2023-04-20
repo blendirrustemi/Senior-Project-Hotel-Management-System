@@ -242,7 +242,7 @@ h3 {
     display: block;
 }
 
-.col a::before {    
+.col a::before {
     content: "";
     position: absolute;
     top: 0px;
@@ -465,6 +465,11 @@ rooms.html
     border: 2.5px solid #CFCFCF;
     border-radius: 5px;
 }
+
+.search_rooms_btn[disabled] {
+    background-color: #cccccc;
+}
+
 
 .date-picker {
     width: 184px;
@@ -800,7 +805,7 @@ contact
     color: #83032F;
 }
 
-.interactive-map {    
+.interactive-map {
     margin: 0 calc(-50vw + 50%);
 }
 
@@ -1108,7 +1113,7 @@ input[type="date"] {
 }
 
 .booking-form select {
-    padding: 8px;    
+    padding: 8px;
     font-size: 18px;
 }
 
@@ -1323,7 +1328,7 @@ media queries
         height: 100%;
         width: 100%;
     }
-    
+
     .room-preview {
         flex-direction: column;
         row-gap: 16px;
@@ -1352,7 +1357,7 @@ media queries
 
     .booking-form {
         margin-top: 64px;
-    }  
+    }
 
     .booking-form-content {
         flex-direction: column;
@@ -1361,7 +1366,7 @@ media queries
     .booking-form-content-left {
         width: 100%;
     }
-    
+
     .booking-form-content-right {
         width: 100%;
     }
@@ -1431,7 +1436,7 @@ media queries
 
     .lodge-suite-grid {
         grid-template-columns: repeat(1, 1fr);
-    }    
+    }
 
     .footer-container {
         flex-direction: column-reverse;
