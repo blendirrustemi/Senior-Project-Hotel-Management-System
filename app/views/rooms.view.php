@@ -97,6 +97,7 @@ if ($submit_btn) {
                 <p>Departure</p>
                     <input class="date-picker departure" name="depart_date" type="date" >
 
+                    <div class="guests">
                 <p>Guests</p>
                     <select name="guest_num" id="guest_num">
                         <option value="1">1</option>
@@ -106,6 +107,8 @@ if ($submit_btn) {
                         <option value="5">5</option>
                         <option value="6">6</option>
                     </select>
+                </div>
+
 
                     <button class="login-button" name="submit" type="submit">Search Rooms</button>
                 </form>
