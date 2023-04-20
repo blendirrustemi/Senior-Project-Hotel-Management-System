@@ -11,7 +11,7 @@ if (!$is_logged_in){
     header("Location: login");
 }
 
-$query = "SELECT * FROM Customers";
+$query = "SELECT * FROM Customers where isAdmin != 1";
 $result = $db->query($query);
 
 $is_deleted = "";
@@ -94,8 +94,11 @@ if (isset($_POST['search_btn'])){
 
       <div class="admin-card">
         <div class="admin-recent-card">
-          <div class="title">Data</div><br>
+          <div class="title">Bookings</div><br>
           <table class="table table-striped table-bordered table-condensed">
+              <button>
+                  <a href="adminaddbooking">Add a Booking</a>
+              </button>
             <thead>
                 <tr>
                     <th width="5%">ID</th>

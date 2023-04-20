@@ -143,12 +143,12 @@ if (isset($_POST['update_values'])) {
 
             <div class="label-input">
                 <label for="entryDate">Entry Date:</label>
-                <input type="date" class=date-picker" id="entryDate" name="arrive_date" required value="<?=$result[0]->CheckInDate?>">
+                <input type="date" class="date-picker arrive" id="entryDate" name="arrive_date" required value="<?=$result[0]->CheckInDate?>">
             </div>
 
             <div class="label-input">
                 <label for="departureDate">Departure Date:</label>
-                <input type="date" id="departureDate" class="departure" name="depart_date" required value="<?=$result[0]-> CheckOutDate?>">
+                <input type="date" id="departureDate" class="date-picker depart" name="depart_date" required value="<?=$result[0]-> CheckOutDate?>">
             </div>
 
             <textarea class="special-requests" name="special_requests"><?=$result[0]->Requests?></textarea>
@@ -177,6 +177,14 @@ if (isset($_POST['update_values'])) {
 
     guest_adult.addEventListener('change', function() {
         guest_children.max = 6 - guest_adult.value;
+    });
+
+    const date = new Date();
+    const today = date.toISOString().substr(0, 10);
+    document.querySelector(".arrive").min = today;
+    document.querySelector(".depart").min = today;
+    document.querySelector(".date-picker").addEventListener("change", function() {
+        document.querySelector(".departure").min = this.value;
     });
 
 </script>
