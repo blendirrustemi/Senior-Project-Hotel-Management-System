@@ -196,7 +196,7 @@
 
             </div>
 
-            <div class="swiper-slide">            
+            <div class="swiper-slide">
                 
                 <div class="review-box">
                     <div class="review-box-top">
@@ -213,7 +213,7 @@
                 </div>
             </div>
 
-            <div class="swiper-slide">            
+            <div class="swiper-slide">
                 <div class="review-box">
                     <div class="review-box-top">
                         <img src="<?=ROOT?>/assets/images/homepage/review-5.png" alt="review">
@@ -229,7 +229,7 @@
                 </div>
             </div>
 
-            <div class="swiper-slide">            
+            <div class="swiper-slide">
                 <div class="review-box">
                     <div class="review-box-top">
                         <img src="<?=ROOT?>/assets/images/homepage/review-6.png" alt="review">
@@ -245,7 +245,7 @@
                 </div>
             </div>
 
-            <div class="swiper-slide">            
+            <div class="swiper-slide">
                 <div class="review-box">
                     <div class="review-box-top">
                         <img src="<?=ROOT?>/assets/images/homepage/review-7.png" alt="review">
@@ -261,7 +261,7 @@
                 </div>
             </div>
 
-            <div class="swiper-slide">            
+            <div class="swiper-slide">
                 <div class="review-box">
                     <div class="review-box-top">
                         <img src="<?=ROOT?>/assets/images/homepage/review-8.png" alt="review">
@@ -293,7 +293,7 @@
                 </div>
             </div>
 
-            <div class="swiper-slide">         
+            <div class="swiper-slide">
                 <div class="review-box">
                     <div class="review-box-top">
                         <img src="<?=ROOT?>/assets/images/homepage/review-4.png" alt="review">
@@ -331,7 +331,7 @@
         </div>
 
         <div class="home-call-to-action-right">
-            <div class="home-call-to-action-right-details">                
+            <div class="home-call-to-action-right-details">
                 <h2>Welcome to Your Home Away From Home at The Yorkshire Inn!</h2>
                 <button><a href="rooms">BOOK NOW</a></button>
             </div>
@@ -342,10 +342,10 @@
         <h2>Stay Connected with Yorkshire Inn</h2>
         <p>Be the first to hear about local events and new amenities.</p>
 
-        <form action="">
+        <!--<form action="">
             <input type="email" name="" id="" placeholder="Email">
             <button><a href="#">SUBSCRIBE</a></button>
-        </form>
+        </form> -->
     </section>
 
 
