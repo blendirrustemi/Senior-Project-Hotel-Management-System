@@ -7,18 +7,20 @@
         header("Location: admin");
     }
     
+    /**if (!validateCsrfToken($_POST['csrf_token'])) {
+     * exit('Invalid CSRF token.');
+     * }*/
+    
     if (isset($_POST['submit'])) {
         $username = $_POST['username'];
         $password = $_POST['password'];
         
         $db  = new Database;
         $con = $db->connect();
-        
         try {
-            $query  = "SELECT * FROM customers WHERE username = '$username' AND password = '$password'";
-            $result = $db->query($query);
+            $userId = verifyPassword($con, $username, $password);
             
-            if (count($result) === 1) {
+            if ($userId) {
                 $_SESSION['is_logged_in'] = true;
                 header("Location: admin");
             } else {
@@ -27,6 +29,21 @@
         } catch (PDOException $e) {
             echo "Error: " . $e->getMessage();
         }
+        
+        
+        /**try {
+            $query  = "SELECT * FROM customers WHERE username = '$username' AND password = '$password'";
+            $result = $db->query($query);
+    
+            if (count($result) === 1) {
+                $_SESSION['is_logged_in'] = true;
+                header("Location: admin");
+            } else {
+                $err = "Invalid username or password";
+            }
+        } catch (PDOException $e) {
+            echo "Error: " . $e->getMessage();
+        }*/
         
     }
 
@@ -59,6 +76,7 @@
 
         <div class="login-input">
             <input type="password" name="password" placeholder="Password" required/>
+            <input type="hidden" name="csrf_token" value="<?php echo generateCsrfToken(); ?>">
         </div>
 
         <button class="login-button" name="submit" type="submit">Log in</button>

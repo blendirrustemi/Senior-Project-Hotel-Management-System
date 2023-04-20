@@ -19,9 +19,10 @@ if (isset($_POST['submit'])){
     $email = $_POST['email'];
     $phone = $_POST['phone'];
     $address = $_POST['address'];
-    $password = $_POST['password'];
+    $salt = bin2hex(random_bytes(16));
+    $password = hashString($_POST['password'], $salt);
 
-    $query = "INSERT INTO Customers (FirstName, LastName, Birthday, Username, Gender, Email, Phone, Address, Password, isAdmin)  VALUES ('$name', '$surname', '$birthday', '$username', '$gender', '$email', '$phone', '$address', '$password', 1)";
+    $query = "INSERT INTO Customers (FirstName, LastName, Birthday, Username, Gender, Email, Phone, Address, password_hash, password_salt, isAdmin)  VALUES ('$name', '$surname', '$birthday', '$username', '$gender', '$email', '$phone', '$address', '$password', '$salt', 1)";
     $result = $db->query($query);
     
     header("Location: users");

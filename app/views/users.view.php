@@ -117,7 +117,7 @@ if (isset($_POST['search_btn'])){
                     <tr>
                         <td><?=$row->CustomerID?></td>
                         <td><?=$row->Username?></td>
-                        <td><?php echo str_repeat("*", strlen($row->Password)); ?></td>
+                        <td><?php echo str_repeat("*", strlen($row->password_hash)); ?></td>
                         <form action="" method="POST">
                             <td class = "button-td">
                                 <a href="usersedit?id=<?=$row->CustomerID?>">
