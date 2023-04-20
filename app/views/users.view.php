@@ -94,8 +94,8 @@ if (isset($_POST['search_btn'])){
             <div class="admin-recent-card">
                 <div class="title">Admins</div><br>
 
-                <button class="add_admin_button" style="background-color: #4CAF50; color: white; font-size: 16px; padding: 10px 20px; border: none; border-radius: 4px; box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);">
-                    <a href="addadmin">Add Admin</a>
+                <button class="add_admin_button" style="background-color: #4CAF50; color: white; font-size: 16px; padding: 10px 20px; border: none; border-radius: 4px; box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3); margin-bottom: 10px;">
+                    <a href="addadmin" style="color:white; text-decoration: none;">Add an Admin</a>
                 </button>
 
 
