@@ -23,8 +23,8 @@ if (isset($_POST['submit'])){
     $phone = $_POST['phone'];
     $address = $_POST['address'];
 
-    $customer_query = "INSERT INTO Customers (FirstName, LastName, Birthday, Username, Gender, Email, Phone, Address, Password, IsAdmin)
-            VALUES ('$name', '$surname', '$birthday', NULL, '$gender', '$email', '$phone', '$address', NULL, 0)";
+    $customer_query = "INSERT INTO Customers (FirstName, LastName, Birthday, Username, Gender, Email, Phone, Address, password_hash, password_salt, IsAdmin)
+            VALUES ('$name', '$surname', '$birthday', NULL, '$gender', '$email', '$phone', '$address', NULL, NULL, 0)";
     $customer = $db->query($customer_query);
 
 // Bookings Table:
@@ -139,29 +139,29 @@ if (isset($_POST['submit'])){
                     <input id="phone" type="tel" name="phone" placeholder="123-456-7890" required>
                 </div>
 
-            </div>
+                <div class="booking-form-content-item">
+                    <label for="price_per_night">Price per night:</label>
+                    <input type="text" id="price_per_night" name="price_per_night" required>
+                </div>
 
-            <div class="booking-form-content-item">
-                <label for="rooms">Rooms:</label>
-                <select id="room_id" name="room_id" required>
-                    <option value="">-- Select --</option>
-                    <option value="1">Blue Room</option>
-                    <option value="2">Bolero Room</option>
-                    <option value="3">Rose Suite</option>
-                    <option value="4">Lodge Suite</option>
-                </select>
-            </div>
+                <div class="booking-form-content-item">
+                    <label for="rooms">Rooms:</label>
+                    <select id="room_id" name="room_id" required>
+                        <option value="">-- Select --</option>
+                        <option value="1">Blue Room</option>
+                        <option value="2">Bolero Room</option>
+                        <option value="3">Rose Suite</option>
+                        <option value="4">Lodge Suite</option>
+                    </select>
+                </div>
 
-            <div class="booking-form-content-item">
-                <label for="price_per_night">Price per night:</label>
-                <input type="text" id="price_per_night" name="price_per_night" required>
             </div>
-
+            
             <div class="booking-form-content-right">
 
                 <div class="booking-form-content-item-group">
 
-                    <div class="booking-form-content-item">
+                    <div class="booking-form-content-item" style="margin-right: 50px;">
                         <label for="checkin">Arrival date:</label>
                         <input type="date" id="checkin" class="date-picker" name="checkin" required>
                     </div>

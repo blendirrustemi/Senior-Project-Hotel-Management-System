@@ -96,7 +96,7 @@ if (isset($_POST['search_btn'])){
         <div class="admin-recent-card">
           <div class="title">Bookings</div><br>
           <table class="table table-striped table-bordered table-condensed">
-              <button>
+              <button class="add_a_booking_button" style="background-color: #4CAF50; color: white; font-size: 16px; padding: 10px 20px; border: none; border-radius: 4px; box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);">
                   <a href="adminaddbooking">Add a Booking</a>
               </button>
             <thead>
